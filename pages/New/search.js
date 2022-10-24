@@ -229,10 +229,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueChangwat}
           onChange={handleChangwat}
-          sx={{ width: '48%', ml: '3%', mt: '1%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '1%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -247,11 +246,10 @@ export default function Search4n(props) {
 
           <Autocomplete
           id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}  
+          options={top100Films}   
           value={valueBranch}
           onChange={handleBranch}      
-          sx={{ width: '48%', ml: '3%', mt: '1%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '1%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -278,8 +276,7 @@ export default function Search4n(props) {
           id="demo-simple-select"
           value={document}
           label=" เอกสารประกอบ * "
-          onChange={handleChangeDocument}
-          >
+          onChange={handleChangeDocument}>
           <MenuItem value={10} className={styles.kanit} 
           onClick={() => {
             setFormchanode(true);
@@ -289,7 +286,7 @@ export default function Search4n(props) {
             setShow9(false);
             setNorsorment('');
           }}
-          ><text className={styles.kanit}>โฉนด</text></MenuItem>
+          >โฉนด</MenuItem>
           <MenuItem value={20} className={styles.kanit}
           onClick={() => {
             setFormnorsor(true);
@@ -299,7 +296,7 @@ export default function Search4n(props) {
             setShow2(false);
             setChanodment('');
           }}
-          ><text className={styles.kanit}>น.ส. 3ก.</text></MenuItem>
+          >น.ส. 3ก.</MenuItem>
           </Select>
           <FormHelperText>{errorD ? 
             <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
@@ -330,7 +327,7 @@ export default function Search4n(props) {
             setValueAmphur('');   setErrorAmphur(false);
             setValueTumbon('');   setErrorTumbon(false);
           }}
-          ><text className={styles.kanit}>เลขที่โฉนด</text></MenuItem>
+          >เลขที่โฉนด</MenuItem>
           <MenuItem value={22} className={styles.kanit} 
           onClick={() => {
             setShow2(true);
@@ -343,7 +340,7 @@ export default function Search4n(props) {
             setValueUTM4('');    setErrorUTM4(false);
             setValueScale('');   setErrorUTMScale(false);
           }}
-          ><text className={styles.kanit}>เลขที่ดิน</text></MenuItem>
+          >เลขที่ดิน</MenuItem>
           </Select>
           <FormHelperText>{errorC ? 
             <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
@@ -374,7 +371,7 @@ export default function Search4n(props) {
             setValueAmphur('');  setErrorAmphur(false);
             setValueTumbon('');  setErrorTumbon(false);
           }}
-          ><text className={styles.kanit}>เลขที่โฉนด</text></MenuItem>
+          >เลขที่โฉนด</MenuItem>
           <MenuItem value={222} className={styles.kanit} 
           onClick={() => {
             setShow9(true);
@@ -388,7 +385,7 @@ export default function Search4n(props) {
             setValueUTM4('');    setErrorUTM4(false);
             setValueScale('');   setErrorUTMScale(false);
           }}
-          ><text className={styles.kanit}>เลขที่ดิน</text></MenuItem>
+          >เลขที่ดิน</MenuItem>
           </Select>
           <FormHelperText>{errorN ? 
             <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
@@ -416,10 +413,9 @@ export default function Search4n(props) {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueChanode}
           onChange={handleChanode}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -435,10 +431,9 @@ export default function Search4n(props) {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueSurvey}
           onChange={handleSurvey}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -458,10 +453,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueAmphur}
           onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -476,10 +470,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueTumbon}
           onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -574,10 +567,9 @@ export default function Search4n(props) {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueLandNo}
           onChange={handleLandNo}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -593,10 +585,9 @@ export default function Search4n(props) {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM1}
           onChange={handleUTM1}
-          sx={{ width: '34%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '34%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -611,14 +602,13 @@ export default function Search4n(props) {
           <Autocomplete
           disableClearable
           id="free-solo-demo"
-          sx={{ width: '12%', ml: '2%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '12%', ml: '2%', mt: '2%' }}
           options={[
               {value:'1', title:'I'},
               {value:'2', title:'II'}, 
               {value:'3', title:'III'}, 
               {value:'4', title:'IV'}]
           }
-          classes={{ option: styles.kanit}}
           value={valueUTM2}
           onChange={handleUTM2}
           getOptionLabel={(option) => option.title}
@@ -640,10 +630,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM3}
           onChange={handleUTM3}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -658,10 +647,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM4}
           onChange={handleUTM4}
-          sx={{ width: '25%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '25%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -676,10 +664,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTMScale}
           onChange={handleUTMScale}
-          sx={{ width: '22%', ml: '1%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '22%', ml: '1%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> มาตราส่วน </Typography>
@@ -782,10 +769,9 @@ export default function Search4n(props) {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueNorsor3}
           onChange={handleNorsor3}
-          sx={{ width: '47%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '47%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> เลขที่น.ส. 3ก. </Typography>
@@ -803,10 +789,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueAmphur}
           onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> อำเภอ </Typography>
@@ -819,10 +804,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueTumbon}
           onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> ตำบล </Typography>
@@ -906,10 +890,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueAmphur}
           onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> อำเภอ </Typography>
@@ -922,10 +905,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueTumbon}
           onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> ตำบล </Typography>
@@ -943,10 +925,9 @@ export default function Search4n(props) {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueLandNo}
           onChange={handleLandNo}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> เลขที่ดิน </Typography>
@@ -960,10 +941,9 @@ export default function Search4n(props) {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM1}
           onChange={handleUTM1}
-          sx={{ width: '34%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '34%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> ระวางแผนภูมิประเทศ </Typography>
@@ -976,14 +956,13 @@ export default function Search4n(props) {
           <Autocomplete
           disableClearable
           id="free-solo-demo"
-          sx={{ width: '12%', ml: '2%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '12%', ml: '2%', mt: '2%' }}
           options={[
               {valuenor:'1', titlenor:'I'},
               {valuenor:'2', titlenor:'II'}, 
               {valuenor:'3', titlenor:'III'}, 
               {valuenor:'4', titlenor:'IV'}]
           }
-          classes={{ option: styles.kanit}}
           value={valueUTM2}
           onChange={handleUTM2}
           getOptionLabel={(option) => option.titlenor}
@@ -1003,10 +982,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM4}
           onChange={handleUTM4}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> แผ่นที่หมายเลขระวาง </Typography>
@@ -1019,10 +997,9 @@ export default function Search4n(props) {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTMScale}
           onChange={handleUTMScale}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> มาตราส่วน </Typography>
