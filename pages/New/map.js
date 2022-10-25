@@ -1,7 +1,6 @@
 import styles from '../../styles/map.module.css';
 // react
 import React from 'react';
-import Footer from '../system4/footer'
 
 // openlayers
 import GeoJSON from 'ol/format/GeoJSON'
@@ -33,7 +32,7 @@ function Mymap() {
             </div> */}
 
             <MapWrapper features height={100} />
-            
+
         </div>
     )
 }

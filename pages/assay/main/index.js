@@ -1,7 +1,7 @@
 import React from 'react'
 import { Grid } from '@mui/material'
 import Navbar from './navbar'
-import Map from '../map'
+import Map from './map'
 import Footer from './footer'
 
 export default function Insys4() {
@@ -13,8 +13,8 @@ export default function Insys4() {
             <Navbar/>
 
             <Map/>
-
-            {/* <Footer/> */}
+           
+            <Footer/>
 
         </Grid>
 
