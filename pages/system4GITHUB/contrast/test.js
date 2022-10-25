@@ -11,7 +11,7 @@ import styles from '../../../styles/Home.module.css';
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
   });
-
+  
 const optionTypes = [
     { key: '1', title: 'Structure' },
     { key: '2', title: 'Un-Structure' }
