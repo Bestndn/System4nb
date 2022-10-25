@@ -98,7 +98,7 @@ export default function Inputlandplot() {
         transform: 'scale(1.02)'
         },
       });
-      const Savereportbutton = styled(Button)({
+      const Savebutton = styled(Button)({
         padding: '2%',
         marginLeft: '1%',
         marginRight: '1%',
@@ -114,6 +114,25 @@ export default function Inputlandplot() {
         backgroundColor: '#fff',
         color: '#2F4266',
         border: '1px solid #2F4266',
+        transform: 'scale(1.02)'
+        },
+      });
+      const Reportbutton = styled(Button)({
+        padding: '2%',
+        marginLeft: '1%',
+        marginRight: '1%',
+        width: '140px',
+        fontWeight: 'bold',
+        fontFamily: 'kanit',
+        textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        borderRadius: '8px', 
+        backgroundColor: '#D7A203', 
+        color: '#fff',
+        boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        '&:hover': {
+        backgroundColor: '#fff',
+        color: '#D7A203',
+        border: '1px solid #D7A203',
         transform: 'scale(1.02)'
         },
       });
@@ -511,16 +530,16 @@ export default function Inputlandplot() {
                     </Grid>
                     </Grid>
                     <Grid container sx= {{justifyContent: 'flex-end', width: '550px', my: '2%'}}>
-                      <Savereportbutton variant='contained' startIcon= {<TextSnippetRoundedIcon/>} 
+                      <Reportbutton variant='contained' startIcon= {<TextSnippetRoundedIcon/>} 
                       
                       >
                         รายงาน
-                      </Savereportbutton>
-                      <Savereportbutton variant='contained'startIcon= {<GiSave/>} 
+                      </Reportbutton>
+                      <Savebutton variant='contained'startIcon= {<GiSave/>} 
                       
                       >
                         กดบันทึก
-                      </Savereportbutton>
+                      </Savebutton>
                     </Grid>
                 </Formgrid>
                 <Shapegrid item xs={6.9} container>

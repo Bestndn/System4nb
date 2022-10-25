@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import styles from '../../styles/Home.module.css';
 import Fab from '@mui/material/Fab';
 import { GiExitDoor } from "react-icons/gi";
-import Username1 from './Username'
+import Username1 from './User'
 
 
 
