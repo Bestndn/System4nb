@@ -39,10 +39,26 @@ export default function SelectTextFields() {
       setShow(true);
     }
 
+    
+
   
   
     
   };
+
+
+  const handleChangeP = (value) => {
+    setCurrency(value);
+    if (currency == 'JPY'){
+      setShow(false);
+    }
+    if ( currency == 'EUR'){
+      setShow(true);
+    }
+
+  };
+
+  
 
   return (
     <Box
@@ -160,24 +176,28 @@ export default function SelectTextFields() {
       </div>
 
 
-
-
-
-
-
-
-
-
-
       <Autocomplete
       disablePortal
       id="combo-box-demo"
       options={currencies}
+      onChange={handleChangeP}
       value={currency}
-      onChange={handleChange}
       sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="Movie" />}
+      renderInput={(params) => <TextField {...params} label="Movie"
+      />}
     />
+
+
+
+
+
+
+
+
+
+
+
+    
     </Box>
 
 

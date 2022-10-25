@@ -3,7 +3,7 @@ import { Grid, Box, Typography, Paper, Button, Stack } from '@mui/material'
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import SearchIcon from '@mui/icons-material/Search';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/SY4.module.css';
 
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -11,14 +11,18 @@ import FormControl from '@mui/material/FormControl';
 import FormHelperText from '@mui/material/FormHelperText';
 import Select from '@mui/material/Select';
 import Collapse from '@mui/material/Collapse';
-
+import Modal from '@mui/material/Modal';
+import Induct from './induct'
+import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
+import { styled } from '@mui/material/styles';
+import { set } from 'date-fns';
 
 
 const top100Films = [
   { label: 'ทดสอบ', year: 1994 },
   ];
 
-export default function Search() {
+export default function Search4n() {
 
   // menu top
   const [errorD, setErrorD] = React.useState(false);
@@ -55,7 +59,7 @@ export default function Search() {
   const [show9, setShow9] = React.useState(false);
   const [formnorsor, setFormnorsor] = React.useState(false);
 
-  // const [modaltrue, setModalTrue] = React.useState(false);
+  const [modaltrue, setModalTrue] = React.useState(false);
   // close switch
 
   // value open
@@ -180,7 +184,50 @@ export default function Search() {
   }
   //value close 
 
- 
+  const Backbutton = styled(Button)({
+    borderRadius: '10px', 
+    width: '130px', 
+    height: '45px', 
+    backgroundColor: '#EAB120', 
+    color: '#fff', 
+    boxShadow: '7px 0px 4px rgba(0, 0, 0, 0.25)',
+    fontWeight: 'bold',
+    fontFamily: [
+        'kanit',
+      ].join(','),
+      '&:hover': {
+        border: '1px solid #ECECEC',
+        backgroundColor: '#fff',
+        color: '#EAB120',
+        boxShadow: '4px 4px 4px rgba(234,177,32)',
+        transform: 'scale(1.02)'
+      },
+  });
+
+  const Inputbutton = styled(Button)({
+    borderRadius: '10px', 
+    width: '130px', 
+    height: '45px', 
+    backgroundColor: '#2F4266', 
+    color: '#fff', 
+    boxShadow: '7px 0px 4px rgba(0, 0, 0, 0.25)',
+    fontWeight: 'bold',
+    fontFamily: [
+        'kanit',
+      ].join(','),
+      '&:hover': {
+        border: '1px solid #ECECEC',
+        backgroundColor: '#fff',
+        color: '#2F4266',
+        boxShadow: '4px 4px 4px rgba(47, 66, 102)',
+        transform: 'scale(1.02)'
+      },
+  });
+
+
+
+
+
   return (
     <div>
       <Grid sx={{ 
@@ -210,16 +257,7 @@ export default function Search() {
           p: '1%',
           }}>
           <Button variant="contained" color='primary' disabled className={styles.Buttondis}
-          sx={{ 
-            bgcolor: '#2F4266', 
-            color: 'white', 
-            width: '15%', 
-            height: '150px',
-            '&:disabled':{
-              bgcolor: '#2F4266', 
-              color: 'white', 
-            } 
-            }}>
+          sx={{ bgcolor: '#2F4266', color: 'white', width: '15%', height: '150px' }}>
             <SearchIcon sx={{ fontSize: 100 }}/>
           </Button>
 
@@ -229,10 +267,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueChangwat}
           onChange={handleChangwat}
-          sx={{ width: '48%', ml: '3%', mt: '1%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '1%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -247,11 +284,10 @@ export default function Search() {
 
           <Autocomplete
           id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}  
+          options={top100Films}   
           value={valueBranch}
           onChange={handleBranch}      
-          sx={{ width: '48%', ml: '3%', mt: '1%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '1%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -278,8 +314,7 @@ export default function Search() {
           id="demo-simple-select"
           value={document}
           label=" เอกสารประกอบ * "
-          onChange={handleChangeDocument}
-          >
+          onChange={handleChangeDocument}>
           <MenuItem value={10} className={styles.kanit} 
           onClick={() => {
             setFormchanode(true);
@@ -289,7 +324,7 @@ export default function Search() {
             setShow9(false);
             setNorsorment('');
           }}
-          ><text className={styles.kanit}>โฉนด</text></MenuItem>
+          >โฉนด</MenuItem>
           <MenuItem value={20} className={styles.kanit}
           onClick={() => {
             setFormnorsor(true);
@@ -299,7 +334,7 @@ export default function Search() {
             setShow2(false);
             setChanodment('');
           }}
-          ><text className={styles.kanit}>น.ส. 3ก.</text></MenuItem>
+          >น.ส. 3ก.</MenuItem>
           </Select>
           <FormHelperText>{errorD ? 
             <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
@@ -330,7 +365,7 @@ export default function Search() {
             setValueAmphur('');   setErrorAmphur(false);
             setValueTumbon('');   setErrorTumbon(false);
           }}
-          ><text className={styles.kanit}>เลขที่โฉนด</text></MenuItem>
+          >เลขที่โฉนด</MenuItem>
           <MenuItem value={22} className={styles.kanit} 
           onClick={() => {
             setShow2(true);
@@ -343,7 +378,7 @@ export default function Search() {
             setValueUTM4('');    setErrorUTM4(false);
             setValueScale('');   setErrorUTMScale(false);
           }}
-          ><text className={styles.kanit}>เลขที่ดิน</text></MenuItem>
+          >เลขที่ดิน</MenuItem>
           </Select>
           <FormHelperText>{errorC ? 
             <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
@@ -374,7 +409,7 @@ export default function Search() {
             setValueAmphur('');  setErrorAmphur(false);
             setValueTumbon('');  setErrorTumbon(false);
           }}
-          ><text className={styles.kanit}>เลขที่โฉนด</text></MenuItem>
+          >เลขที่โฉนด</MenuItem>
           <MenuItem value={222} className={styles.kanit} 
           onClick={() => {
             setShow9(true);
@@ -388,7 +423,7 @@ export default function Search() {
             setValueUTM4('');    setErrorUTM4(false);
             setValueScale('');   setErrorUTMScale(false);
           }}
-          ><text className={styles.kanit}>เลขที่ดิน</text></MenuItem>
+          >เลขที่ดิน</MenuItem>
           </Select>
           <FormHelperText>{errorN ? 
             <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
@@ -416,10 +451,9 @@ export default function Search() {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueChanode}
           onChange={handleChanode}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -435,10 +469,9 @@ export default function Search() {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueSurvey}
           onChange={handleSurvey}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -458,10 +491,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueAmphur}
           onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -476,10 +508,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueTumbon}
           onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -531,7 +562,7 @@ export default function Search() {
               if ( valueSurvey != '' )
               if ( valueAmphur != '' )
               if ( valueTumbon != '' ){
-                
+                setModalTrue(true);
               }
             }}
             >
@@ -574,10 +605,9 @@ export default function Search() {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueLandNo}
           onChange={handleLandNo}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -593,10 +623,9 @@ export default function Search() {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM1}
           onChange={handleUTM1}
-          sx={{ width: '34%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '34%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -611,14 +640,13 @@ export default function Search() {
           <Autocomplete
           disableClearable
           id="free-solo-demo"
-          sx={{ width: '12%', ml: '2%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '12%', ml: '2%', mt: '2%' }}
           options={[
               {value:'1', title:'I'},
               {value:'2', title:'II'}, 
               {value:'3', title:'III'}, 
               {value:'4', title:'IV'}]
           }
-          classes={{ option: styles.kanit}}
           value={valueUTM2}
           onChange={handleUTM2}
           getOptionLabel={(option) => option.title}
@@ -640,10 +668,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM3}
           onChange={handleUTM3}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -658,10 +685,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM4}
           onChange={handleUTM4}
-          sx={{ width: '25%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '25%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={
           <div>
@@ -676,10 +702,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTMScale}
           onChange={handleUTMScale}
-          sx={{ width: '22%', ml: '1%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '22%', ml: '1%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> มาตราส่วน </Typography>
@@ -737,7 +762,7 @@ export default function Search() {
               if ( valueUTM3 != '' )
               if ( valueUTM4 != '' )
               if ( valueUTMScale != '' ){
-                
+                setModalTrue(true);
               }
             }}
             >
@@ -782,10 +807,9 @@ export default function Search() {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueNorsor3}
           onChange={handleNorsor3}
-          sx={{ width: '47%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '47%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> เลขที่น.ส. 3ก. </Typography>
@@ -803,10 +827,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueAmphur}
           onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> อำเภอ </Typography>
@@ -819,10 +842,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueTumbon}
           onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> ตำบล </Typography>
@@ -868,7 +890,7 @@ export default function Search() {
               if ( valueNorsor3 != '' )
               if ( valueAmphur != '' )
               if ( valueTumbon != '' ){
-                
+                setModalTrue(true);
               }
             }}>
               <text className={styles.kanit}>ค้นหา</text>
@@ -906,10 +928,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueAmphur}
           onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> อำเภอ </Typography>
@@ -922,10 +943,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueTumbon}
           onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> ตำบล </Typography>
@@ -943,10 +963,9 @@ export default function Search() {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueLandNo}
           onChange={handleLandNo}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> เลขที่ดิน </Typography>
@@ -960,10 +979,9 @@ export default function Search() {
           freeSolo
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM1}
           onChange={handleUTM1}
-          sx={{ width: '34%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '34%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> ระวางแผนภูมิประเทศ </Typography>
@@ -976,14 +994,13 @@ export default function Search() {
           <Autocomplete
           disableClearable
           id="free-solo-demo"
-          sx={{ width: '12%', ml: '2%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '12%', ml: '2%', mt: '2%' }}
           options={[
               {valuenor:'1', titlenor:'I'},
               {valuenor:'2', titlenor:'II'}, 
               {valuenor:'3', titlenor:'III'}, 
               {valuenor:'4', titlenor:'IV'}]
           }
-          classes={{ option: styles.kanit}}
           value={valueUTM2}
           onChange={handleUTM2}
           getOptionLabel={(option) => option.titlenor}
@@ -1003,10 +1020,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTM4}
           onChange={handleUTM4}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> แผ่นที่หมายเลขระวาง </Typography>
@@ -1019,10 +1035,9 @@ export default function Search() {
           <Autocomplete
           id="combo-box-demo"
           options={top100Films}
-          classes={{ option: styles.kanit}}
           value={valueUTMScale}
           onChange={handleUTMScale}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          sx={{ width: '48%', ml: '3%', mt: '2%' }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
             <Typography variant="text" className={styles.kanit}> มาตราส่วน </Typography>
@@ -1086,7 +1101,7 @@ export default function Search() {
               if ( valueUTM2 != null )
               if ( valueUTM4 != '' )
               if ( valueUTMScale != '' ){
-                
+                setModalTrue(true);
               }
             }}>
               <text className={styles.kanit}>ค้นหา</text>
@@ -1122,7 +1137,7 @@ export default function Search() {
 
 
 
-      {/* <Modal
+      <Modal
         open={modaltrue}
         onClose={() => { setModalTrue(false); }}
       >
@@ -1133,37 +1148,14 @@ export default function Search() {
             transform: 'translate(-50%, -50%)',
             width: 'auto',
         }}>
-        <div>
-        <Box 
-        sx={{
-        bgcolor: '#fff', 
-        width: '650px', 
-        boxShadow : '2px -3px 14px rgba(0, 0, 0, 0.25)', 
-        mt: '5%', 
-        ml: '5%', 
-        borderRadius: '10px'
-        }}
-        >
-        <Grid container sx= {{justifyContent: 'center', alignItems: 'center', py: '10%'}}>
-          <CancelRoundedIcon sx= {{ width: '146px', height: '146px', color: '#E64D3B' }}/>
-        <Grid container sx= {{justifyContent: 'center', mt: '3%'}}>
-          <Typography variant= "h4" className= {styles.kanit} sx= {{fontWeight: 'bold', color: '#848484'}}>
-            ไม่ปรากฏขัอมูลในบัญชีราคาประเมินที่ดิน
-          </Typography>
-        </Grid>
-                
-        <Grid container sx= {{justifyContent: 'space-evenly', mt: '5%'}}>
-          <Backbutton variant= "contained" onClick={() => { setModalTrue(false); }}>กลับหน้าค้นหา</Backbutton>
-          <Inputbutton variant= "contained" onClick={props.onClick}>นำเข้า</Inputbutton>
-        </Grid>
-        </Grid>
+          <Induct onClose={() => { setModalTrue(false); }}/>
         </Box>
-        </div>
-        </Box>
-      </Modal> */}
+      </Modal>
 
 
      
     </div>
   )
 }
+
+

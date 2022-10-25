@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+
+.kanit{
+  font-family: 'Kanit';
+}
+
+.kanit1{
+  font-family: 'Kanit';
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) ;
+}
+
+.kanu{
+  font-family: 'Kanit';
+  font-size: large;
+  font-weight: 600;
+  color: white;
+}
+
+.kanu:hover{
+  text-shadow: 2px 2px blue;
+}
+
