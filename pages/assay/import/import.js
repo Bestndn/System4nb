@@ -6,7 +6,7 @@ import styles from '../../../styles/Home.module.css';
 import { FcAddDatabase } from "react-icons/fc";
 
 
-import Test from './test'
+import Test from './editimport'
 import Dialog from '@mui/material/Dialog';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';

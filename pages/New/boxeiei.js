@@ -3,7 +3,7 @@ import {Box, Grid, Typography, ButtonBase, Button, Collapse, Divider, Stack, Ava
 import { FaHome } from "react-icons/fa";
 import { HiDocumentSearch, HiDatabase, HiDocumentReport } from "react-icons/hi";
 import { GiScales } from "react-icons/gi";
-
+import styles from '../../styles/Home.module.css';
 
 export default function Boxeiei() {
 
