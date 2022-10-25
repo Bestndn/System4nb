@@ -1,5 +1,4 @@
-import '../../styles/map.module.css';
-
+import styles from '../../styles/map.module.css';
 // react
 import React from 'react';
 
