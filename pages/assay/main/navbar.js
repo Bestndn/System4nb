@@ -84,7 +84,7 @@ export default function Navbar() {
 
         
         
-        { open2 ?
+        { open1 ?
         <Box sx={{ 
           position: 'absolute', 
           zIndex: 10,
