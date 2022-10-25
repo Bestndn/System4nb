@@ -77,6 +77,51 @@ const [values, setValues] = React.useState({
       },
   });
 
+  const IdField = styled(TextField)({
+    '& label.Mui-focused': {
+      color: '#2F4266',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: '#2F4266',
+    },
+    "& .MuiInputBase-root": {
+      backgroundColor: '#fff', fontFamily: 'kanit'
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#2F4266',
+      },
+      '&:hover fieldset': {
+        borderColor: 'gray',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#2F4266',
+      },
+    },
+  });
+  const PasswordField = styled(FormControl)({
+    '& label.Mui-focused': {
+      color: '#2F4266',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: '#2F4266',
+    },
+    "& .MuiInputBase-root": {
+      backgroundColor: '#fff', fontFamily: 'kanit'
+    },
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        borderColor: '#2F4266',
+      },
+      '&:hover fieldset': {
+        borderColor: 'gray',
+      },
+      '&.Mui-focused fieldset': {
+        borderColor: '#2F4266',
+      },
+    },
+  });
+
   const Openicon = styled(MdOutlineVisibility)({
     color: '#C7C7C7',
   });
@@ -124,13 +169,13 @@ const [values, setValues] = React.useState({
                 <Image src="/Cuma.png" alt="Banner" width={`192px`}  height={'194px'}/>
               </Grid>
                     <Grid>
-                    <Typography component="h1" variant="h4" fontWeight= "bold" className= {styles.kanit} sx= {{display: {xs: "none", lg: "block"}, mt: '3%'}}>
+                    <Typography component="h1" variant="h4" fontWeight= "bold" className= {styles.kanit1} sx= {{display: {xs: "none", lg: "block"}, mt: '3%'}}>
                         บูรณาการทะเบียนทรัพย์สิน 
                     </Typography>
                     </Grid>
                 <Grid container sx= {{justifyContent: 'center'}}>
                     <Grid>
-                    <Typography component="h1" variant="h4" fontWeight= "bold" className= {styles.kanit} sx= {{display: {xs: "none", lg: "block"}, mb: '3%'}}>
+                    <Typography component="h1" variant="h4" fontWeight= "bold" className= {styles.kanit1} sx= {{display: {xs: "none", lg: "block"}, mb: '3%'}}>
                         (กรมธนารักษ์)
                     </Typography>
                     </Grid>
@@ -140,7 +185,7 @@ const [values, setValues] = React.useState({
                 <Typography className= {styles.kanit} >
                     ชื่อผู้ใช้
                 </Typography>
-                    <TextField
+                    <IdField
                     margin="normal"
                     id="email"
                     label={<Typography className= {styles.kanit}>Username</Typography>}
@@ -148,55 +193,15 @@ const [values, setValues] = React.useState({
                     autoComplete="email"
                     autoFocus
                     fullWidth
-                    sx= {{
-                      '& label.Mui-focused': {
-                        color: '#2F4266',
-                      },
-                      '& .MuiInput-underline:after': {
-                        borderBottomColor: '#2F4266',
-                      },
-                      "& .MuiInputBase-root": {
-                        backgroundColor: '#fff', fontFamily: 'kanit'
-                      },
-                      '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                          borderColor: '#2F4266',
-                        },
-                        '&:hover fieldset': {
-                          borderColor: 'gray',
-                        },
-                        '&.Mui-focused fieldset': {
-                          borderColor: '#2F4266',
-                        },
-                      },
-                    }}
                     />
                 <Typography className= {styles.kanit} sx= {{mt: '3%'}}>
                     รหัสผ่าน
                 </Typography>
-                <FormControl fullWidth variant="outlined" margin="normal" 
-                    sx= {{
-                      '& label.Mui-focused': {
-                        color: '#2F4266',
-                      },
-                      '& .MuiInput-underline:after': {
-                        borderBottomColor: '#2F4266',
-                      },
-                      "& .MuiInputBase-root": {
-                        backgroundColor: '#fff', fontFamily: 'kanit'
-                      },
-                      '& .MuiOutlinedInput-root': {
-                        '& fieldset': {
-                          borderColor: '#2F4266',
-                        },
-                        '&:hover fieldset': {
-                          borderColor: 'gray',
-                        },
-                        '&.Mui-focused fieldset': {
-                          borderColor: '#2F4266',
-                        },
-                      },
-                    }}>
+                <PasswordField 
+                fullWidth 
+                variant="outlined" 
+                margin="normal" 
+                >
                       <InputLabel htmlFor="outlined-adornment-password" >
                         {<Typography className= {styles.kanit}>Password</Typography>}
                       </InputLabel>
@@ -222,7 +227,7 @@ const [values, setValues] = React.useState({
                       }
                       label="Password"
                       />
-                </FormControl>
+                </PasswordField>
 
                 <Grid container sx ={{justifyContent: 'space-between', alignItems: 'center'}}>
                 <Grid item xs>
@@ -249,7 +254,7 @@ const [values, setValues] = React.useState({
                   type="submit"
                   variant="contained"
                   fullWidth
-                  href={'../Best/Login1.js'}
+                  href={'../Besthome/Menu1'}
                 >
                   เข้าสู่ระบบ
                 </Signinbutton> 

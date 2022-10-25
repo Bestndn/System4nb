@@ -7,6 +7,7 @@ import { GiSave } from "react-icons/gi";
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import Snackbar from '@mui/material/Snackbar';
 import { SiOpenstreetmap } from "react-icons/si";
+import TextSnippetRoundedIcon from '@mui/icons-material/TextSnippetRounded';
 import MuiAlert from '@mui/material/Alert';
 import styles from '../../styles/Home.module.css';
 
@@ -41,12 +42,10 @@ export default function Inputlandplot() {
         justifyContent: 'space-between',
         width: '90%',
         marginTop: '1%',
-        
       });
       const Typography1 = styled(Typography)({
         fontFamily: 'kanit',
       });
-    
       const TextField1 = styled(TextField)({
         width: '70%',
         "& .MuiInputBase-root": {
@@ -71,19 +70,21 @@ export default function Inputlandplot() {
         marginBottom: '2%',
         fontFamily: 'kanit',
         fontWeight: 'bold',
-        border: '1px solid #FD7060',
+        textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        border: '1px solid #2F4266',
         borderRadius: '8px', 
-        backgroundColor: '#FD7060', 
-        color: '#fff',
+        backgroundColor: '#fff', 
+        color: '#2F4266',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         '&:hover': {
-        backgroundColor: '#fff',
-        color: '#FD7060',
+        backgroundColor: '#2F4266',
+        color: '#fff',
         transform: 'scale(1.02)'
         },
       });
       const Pagebutton = styled(Button)({
         fontFamily: 'kanit',
+        textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
         width: '120px',
         fontWeight: 'bold',
         border: '1px solid #2F4266',
@@ -97,20 +98,32 @@ export default function Inputlandplot() {
         transform: 'scale(1.02)'
         },
       });
+      const Savereportbutton = styled(Button)({
+        padding: '2%',
+        marginLeft: '1%',
+        marginRight: '1%',
+        width: '140px',
+        fontWeight: 'bold',
+        fontFamily: 'kanit',
+        textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        borderRadius: '8px', 
+        backgroundColor: '#2F4266', 
+        color: '#fff',
+        boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+        '&:hover': {
+        backgroundColor: '#fff',
+        color: '#2F4266',
+        border: '1px solid #2F4266',
+        transform: 'scale(1.02)'
+        },
+      });
 
   return (
     <div>
         <Box sx= {{height: '100vh', minWidth: '1200px'}}>
            <Grid container sx= {{justifyContent: 'space-evenly', my: '0.5%'}}>
                 <Formgrid item xs={4.8} container>
-                    <Grid container sx= {{justifyContent: 'center'}}>
-                        <Grid sx= {{px: '8%', py: '0.5%', backgroundColor: '#5E52E5', color: '#fff', borderRadius: '6px', my: '2%', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                            <Typography className= {styles.kanit1} fontWeight= "bold">
-                                แปลงนำเข้า
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                    <Grid container sx= {{justifyContent: 'space-evenly', width: '400px', alignItems: 'center'}}>
+                    <Grid container sx= {{justifyContent: 'space-evenly', width: '400px', alignItems: 'center', my: "2%"}}>
                         <Grid>
                             <Pagebutton variant='contained'
                             startIcon={<AiFillCaretLeft/>}
@@ -129,7 +142,12 @@ export default function Inputlandplot() {
                             </Pagebutton>
                         </Grid>
                     </Grid>
-                    <Grid container sx= {{border: '2px solid #8C82F7', width: '550px', my: '2%', justifyContent: 'flex-end', borderRadius: '6px'}}>
+                    <Grid container sx= {{justifyContent: 'flex-start'}}>
+                        <Typography className= {styles.kanit1} fontWeight= "bold" sx= {{ml: '5%'}}>
+                              แปลงที่ดินที่ไม่ปรากฏในบัญชีราคาประเมินที่ดิน 
+                        </Typography>
+                    </Grid>
+                    <Grid container sx= {{border: '2px solid #8C82F7', width: '550px', mb: '2%', justifyContent: 'flex-end', borderRadius: '6px'}}>
                       <Grid sx= {{width: '500px', mt: '2%'}}>
                         <Typography1 variant='text' color= "gray">
                         สำนักงานที่ดิน: 
@@ -241,13 +259,13 @@ export default function Inputlandplot() {
                         </Plotoflandbutton>
                       </Grid>
                     </Grid>
-                    <Grid sx= {{px: '8%', py: '0.5%', backgroundColor: '#279E23', color: '#fff', borderRadius: '6px', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                            <Typography className= {styles.kanit1} fontWeight= "bold">
-                              แปลงเทียบเคียง
-                            </Typography>
+                    <Grid container sx= {{justifyContent: 'flex-start'}}>
+                        <Typography className= {styles.kanit1} fontWeight= "bold" sx= {{ml: '5%'}}>
+                          แปลงที่ดินที่มีสภาพคล้ายคลึงกัน 
+                        </Typography>
                     </Grid>
-                    <Grid sx ={{overflowY: 'scroll', height: '300px', my: '2%'}}>
-                    <Grid container sx= {{border: '2px solid #279E23', width: '550px', justifyContent: 'flex-end', borderRadius: '6px'}}>
+                    <Grid sx ={{overflowY: 'scroll', height: '300px', mb: '2%'}}>
+                    <Grid container sx= {{border: '2px solid #2F4266', width: '550px', justifyContent: 'flex-end', borderRadius: '6px'}}>
                       <Grid sx= {{width: '500px', mt: '2%'}}>
                         <Typography1 variant='text' color= "gray">
                         สำนักงานที่ดิน: 
@@ -355,12 +373,12 @@ export default function Inputlandplot() {
                       
                       <Grid container sx= {{justifyContent: 'space-evenly', alignItems: 'center', my: '1.5%'}}>
                         <Grid sx= {{display: 'flex', width: '220px'}}>
-                          <Checkbox size= "small" color= "success"/>
-                          <Grid sx= {{px: '8%', py: '0.5%', backgroundColor: '#1EAC1B', color: '#fff', borderRadius: '6px', my: '2%', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                            <Typography className= {styles.kanit1} fontWeight= "bold">
-                            เลือกแปลงเทียบเคียง
-                            </Typography>
-                          </Grid>
+                          <Radio size= "small"/>
+                            <Grid>
+                              <Plotoflandbutton variant='contained'>
+                              เลือกแปลงเทียบเคียง
+                              </Plotoflandbutton>
+                            </Grid>
                         </Grid>
                         <Grid>
                         <Plotoflandbutton variant='contained' startIcon= {<SiOpenstreetmap/>}>
@@ -369,7 +387,7 @@ export default function Inputlandplot() {
                         </Grid>
                       </Grid>
                     </Grid>
-                    <Grid container sx= {{border: '2px solid #279E23', width: '550px', justifyContent: 'flex-end', borderRadius: '6px', mt: '2%'}}>
+                    <Grid container sx= {{border: '2px solid #2F4266', width: '550px', justifyContent: 'flex-end', borderRadius: '6px', mt: '2%'}}>
                       <Grid sx= {{width: '500px', mt: '2%'}}>
                         <Typography1 variant='text' color= "gray">
                         สำนักงานที่ดิน: 
@@ -477,12 +495,12 @@ export default function Inputlandplot() {
                       
                       <Grid container sx= {{justifyContent: 'space-evenly', alignItems: 'center', my: '1.5%'}}>
                         <Grid sx= {{display: 'flex', width: '220px'}}>
-                          <Checkbox size= "small" color= "success"/>
-                          <Grid sx= {{px: '8%', py: '0.5%', backgroundColor: '#1EAC1B', color: '#fff', borderRadius: '6px', my: '2%', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>
-                            <Typography className= {styles.kanit1} fontWeight= "bold">
-                            เลือกแปลงเทียบเคียง
-                            </Typography>
-                          </Grid>
+                          <Radio size= "small"/>
+                          <Grid>
+                              <Plotoflandbutton variant='contained'>
+                              เลือกแปลงเทียบเคียง
+                              </Plotoflandbutton>
+                            </Grid>
                         </Grid>
                         <Grid>
                         <Plotoflandbutton variant='contained' startIcon= {<SiOpenstreetmap/>}>
@@ -493,12 +511,16 @@ export default function Inputlandplot() {
                     </Grid>
                     </Grid>
                     <Grid container sx= {{justifyContent: 'flex-end', width: '550px', my: '2%'}}>
-                      <Button variant='contained'className= {styles.kanit1} fontWeight= "bold" startIcon= {<GiSave/>} 
-                      sx= {{borderRadius: '8px', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', width: '140px'}}
-                      disabled
+                      <Savereportbutton variant='contained' startIcon= {<TextSnippetRoundedIcon/>} 
+                      
+                      >
+                        รายงาน
+                      </Savereportbutton>
+                      <Savereportbutton variant='contained'startIcon= {<GiSave/>} 
+                      
                       >
                         กดบันทึก
-                      </Button>
+                      </Savereportbutton>
                     </Grid>
                 </Formgrid>
                 <Shapegrid item xs={6.9} container>
@@ -510,3 +532,4 @@ export default function Inputlandplot() {
     </div>
   )
 }
+
