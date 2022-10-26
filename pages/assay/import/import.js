@@ -6,7 +6,7 @@ import styles from '../../../styles/Home.module.css';
 import { FcAddDatabase } from "react-icons/fc";
 
 
-import Test from './editimport'
+import Editrt from './edit'
 import Dialog from '@mui/material/Dialog';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -22,7 +22,7 @@ const top100Films = [
   { label: 'ทดสอบ', year: 1994 },
   ];
   
-export default function Contrast() {
+export default function Importt() {
 
   const [errorChangwat, setErrorChangwat] = React.useState(false);
   const [errorBranch, setErrorBranch] = React.useState(false);
@@ -60,14 +60,14 @@ export default function Contrast() {
     setErrorZ(false);
   }
 
-
+  const [show, setShow] = React.useState(true);
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleCloseOpen = () => {
     setOpen(false);
   };
 
@@ -75,13 +75,15 @@ export default function Contrast() {
 
   return (
     <div>
+      { show ?
       <Grid sx={{ 
           bgcolor: 'white',
           borderBottomRightRadius: '10px',
           borderBottomLeftRadius: '10px',
           borderTopLeftRadius: '6px',
           borderTopRightRadius: '6px',
-          boxShadow: 20 
+          boxShadow: 20,
+          minWidth: '1000px',
       }}>
 
         <Grid sx={{ 
@@ -103,7 +105,16 @@ export default function Contrast() {
           }}>
 
           <Button variant="contained" color='primary' disabled className={styles.Buttondis}
-          sx={{ bgcolor: '#2F4266', color: 'white', width: '15%', height: '150px' }}>
+          sx={{ 
+            bgcolor: '#2F4266', 
+            color: 'white', 
+            width: '15%', 
+            height: '150px',
+            '&:disabled':{
+              bgcolor: '#2F4266', 
+              color: 'white', 
+            }
+          }}>
             <FcAddDatabase size={130}/>
           </Button>
 
@@ -217,6 +228,7 @@ export default function Contrast() {
               if ( files != '' )
               if ( zones != '' ){
                 setOpen(true);
+                setShow(false);
                 setValueChangwat('');
                 setValueBranch('');
                 setDocument('');
@@ -231,38 +243,26 @@ export default function Contrast() {
 
           </Grid>
         </Grid>
+        
 
 
 
       </Grid>
+      : null }
 
 
-      <Dialog
-        fullScreen
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Transition}
-      >
-        <AppBar sx={{ position: 'relative', zIndex: 300 }}>
-          <Toolbar sx={{ bgcolor: '#2F4266'}}>
-            <IconButton
-              edge="start"
-              color="inherit"
-              onClick={handleClose}
-              aria-label="close"
-            >
-              <CloseIcon />
-            </IconButton>
-            <Typography sx={{ ml: 2, flex: 1 }} variant="h6" component="div" className={styles.kanit}>
-              นำเข้าไฟล์ shp,kmz
-            </Typography>
-            <Button autoFocus color="inherit" onClick={handleClose} className={styles.kanit}>
-              ปิด
-            </Button>
-          </Toolbar>
-        </AppBar>
-        <Test/>
-      </Dialog>
+      { open ?
+      <Grid sx={{ 
+        position: 'absolute', 
+        zIndex: 10,
+        display: 'flex',
+        justifyContent: 'flex-start',
+        p: '1%',
+        }}>
+        <Editrt />
+      </Grid>
+      : null }
+
     </div>
   )
 }

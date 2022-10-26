@@ -9,7 +9,9 @@ import { HiDocumentSearch, HiDatabase, HiDocumentReport } from "react-icons/hi";
 import { GiScales } from "react-icons/gi";
 
 import Search from '../search/search'
-import Import from '../import/alertimport'
+
+import Import1 from '../import/warn'
+import Import2 from '../import/import'
 
 
 export default function Navbar() {
@@ -51,6 +53,7 @@ export default function Navbar() {
 
   const [open1, setOpen1] = React.useState(true);
   const [open2, setOpen2] = React.useState(false);
+  const [open22, setOpen22] = React.useState(false);
   const [open3, setOpen3] = React.useState(false);
   const [open4, setOpen4] = React.useState(false);
   const [open5, setOpen5] = React.useState(false);
@@ -74,8 +77,18 @@ export default function Navbar() {
             <Grid container sx={{bgcolor: '#2F4266', boxShadow: `6px 6px 9px rgba(0, 0, 0, 0.25)`, p: '1%' }}>
                 <Stack spacing={12} direction="row" sx={{ ml: 10 }}>
                   <Button variant="text" className={styles.kanu} >หน้าหลัก</Button>
-                  <Button variant="text" className={styles.kanu} >ค้นหา</Button>
-                  <Button variant="text" className={styles.kanu} >นำเข้า</Button>
+                  <Button variant="text" className={styles.kanu} 
+                  onClick={() => {
+                    setOpen1(true);
+                    setOpen2(false);
+                    setOpen22(false);
+                  }}>ค้นหา</Button>
+                  <Button variant="text" className={styles.kanu} 
+                  onClick={() => {
+                    setOpen1(false);
+                    setOpen2(true);
+                    setOpen22(false);
+                  }}>นำเข้า</Button>
                   <Button variant="text" className={styles.kanu} >เทียบเคียง</Button>
                   <Button variant="text" className={styles.kanu} >รายงาน</Button>
                 </Stack>
@@ -88,15 +101,52 @@ export default function Navbar() {
         <Box sx={{ 
           position: 'absolute', 
           zIndex: 10,
-          width: '100%',
-          height: '100%',
           display: 'flex',
           justifyContent: 'flex-start',
           p: '1%',
           }}>
-        <Search />
+        <Search onClick={() => {
+          setOpen1(false);
+          setOpen2(true);
+          setOpen3(false);
+          setOpen4(false);
+        }}/>
         </Box>
         : null }
+
+
+        { open2 ?
+        <Box sx={{ 
+          position: 'absolute', 
+          zIndex: 10,
+          top: 500,
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          }}>
+        <Import1 onClick={() => {
+          setOpen1(false);
+          setOpen2(false);
+          setOpen22(true);
+          setOpen3(false);
+          setOpen4(false);
+        }}/>
+        </Box>
+        : null }
+
+
+        { open22 ?
+        <Box sx={{ 
+          position: 'absolute', 
+          zIndex: 10,
+          display: 'flex',
+          justifyContent: 'flex-start',
+          p: '1%',
+          }}>
+        <Import2 />
+        </Box>
+        : null }
+
+
         
 
 

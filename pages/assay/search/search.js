@@ -12,8 +12,10 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Select from '@mui/material/Select';
 import Collapse from '@mui/material/Collapse';
 
+
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
 import { styled } from '@mui/material/styles';
+
 
 
 
@@ -21,7 +23,7 @@ const top100Films = [
   { label: 'ทดสอบ', year: 1994 },
   ];
 
-export default function Search() {
+export default function Search(props) {
 
   // menu top
   const [errorD, setErrorD] = React.useState(false);
@@ -183,7 +185,6 @@ export default function Search() {
   }
   //value close 
 
-
   const Backbutton = styled(Button)({
     borderRadius: '10px', 
     width: '130px', 
@@ -224,7 +225,6 @@ export default function Search() {
       },
   });
 
- 
   return (
     <div>
       <Grid sx={{ 
@@ -1213,7 +1213,7 @@ export default function Search() {
                 
         <Grid container sx= {{justifyContent: 'space-evenly', mt: '5%'}}>
           <Backbutton variant= "contained" onClick={() => { setModalTrue(false); }}>กลับหน้าค้นหา</Backbutton>
-          <Inputbutton variant= "contained">นำเข้า</Inputbutton>
+          <Inputbutton variant= "contained" onClick={props.onClick}>นำเข้า</Inputbutton>
         </Grid>
         </Grid>
         </Box>

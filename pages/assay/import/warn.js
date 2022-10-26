@@ -1,10 +1,12 @@
+import React from 'react'
 import { Box, Button, Grid, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles';
-import styles from '../../../styles/Contrast.module.css';
-import React from 'react'
+import styles from '../../../styles/Home.module.css';
 
 
-export default function Alertimport(){
+
+
+export default function Warning(props){
     
     const Inputbutton = styled(Button)({
         marginBottom: '5%',
@@ -24,10 +26,13 @@ export default function Alertimport(){
       });
 
     
+    const [open, setOpen] = React.useState(true);
+    
+
+    
     
   return (
     <div>
-
         <Box>
             <Grid sx= {{m: '5%', borderRadius: '10px', width: '546px', borderRight: '10px', boxShadow: '4px 5px 18px rgba(0, 0, 0, 0.25)'}}>
                 <Grid container sx= {{backgroundColor: '#DA3232', borderRadius: '10px 10px 0px 0px', justifyContent: 'center', alignItems: 'center', height: '40px'}}>
@@ -74,12 +79,13 @@ export default function Alertimport(){
                     
                     </Grid>
 
-                    <Inputbutton variant= "contained">
+                    <Inputbutton variant= "contained" onClick={props.onClick}>
                         นำเข้า
                     </Inputbutton>
                 </Grid>
             </Grid>
         </Box>
+
 
 
     </div>

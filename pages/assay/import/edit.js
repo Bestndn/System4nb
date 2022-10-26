@@ -17,7 +17,9 @@ const optionTypes = [
     { key: '2', title: 'Un-Structure' }
 ]
 
-export default function Test() {
+const onlyNumbers = (e) => { e.target.value = e.target.value.replace(/[^0-9]/g, '') };
+
+export default function Editt() {
 
     const [open, setOpen] = React.useState(false);
 
@@ -43,6 +45,11 @@ export default function Test() {
       const Typography1 = styled(Typography)({
         fontFamily: 'kanit',
         color: 'black'
+      });
+
+      const Typography2 = styled(Typography)({
+        fontFamily: 'kanit',
+        color: 'red'
       });
     
       const TextField1 = styled(TextField)({
@@ -94,6 +101,73 @@ export default function Test() {
         },
       });
 
+      const [valuechanodeland , setValuechanodeland] = React.useState('');
+      const [valueSurvey, setValueSurvey] = React.useState('');
+      const [valueUTM1, setValueUTM1] = React.useState('');
+      const [valueUTM2, setValueUTM2] = React.useState(null);
+      const [valueUTM3, setValueUTM3] = React.useState('');
+      const [valueUTM4, setValueUTM4] = React.useState('');
+      const [valueUTMScale, setValueScale] = React.useState('');
+
+      const [errorchanodeland , setErrorchanodeland] = React.useState(false);
+      const [errorSurvey, setErrorSurvey] = React.useState(false);
+      const [errorUTM1, setErrorUTM1] = React.useState(false);
+      const [errorUTM2, setErrorUTM2] = React.useState(false);
+      const [errorUTM3, setErrorUTM3] = React.useState(false);
+      const [errorUTM4, setErrorUTM4] = React.useState(false);
+      const [errorUTMScale, setErrorUTMScale] = React.useState(false);
+
+      const handleSurvey = (event, value) => {
+        setValueSurvey(value);
+        console.log(value);
+        setErrorSurvey(false);
+      }
+    
+    const handleUTM1 = (event, value) => {
+        setValueUTM1(value);
+        console.log(value);
+        setErrorUTM1(false);
+      }
+    
+      const handleUTM2 = (event, value) => {
+        setValueUTM2(value);
+        console.log(value);
+        setErrorUTM2(false);
+      }
+    
+      const handleUTM3 = (event, value) => {
+        setValueUTM3(value);
+        console.log(value);
+        setErrorUTM3(false);
+      }
+    
+      const handleUTM4 = (event, value) => {
+        setValueUTM4(value);
+        console.log(value);
+        setErrorUTM4(false);
+      }
+    
+      const handleUTMScale = (event, value) => {
+        setValueScale(value);
+        console.log(value);
+        setErrorUTMScale(false);
+      }
+
+      const [count, setCount] = React.useState(1);
+      const increment = () => {
+        setCount((c) => c + 1);
+      };
+
+      const unincrement = () => {
+        setCount((c) => c - 1);
+      };
+
+      const [disbut, setDisbut] = React.useState(true);
+      const [editoff, setEditoff] = React.useState(false);
+
+      
+
+
   return (
     <div>
         <Box sx= {{height: '100vh', minWidth: '1200px'}}>
@@ -106,45 +180,70 @@ export default function Test() {
                         </Typography>
                     </Grid>
                     <Editgrid container>
-                        <Typography1 variant='text'>
-                        โฉนดที่ดินเลขที่
-                        </Typography1>
+                        <div>
+                        <Typography1 variant='text'> โฉนดที่ดินเลขที่ </Typography1>
+                        {/* <Typography2 variant='text'> * </Typography2> */}
+                        </div>
                         <TextField1
+                            disabled={disbut}
                             sx={{ "& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }} 
                             size= "small"
+                            inputProps={
+                                {maxLength: 4}
+                              }
+                              onInput={(e) => onlyNumbers(e) }
                         />
                     </Editgrid>
                     <Editgrid container>
-                        <Typography1 variant='text'>
-                        หน้าสำรวจ
-                        </Typography1>
+                        <div>
+                        <Typography1 variant='text'> หน้าสำรวจ </Typography1>
+                        <Typography2 variant='text'> * </Typography2>
+                        </div>
                         <TextField1 
+                            disabled={disbut}
                             sx={{ "& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }}
                             size= "small"
+                            inputProps={
+                                {maxLength: 4}
+                              }
+                              onInput={(e) => onlyNumbers(e) }
                         />
                     </Editgrid>
                     <Editgrid container>
-                        <Typography1 variant='text'>
-                            UTMMAP1
-                        </Typography1>
+                        <div>
+                        <Typography1 variant='text'> UTMMAP1 </Typography1>
+                        <Typography2 variant='text'> * </Typography2>
+                        </div>
                         <TextField1 
+                            disabled={disbut}
                             sx={{ "& .MuiInputBase-root": {
                             backgroundColor: '#fff', fontFamily: 'kanit'
                             } }}
                             size= "small"
+                            inputProps={
+                                {maxLength: 4}
+                              }
+                              onInput={(e) => onlyNumbers(e) }
                         />
                     </Editgrid>
                     <Editgrid container >
-                        <Typography1 variant='text'>
-                            UTMMAP2
-                        </Typography1>
+                        <div>
+                        <Typography1 variant='text'> UTMMAP2 </Typography1>
+                        <Typography2 variant='text'> * </Typography2>
+                        </div>
                         <Autocomplete
+                            disabled={disbut}
                             id="combo-box-demo"
-                            options={optionTypes}
+                            options={[
+                                {value:'1', title:'I'},
+                                {value:'2', title:'II'}, 
+                                {value:'3', title:'III'}, 
+                                {value:'4', title:'IV'}]
+                            }
                             getOptionLabel={(option) => option.title}
                             disableClearable
                             classes={{ option: styles.kanit}}
@@ -156,24 +255,54 @@ export default function Test() {
                         />              
                     </Editgrid>
                     <Editgrid container >
-                        <Typography1 variant='text'>
-                            UTMMAP3
-                        </Typography1>
+                        <div>
+                        <Typography1 variant='text'> UTMMAP3 </Typography1>
+                        <Typography2 variant='text'> * </Typography2>
+                        </div>
                         <TextField1 
+                            disabled={disbut}
                             sx={{ "& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }}
                             size= "small"
+                            inputProps={
+                                {maxLength: 4}
+                              }
+                              onInput={(e) => onlyNumbers(e) }
                         />
                     </Editgrid>
                     <Editgrid container >
-                        <Typography1 variant='text'>
-                        UTMMAP4
-                        </Typography1>
+                        <div>
+                        <Typography1 variant='text'> UTMMAP4 </Typography1>
+                        <Typography2 variant='text'> * </Typography2>
+                        </div>
                         <Autocomplete
+                            disabled={disbut}
                             id="combo-box-demo"
-                            options={optionTypes}
-                            getOptionLabel={(option) => option.title}
+                            options={[
+                                {value4:'1', title4:'01'},
+                                {value4:'2', title4:'02'}, 
+                                {value4:'3', title4:'03'}, 
+                                {value4:'4', title4:'04'},
+                                {value4:'5', title4:'05'},
+                                {value4:'6', title4:'06'},
+                                {value4:'7', title4:'07'},
+                                {value4:'8', title4:'08'},
+                                {value4:'9', title4:'09'},
+                                {value4:'10', title4:'10'},
+                                {value4:'11', title4:'11'},
+                                {value4:'12', title4:'12'},
+                                {value4:'13', title4:'13'},
+                                {value4:'14', title4:'14'},
+                                {value4:'15', title4:'15'},
+                                {value4:'16', title4:'16'},
+                                {value4:'17', title4:'17'},
+                                {value4:'18', title4:'18'},
+                                {value4:'19', title4:'19'},
+                                {value4:'20', title4:'20'},
+                            ]
+                            }
+                            getOptionLabel={(option) => option.title4}
                             disableClearable
                             classes={{ option: styles.kanit}}
                             sx={{ width: '70%',"& .MuiInputBase-root": {
@@ -181,34 +310,55 @@ export default function Test() {
                             } }}
                             renderInput={(params) => <TextField {...params}  label= "" size= "small"
                             />}
+                            inputProps={
+                                {maxLength: 2}
+                              }
+                              onInput={(e) => onlyNumbers(e) }
                         />
                     </Editgrid>
                     <Editgrid container >
-                        <Typography1 variant='text'>
-                        UTMSCALE
-                        </Typography1>
+                        <div>
+                        <Typography1 variant='text'> UTMSCALE </Typography1>
+                        <Typography2 variant='text'> * </Typography2>
+                        </div>
                         <Autocomplete
+                            disabled={disbut}
                             disablePortal
                             id="combo-box-demo"
-                            options={optionTypes}
-                            getOptionLabel={(option) => option.title}
+                            options={[
+                                {values:'1000', titles:'1000'},
+                                {values:'2000', titles:'2000'}, 
+                                {values:'3000', titles:'3000'}, 
+                                {values:'4000', titles:'4000'}]
+                            }
+                            getOptionLabel={(option) => option.titles}
                             disableClearable
                             classes={{ option: styles.kanit}}
                             sx={{ width: '70%',"& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                             } }}
                             renderInput={(params) => <TextField {...params} label="" size= "small"/>}
+                            inputProps={
+                                {maxLength: 4}
+                              }
+                              onInput={(e) => onlyNumbers(e) }
                         />
                     </Editgrid>
                     <Editgrid container >
-                        <Typography1 variant='text'>
-                        เลขที่ดิน
-                        </Typography1>
+                        <div>
+                        <Typography1 variant='text'> เลขที่ดิน </Typography1>
+                        <Typography2 variant='text'> * </Typography2>
+                        </div>
                         <TextField1
+                            disabled={disbut}
                             sx={{ "& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }}
                             size= "small" 
+                            inputProps={
+                                {maxLength: 4}
+                              }
+                              onInput={(e) => onlyNumbers(e) }
                         />
                     </Editgrid>
                     <Editgrid container >
@@ -216,10 +366,14 @@ export default function Test() {
                         ไร่
                         </Typography1>
                         <TextField1 
+                            disabled={disbut}
                             sx={{ "& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }}
                             size= "small" 
+                            inputProps={
+                                {maxLength: 4}
+                              }
                         />
                     </Editgrid>
                     <Editgrid container >
@@ -227,10 +381,14 @@ export default function Test() {
                         งาน
                         </Typography1>
                         <TextField1 
+                            disabled={disbut}
                             sx={{ "& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }}
                             size= "small" 
+                            inputProps={
+                                {maxLength: 4}
+                              }
                         />
                     </Editgrid>
                     <Editgrid container >
@@ -238,28 +396,40 @@ export default function Test() {
                         ตารางวา
                         </Typography1>
                         <TextField1 
+                            disabled={disbut}
                             sx={{ "& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }}
                             size= "small" 
+                            inputProps={
+                                {maxLength: 4}
+                              }
                         />
                     </Editgrid>
                     
                     <Grid container sx= {{justifyContent: 'flex-end', mt: '3%', mb: '5%', width: '90%'}}>
                         <Grid sx= {{width: '70%'}}>
                             <Grid container sx= {{justifyContent: 'space-between'}}>
-                                <ConfirmEdit variant='contained'>
+                                <ConfirmEdit variant='contained' disabled={editoff}
+                                sx={{ '&:disabled':{ bgcolor: 'white', color: '#2F4266' }}}
+                                onClick={() => {setDisbut(false); setEditoff(true);}}>
                                 <EditRoundedIcon/>
                                     แก้ไข
                                 </ConfirmEdit>
                                 
-                                <Page variant='contained'  
+                                <Page variant='contained' disabled={count==1?true:false} onClick={unincrement} 
+                                sx={{ '&:disabled':{ bgcolor: '#2F4266', color: 'white' }}}
                                 startIcon={<AiFillCaretLeft/>}
                                 >
                                     ก่อนหน้า
                                 </Page>
 
-                                <Page variant='contained' 
+                                <text>{count}</text>
+                                <text>/</text>
+                                <text>3</text>
+
+                                <Page variant='contained' disabled={count==3?true:false} onClick={increment} 
+                                sx={{ '&:disabled':{ bgcolor: '#2F4266', color: 'white' }}}
                                 endIcon={<AiFillCaretRight/>}
                                 >
                                     ถัดไป
@@ -281,7 +451,7 @@ export default function Test() {
                     
                 </Formgrid>
                 <Shapegrid item xs={5.9} container>
-                    
+
                 </Shapegrid>
 
             </Grid>
