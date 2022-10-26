@@ -17,7 +17,7 @@ const optionTypes = [
     { key: '2', title: 'Un-Structure' }
 ]
 
-export default function Test() {
+export default function Inputinfo() {
 
     const [open, setOpen] = React.useState(false);
 

@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import styles from '../../styles/Home.module.css';
 import { GiGears } from "react-icons/gi";
+import { GrCompare } from "react-icons/gr";
 import Image from 'next/image'
 import React from 'react'
 
@@ -25,26 +26,25 @@ export default function Compare() {
 
   return (
     <div>
-        <Box>
+        <Box sx= {{position: 'absolute'}}>
             <Grid container 
             sx= {{
                 width: '850px', 
-                m: '5%', 
+                mt: '1%', 
+                ml: '1%',
                 borderRadius: '8px', 
                 boxShadow: '10px 10px 4px rgba(0, 0, 0, 0.25)',
-                backgroundColor: '#fff'
+                backgroundColor: '#fff',
                 }}
                 >
                 <Grid sx= {{
                     backgroundColor: '#2F4266', 
                     width: '100%', 
                     borderRadius: '8px 8px 0px 0px',
-                    py: '0.5%'
+                    py: '1%'
                     }}
                     >
                     <Typography variant='text' className={styles.kanit} color= "#fff" 
-                    fontSize= "20px" 
-                    fontWeight= "bold" 
                     sx= {{ml: '5%'}}
                     >
                         เทียบเคียง
@@ -63,7 +63,7 @@ export default function Compare() {
                             backgroundColor: '#2F4266', 
                             borderRadius: '8px', 
                             boxShadow: '10px 10px 4px rgba(0, 0, 0, 0.25)',
-                            p: '10%'
+                            p: '10%',
                             }}
                             >
                             <Image src="/vector.png" alt="Banner" width={`92px`}  height={'101px'}/>
@@ -72,7 +72,7 @@ export default function Compare() {
                     <Grid >
                         <Cpbutton variant='contained'>
                             <GiGears size= {55}/>
-                            <Typography variant='button' fontWeight= "bold" fontSize= "18px" className= {styles.kanit} 
+                            <Typography variant='button' fontSize= "18px" className= {styles.kanit} 
                             sx= {{ml: '5%'}}
                             >
                                 กดเทียบเคียง

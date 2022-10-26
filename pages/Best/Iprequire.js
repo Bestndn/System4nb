@@ -3,7 +3,8 @@ import { styled } from '@mui/material/styles';
 import styles from '../../styles/Home.module.css';
 import React from 'react'
 
-export default function Importrequire(){
+
+export default function Inputrequire(){
     
     const Inputbutton = styled(Button)({
         marginBottom: '5%',
@@ -21,11 +22,16 @@ export default function Importrequire(){
             transform: 'scale(1.02)'
           },
       });
+    const Typographytext = styled(Typography)({
+        fontFamily: 'kanit',
+        color: 'black'
+      });
     
   return (
     <div>
-        <Box>
-            <Grid sx= {{m: '5%', borderRadius: '10px', width: '546px', borderRight: '10px', boxShadow: '4px 5px 18px rgba(0, 0, 0, 0.25)'}}>
+        <Box sx= {{position: 'absolute', width: '100%', height: '80%', minWidth: '1200px', minHeight: '600px'}}>
+            <Grid container sx= {{justifyContent: 'center', alignItems: 'center', height: '100%'}}>
+            <Grid  sx= {{borderRadius: '10px', width: '546px', borderRight: '10px', boxShadow: '10px 10px 4px rgba(0, 0, 0, 0.25)'}}>
                 <Grid container sx= {{backgroundColor: '#DA3232', borderRadius: '10px 10px 0px 0px', justifyContent: 'center', alignItems: 'center', height: '40px'}}>
                     <Typography variant='text' color= '#fff' fontWeight= 'bold' className= {styles.kanit}>
                         ข้อกำหนดในการนำเข้า
@@ -35,37 +41,37 @@ export default function Importrequire(){
                     <Grid container sx= {{width: '90%', my: '5%'}}>
                         
                         <Grid container sx= {{mb: '2%'}}>
-                        <Typography variant='text' className= {styles.kanit}>
+                        <Typographytext variant='text' className= {styles.kanit}>
                         •  กรณีนำเข้ารูปแปลง (shp,kmz) ต้องได้รับจาก 
-                        </Typography>
-                        <Typography variant='text' className= {styles.kanit} sx= {{mx: '1%', fontWeight: 'bold'}}>
+                        </Typographytext>
+                        <Typographytext variant='text' className= {styles.kanit} sx= {{mx: '1%', fontWeight: 'bold'}}>
                             กรมที่ดิน
-                        </Typography>
-                        <Typography variant='text' className= {styles.kanit}>
+                        </Typographytext>
+                        <Typographytext variant='text' className= {styles.kanit}>
                             เท่านั้น
-                        </Typography>
+                        </Typographytext>
                     </Grid>
                     <Grid container sx= {{mb: '2%'}}>
-                        <Typography variant='text' className= {styles.kanit} >
+                        <Typographytext variant='text' className= {styles.kanit} >
                         •  พิกัดรูปแปลง ต้องเป็น
-                        </Typography>
-                        <Typography variant='text' className= {styles.kanit} sx= {{mx: '1%', fontWeight: 'bold'}}>
+                        </Typographytext>
+                        <Typographytext variant='text' className= {styles.kanit} sx= {{mx: '1%', fontWeight: 'bold'}}>
                             Indian 1975 Zone 47,Zone 48 
-                        </Typography>
-                        <Typography variant='text' className= {styles.kanit} >
+                        </Typographytext>
+                        <Typographytext variant='text' className= {styles.kanit} >
                             เท่านั้น
-                        </Typography>
+                        </Typographytext>
                     </Grid>
                     <Grid container sx= {{mb: '2%'}}>
-                        <Typography variant='text' className= {styles.kanit}>
-                        •  นำเข้าได้ ไม่เกิน 100 แปลง
-                        </Typography>
-                        <Typography variant='text' className= {styles.kanit} sx= {{mx: '1%', fontWeight: 'bold'}}>
+                        <Typographytext variant='text' className= {styles.kanit}>
+                        •  นำเข้าข้อมูลรูปแปลงได้ 
+                        </Typographytext>
+                        <Typographytext variant='text' className= {styles.kanit} sx= {{mx: '1%', fontWeight: 'bold'}}>
                             ไม่เกิน
-                        </Typography>
-                        <Typography variant='text' className= {styles.kanit}>
-                            แปลง
-                        </Typography>
+                        </Typographytext>
+                        <Typographytext variant='text' className= {styles.kanit}>
+                            20 แปลง
+                        </Typographytext>
                     </Grid>
                     
                     </Grid>
@@ -75,7 +81,8 @@ export default function Importrequire(){
                     </Inputbutton>
                 </Grid>
             </Grid>
-        </Box>
+            </Grid>
+         </Box>
     </div>
   )
 }

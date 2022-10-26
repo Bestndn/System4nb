@@ -8,12 +8,12 @@ import IconButton from '@mui/material/IconButton';
 
 
 
-export default function Infocard(){
+export default function Searchcardnorsor () {
   
   return (
   <div> 
     <Box sx= {{maxWidth: '600px', bgcolor: '#E5E7F9 ', boxShadow: '4px 5px 18px rgba(0, 0, 0, 0.25)', borderRadius: '10px', mt: '5%', ml: '5%'}}>
-        <Grid container sx= {{alignItems: 'center', justifyContent: 'flex-end',backgroundColor: '#2066EA', borderRadius: '10px 10px 0px 0px'}}>
+        <Grid container sx= {{alignItems: 'center', justifyContent: 'flex-end',backgroundColor: '#EAB120 ', borderRadius: '10px 10px 0px 0px'}}>
                 <Grid sx= {{width: '200px'}}>
                   <Grid container sx= {{justifyContent: 'center'}}>
                     <Typography variant= "h6" className= {styles.kanit} sx= {{color: '#fff', fontWeight: 'bold'}}>
@@ -43,7 +43,7 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      ประกาศแบบเรียงตามเลขโฉนด
+                      ประกาศแบบเรีบงตามเลขที่ดิน
                       </Typography>
                     </Grid>
                     </Grid>
@@ -77,25 +77,12 @@ export default function Infocard(){
                     <Grid container sx= {{mb: '1%'}}>
                     <Grid container sx= {{width: '45%', justifyContent: 'flex-end', mx: '2.5%' }}>
                       <Typography className= {styles.kanit} fontWeight= "bold" sx= {{color: '#314365'}}>
-                      โฉนดที่ดินเลขที่
+                      น.ส. 3กเลขที่
                       </Typography>
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      2086
-                      </Typography>
-                    </Grid>
-                    </Grid>
-
-                    <Grid container sx= {{mb: '1%'}}>
-                    <Grid container sx= {{width: '45%', justifyContent: 'flex-end', mx: '2.5%' }}>
-                      <Typography className= {styles.kanit} fontWeight= "bold" sx= {{color: '#314365'}}>
-                      หน้าสำรวจ
-                      </Typography>
-                    </Grid>
-                    <Grid container sx= {{width: '45%', mx: '2.5%'}}>
-                      <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      1721
+                      -
                       </Typography>
                     </Grid>
                     </Grid>
@@ -108,7 +95,7 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      17
+                      218
                       </Typography>
                     </Grid>
                     </Grid>
@@ -121,7 +108,7 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      4836 I 4638-00 (4000)
+                      4836 IV 026 (5000)
                       </Typography>
                     </Grid>
                     </Grid>
@@ -134,7 +121,7 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      กลอนโด
+                     -
                       </Typography>
                     </Grid>
                     </Grid>
@@ -147,11 +134,11 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      ด่านมะขามเตี้ย
+                      -
                       </Typography>
                     </Grid>
                     </Grid>
-                    
+
                     <Grid container sx= {{mb: '1%'}}>
                     <Grid container sx= {{width: '45%', justifyContent: 'flex-end', mx: '2.5%' }}>
                       <Typography className= {styles.kanit} fontWeight= "bold" sx= {{color: '#314365'}}>
@@ -164,7 +151,7 @@ export default function Infocard(){
                       </Typography>
                     </Grid>
                     </Grid>
-
+                    
                     <Grid container sx= {{mb: '1%'}}>
                     <Grid container sx= {{width: '45%', justifyContent: 'flex-end', mx: '2.5%' }}>
                       <Typography className= {styles.kanit} fontWeight= "bold" sx= {{color: '#314365'}}>
@@ -173,7 +160,7 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      2-3-82
+                      -
                       </Typography>
                     </Grid>
                     </Grid>
@@ -199,7 +186,7 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      S06090
+                      S07625
                       </Typography>
                     </Grid>
                     </Grid>
@@ -212,7 +199,7 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      ถนนสายบ้านกลอนโด-บ้านทุ่งมะขามเฒ่า
+                      ซอยทาง
                       </Typography>
                     </Grid>
                     </Grid>
@@ -238,7 +225,7 @@ export default function Infocard(){
                     </Grid>
                     <Grid container sx= {{width: '45%', mx: '2.5%'}}>
                       <Typography className= {styles.kanit} sx= {{color: 'black'}}>
-                      95
+                      129
                       </Typography>
                     </Grid>
                     </Grid>

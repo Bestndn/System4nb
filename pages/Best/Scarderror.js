@@ -6,7 +6,7 @@ import styles from '../../styles/Home.module.css';
 import { styled } from '@mui/material/styles';
 
 
-export default function Compelete() {
+export default function Searcherror() {
 
   const Backbutton = styled(Button)({
     borderRadius: '10px', 
