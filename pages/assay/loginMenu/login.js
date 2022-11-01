@@ -106,7 +106,7 @@ const [values, setValues] = React.useState({
         >
           <Grid container sx= {{ alignItems: 'center', width: '100%', height: '25%', my: '1.5%', mx: '2%'}}>
               <Grid>
-              <Image src="/Comu.png" alt="Banner" width={`650px`}  height={'172px'} />
+              <Image src="/Comu.png" alt="Banner" width={650}  height={172} />
               </Grid>
           </Grid>
         </Grid>

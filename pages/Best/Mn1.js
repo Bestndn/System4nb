@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Grid, Typography, Button, Link } from '@mui/material'
+import { Box, Grid, Typography, Button, Link, ButtonBase } from '@mui/material'
 import { styled } from '@mui/material/styles';
 import styles from '../../styles/Home.module.css';
 import Fab from '@mui/material/Fab';
@@ -16,13 +16,15 @@ export default function Menu() {
         backgroundImage: 'url(/image2.png)', 
         backgroundSize: 'cover', 
         backgroundPosition: 'bottom',
+        
       });
     
       const Menubutton = styled(Button)({
-        backgroundColor: '#fff',
+        backgroundColor: 'white',
         color: 'black', 
         height: '100px',
         borderRadius: '20px',
+        zIndex: '1000',
         boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
       });
 
@@ -34,10 +36,8 @@ export default function Menu() {
         color: '#fff', 
         justifyContent: 'space-evenly',
         zIndex: '300',
-        fontFamily: [
-            'kanit',
-          ].join(','),
-          '&:hover': {
+        fontFamily: 'kanit',
+        '&:hover': {
             backgroundColor: '#fff',
             color: '#E64D3B',
             transform: 'scale(1.02)'
@@ -54,7 +54,7 @@ export default function Menu() {
         height: '45px', 
         justifyContent: 'flex-start',
         border: '1px solid #ECECEC',
-        zIndex: '300',
+        zIndex: '1000',
         fontFamily: [
             'kanit',
           ].join(','),
@@ -75,44 +75,47 @@ export default function Menu() {
         
         <Grid container sx= {{height: '260px'}}>
             <Grid container sx= {{justifyContent: 'space-evenly'}}>
-                <Box> 
-                    <Menubutton variant= "contained" className= {styles.brdrleft1}>
+                    <Menubutton variant= "contained" className= {styles.brdrleft1} component= "Grid">
                         <Typography variant= "button" fontWeight= "bold" className= {styles.kanit1} >
                             ระบบบริหารจัดการข้อมูลในรูปแบบ Data Leke
                         </Typography>
                     </Menubutton>
-                </Box>
-                <Grid >
-                    <Menubutton variant= "contained" className= {styles.brdrleft2}>
-                        <Typography variant= "button" fontWeight= "bold" className= {styles.kanit1}>
-                            ระบบการประเมินราคาที่ดินที่สำหรับเอกสารสิทธิ
-                            ประเภทอื่นนอกเหนือจาดโฉนดที่ดินและ
-                            หนังสือรับรองการทำประโยชน์ (น.ส. 3ก.)
-                        </Typography>
+                    <Menubutton variant= "contained" className= {styles.brdrleft2} component= "Grid">
+                        <Grid container sx= {{justifyContent: 'center'}}>
+                            <Typography variant= "button" fontWeight= "bold" className= {styles.kanit1}>
+                                ระบบการประเมินราคาที่ดินที่สำหรับเอกสารสิทธิ
+                            </Typography>
+                            <Typography variant= "button" fontWeight= "bold" className= {styles.kanit1}>
+                                ประเภทอื่นนอกเหนือจาดโฉนดที่ดินและ
+                            </Typography>
+                            <Typography variant= "button" fontWeight= "bold" className= {styles.kanit1}>
+                                หนังสือรับรองการทำประโยชน์ (น.ส. 3ก.)
+                            </Typography>
+                        </Grid>
+                        
                     </Menubutton>
-                </Grid>
             </Grid>
             <Grid container sx= {{justifyContent: 'space-evenly', mt: '4%'}}>
-                <Grid >
                 <Link
                     href={'./Menu1.js'}
                     underline="none"
                    >
-                    <Menubutton variant= "contained" className= {styles.brdrleft3}>
+                    <Menubutton variant= "contained" className= {styles.brdrleft3} component= "Grid">
+                        <Grid container sx= {{justifyContent: 'center'}}>
                         <Typography variant= "button" fontWeight= "bold" className= {styles.kanit1} >
                             ระบบการประเมินราคาที่ดินที่ไม่ปรากฎ
+                        </Typography>
+                        <Typography variant= "button" fontWeight= "bold" className= {styles.kanit1} >
                             ในบัญชีราคาประเมินที่ดิน
                         </Typography>
+                        </Grid>
                     </Menubutton>
                 </Link>
-                </Grid>
-                <Grid >
-                    <Menubutton variant= "contained" className= {styles.brdrleft4}>
+                    <Menubutton variant= "contained" className= {styles.brdrleft4} component= "Grid">
                         <Typography variant= "button" fontWeight= "bold" className= {styles.kanit1}>
                             ระบบเชื่อมโยงแลกเปลี่ยนข้อมูล
                         </Typography>
                     </Menubutton>
-                </Grid>
             </Grid>
         </Grid>
 
@@ -122,7 +125,7 @@ export default function Menu() {
             sx= {{mr: '1%', mb: '3%'}} 
             underline="none"
             >
-            <Exitbutton>
+            <Exitbutton component= "Grid">
                 <Typography variant= "button" className= {styles.kanit} fontWeight= "bold">
                     ออกจากระบบ
                 </Typography>

@@ -84,7 +84,7 @@ export default function Compare() {
                             p: '10%'
                             }}
                             >
-                            <Image src="/vector.png" alt="Banner" width={`92px`}  height={'101px'}/>
+                            <Image src="/vector.png" alt="Banner" width={92}  height={101}/>
                         </Grid>
                     </Grid>
                     <Grid >

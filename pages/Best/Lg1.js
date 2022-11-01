@@ -46,34 +46,28 @@ const [values, setValues] = React.useState({
   };
 
   const Signinbutton = styled(Button)({
-    marginTop: '10%',
     height: '50px', 
     borderRadius: '8px', 
     backgroundColor: '#2F4266', 
     fontWeight: 'bold', 
-    fontFamily: [
-        'kanit',
-      ].join(','),
+    fontFamily: 'kanit',
       '&:hover': {
+        border: '1px solid #2F4266',
         backgroundColor: '#fff',
         color: '#2F4266',
-        transform: 'scale(1.02)'
       },
   });
 
   const Signupbutton = styled(Button)({
-    marginTop: '5%',
     height: '50px',
     borderRadius: '8px', 
     backgroundColor: '#FFCF40', 
     fontWeight: 'bold', 
-    fontFamily: [
-        'kanit',
-      ].join(','),
+    fontFamily: 'kanit',
       '&:hover': {
+        border: '1px solid #FFCF40',
         backgroundColor: '#fff',
         color: '#FFCF40',
-        transform: 'scale(1.02)'
       },
   });
 
@@ -149,7 +143,7 @@ const [values, setValues] = React.useState({
         >
           <Grid container sx= {{ alignItems: 'center', width: '100%', height: '25%', my: '1.5%', mx: '2%', display: {xs: "none", lg: "block"}}}>
               <Grid>
-              <Image src="/Comu.png" alt="Banner" width={`700px`}  height={'182px'} />
+              <Image src="/Comu.png" alt="Banner" width={700}  height={182} />
               </Grid>
           </Grid>
         </Grid>
@@ -166,7 +160,7 @@ const [values, setValues] = React.useState({
           >
             <Grid container sx= {{justifyContent: 'center'}}>
               <Grid sx= {{display: {xs: "block", lg: "none"} }}>
-                <Image src="/Cuma.png" alt="Banner" width={`192px`}  height={'194px'}/>
+                <Image src="/Cuma.png" alt="Banner" width={192}  height={194}/>
               </Grid>
                     <Grid>
                     <Typography component="h1" variant="h4" fontWeight= "bold" className= {styles.kanit1} sx= {{display: {xs: "none", lg: "block"}, mt: '3%'}}>
@@ -250,15 +244,19 @@ const [values, setValues] = React.useState({
                 </Grid>
               </Grid>
 
-               <Signinbutton
+              <Grid sx= {{bgcolor: '#2F4266', borderRadius: '8px', mt: '10%'}}>
+                <Signinbutton
                   type="submit"
                   variant="contained"
                   fullWidth
-                  href={'../Best/Menu1'}
+                  href={'../Best/Mn1'}
                 >
                   เข้าสู่ระบบ
                 </Signinbutton> 
-              <Signupbutton
+              </Grid> 
+
+              <Grid sx= {{bgcolor: '#FFCF40', borderRadius: '8px', mt: '5%'}}>
+                <Signupbutton
                   type="submit"
                   variant="contained"
                   fullWidth
@@ -266,6 +264,7 @@ const [values, setValues] = React.useState({
                 >
                   ลงทะเบียน
                 </Signupbutton>
+              </Grid>
             </Box>
           
           </Box>

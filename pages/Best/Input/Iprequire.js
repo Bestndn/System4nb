@@ -11,7 +11,6 @@ export default function Inputrequire(){
         width: '25%',
         borderRadius: '10px', 
         backgroundColor: '#2F4266', 
-        fontWeight: 'bold',
         boxShadow: '7px 0px 4px rgba(0, 0, 0, 0.25)',
         fontFamily: [
             'kanit',
@@ -29,11 +28,11 @@ export default function Inputrequire(){
     
   return (
     <div>
-        <Box sx= {{position: 'absolute', width: '100%', height: '80%', minWidth: '1200px', minHeight: '600px'}}>
+        <Box sx= {{position: 'absolute', width: '100%', height: '80%', minWidth: '1200px', minHeight: '600px', zIndex: '200'}}>
             <Grid container sx= {{justifyContent: 'center', alignItems: 'center', height: '100%'}}>
             <Grid  sx= {{borderRadius: '10px', width: '546px', borderRight: '10px', boxShadow: '10px 10px 4px rgba(0, 0, 0, 0.25)'}}>
                 <Grid container sx= {{backgroundColor: '#DA3232', borderRadius: '10px 10px 0px 0px', justifyContent: 'center', alignItems: 'center', height: '40px'}}>
-                    <Typography variant='text' color= '#fff' fontWeight= 'bold' className= {styles.kanit}>
+                    <Typography variant='text' color= '#fff' className= {styles.kanit}>
                         ข้อกำหนดในการนำเข้า
                     </Typography>
                 </Grid>

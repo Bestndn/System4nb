@@ -54,15 +54,33 @@ export default function Pricereport() {
 
   return (
     <div>
-        <Box sx= {{position: 'absolute'}}>
-            <Grid container sx= {{width: '900px', borderRadius: '10px', boxShadow: '10px 10px 4px rgba(0, 0, 0, 0.25)', m: '1.5%', backgroundColor: '#fff'}}>
+        <Box sx= {{position: 'absolute', width: '100%', minWidth: '1200px', zIndex: '200'}}>
+        <Grid container sx= {{justifyContent: 'center'}}>
+            <Grid sx= {{
+                width: '1000px', 
+                borderRadius: '10px', 
+                boxShadow: '10px 10px 4px rgba(0, 0, 0, 0.25)', 
+                mt: '1%', 
+                backgroundColor: '#fff'
+                }}
+                >
                 <Grid container sx= {{backgroundColor: '#2F4266', borderRadius: '10px 10px 0px 0px', py: '1%'}}>
                     <Typography variant='text' className= {styles.kanit} color= "#fff" sx= {{ml: '5%'}}>
                         รายงานเผยแพร่ข้อมูล
                     </Typography>
                 </Grid>
                 <Grid container sx= {{justifyContent: 'space-evenly'}}>
-                    <Grid sx= {{backgroundColor: '#2F4266', color: '#fff', px: '2%', py: '3.5%', mt: '1%', borderRadius: '10px', boxShadow: '7px 0px 4px rgba(0, 0, 0, 0.25)', height: '130px'}}>
+                    <Grid sx= {{
+                        backgroundColor: '#2F4266', 
+                        color: '#fff', 
+                        px: '2%', 
+                        py: '3.5%', 
+                        mt: '1%', 
+                        borderRadius: '10px', 
+                        boxShadow: '7px 0px 4px rgba(0, 0, 0, 0.25)', 
+                        height: '130px'
+                        }}
+                        >
                         <HiOutlineDocumentChartBar size={60}/>
                     </Grid>
                     <Grid sx= {{mt: '1%', width: '85%'}}>
@@ -195,13 +213,14 @@ export default function Pricereport() {
                             </Stack>
                         </Grid>
                     </Grid>
-                        <Grid container sx= {{justifyContent: 'center', mt: '2%' , mb: '2%'}}>
+                        <Grid container sx= {{justifyContent: 'center', my: '2%'}}>
                             <Searchbutton variant='contained' startIcon= {<FindInPageRoundedIcon/>}
                             >
                             ค้นหา
                             </Searchbutton>
                         </Grid>
                 </Grid>
+            </Grid>
             </Grid>
         </Box>
     </div>
