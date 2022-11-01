@@ -104,7 +104,7 @@ export default function Navbar() {
 
             <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between',padding: '0.2%' }}>
 
-                <Image src="/Comu.png" alt="sdda" width={`300px`} height={'76px'} />
+                <Image src="/Comu.png" alt="sdda" width={300} height={76} />
                 <Typography variant='text' className={styles.kanit} 
                 sx={{ color: '#2F4266', fontSize: 'x-large', fontWeight: 'bold'}}>
                   ระบบการประเมินราคาที่ดินที่ไม่ปรากฎในบัญชีราคาประเมินที่ดิน

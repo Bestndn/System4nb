@@ -30,6 +30,7 @@
   border-left:  10px solid rgba(212, 89, 163, 1) ;
   width: 350px;
   z-index: 300;
+  background-color: '#fff'
 }
 .brdrleft1:hover {
   background-color:   rgba(212, 89, 163, 1) ;
@@ -197,3 +198,5 @@
     filter: invert(1);
   }
 }
+
+

@@ -104,7 +104,7 @@ const [values, setValues] = React.useState({
         >
           <Grid container sx= {{ alignItems: 'center', width: '100%', height: '25%', my: '1.5%', mx: '2%', display: {xs: "none", lg: "block"}}}>
               <Grid>
-              <Image src="/Comu.png" alt="Banner" width={`700px`}  height={'182px'} />
+              <Image src="/Comu.png" alt="Banner" width={700}  height={182} />
               </Grid>
           </Grid>
         </Grid>
@@ -121,7 +121,7 @@ const [values, setValues] = React.useState({
           >
             <Grid container sx= {{justifyContent: 'center'}}>
               <Grid sx= {{display: {xs: "block", lg: "none"} }}>
-                <Image src="/Cuma.png" alt="Banner" width={`192px`}  height={'194px'}/>
+                <Image src="/Cuma.png" alt="Banner" width={192}  height={194}/>
               </Grid>
                     <Grid>
                     <Typography component="h1" variant="h4" fontWeight= "bold" className= {styles.kanit} sx= {{display: {xs: "none", lg: "block"}, mt: '3%'}}>

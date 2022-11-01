@@ -5,6 +5,7 @@ import { GoShield, GoGear, GoFlame } from "react-icons/go";
 import styles from '../../styles/Home.module.css';
 import { styled } from '@mui/material/styles';
 import { FcBusinessman } from "react-icons/fc";
+import Fab from '@mui/material/Fab';
 import Link from 'next/link';
 
 export default function User() {
@@ -43,15 +44,16 @@ export default function User() {
     prevOpen.current = open;
   }, [open]);
 
-    const Username = styled(ButtonBase)({
+    const Username = styled(Fab)({
         padding: '0.1%', 
         borderRadius: '50px', 
         width: '200px', 
-        background: '#fff',  
+        backgroundColor: '#fff',  
         marginTop: '1%', 
         height: '45px', 
         justifyContent: 'flex-start',
         border: '1px solid #ECECEC',
+        zIndex: '300',
         fontFamily: [
             'kanit',
           ].join(','),
@@ -73,17 +75,19 @@ export default function User() {
       onClick={handleToggle}
       >
       
-      <Grid >
+      <Grid>
            <Tooltip>
-            <Username >
+            <Username component= "grid">
                  <Grid container sx= {{alignItems: 'center', justifyContent: 'space-between', width: '80%'}}>
                     <Avatar sx= {{bgcolor: '#031E51'}}>
-                      <FcBusinessman size={30}/>
+                      <FcBusinessman size={40}/>
                     </Avatar>
-                    <Grid >
-                        <Typography variant= "body2" className= {styles.kanit} sx= {{color: '#031E51', fontWeight: 'bold'}}>
-                        สมชาย ใจดี
-                        </Typography>
+                    <Grid>
+                        <Grid container sx= {{justifyContent: 'center'}}>
+                          <Typography variant= "body2" className= {styles.kanit} sx= {{color: '#031E51', fontWeight: 'bold'}}>
+                            สมชาย ใจดี
+                          </Typography>
+                        </Grid>
                         <Typography variant= "caption" className= {styles.kanit} sx= {{color: '#031E51'}}>
                         เจ้าหน้าที่กรมที่ดิน
                         </Typography>
@@ -131,7 +135,7 @@ export default function User() {
                       </Stack>
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <a href='../'>
+                      <a href='../system4/login'>
                       <Stack spacing={1} direction="row" className={styles.kanit}>
                         <GoFlame/>
                         <text>ออกจากระบบ</text>

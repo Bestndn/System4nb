@@ -7,7 +7,7 @@ import { GiGears } from "react-icons/gi";
 import { IoGitCompareOutline } from "react-icons/io5";
 
 
-export default function Pricereport() {
+export default function Cp1() {
     
     const Cpbutton = styled(Button)({
         backgroundColor: '#2F4266',
@@ -28,13 +28,14 @@ export default function Pricereport() {
 
   return (
     <div>
-        <Box sx= {{position: 'absolute'}}>
+        <Box sx= {{position: 'absolute', zIndex: '200'}}>
             <Grid container 
             sx= {{
                 width: '900px', 
                 borderRadius: '10px', 
                 boxShadow: '10px 10px 4px rgba(0, 0, 0, 0.25)', 
-                m: '1.5%', 
+                mt: '1.5%',
+                ml: '1.5%', 
                 backgroundColor: '#fff'
                 }}
                 >

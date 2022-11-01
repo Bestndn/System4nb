@@ -29,7 +29,7 @@ export default function ButtonAppBar() {
     <Box sx={{height: '100vh' }}>
         <Grid container sx= {{height: '10px', backgroundColor: '#2F4266'}}></Grid>
         <Grid container sx= {{height: '90px', backgroundColor: '#fff', alignItems: 'center', justifyContent: 'space-between'}}>
-            <Image src="/Comu.png" alt="sdda" width={`300px`} height={'76px'} />
+            <Image src="/Comu.png" alt="sdda" width={300} height={76} />
             <Typography variant='text' className={styles.kanit} 
             sx={{ color: '#2F4266', fontSize: 'x-large', fontWeight: 'bold'}}>
                   ระบบการประเมินราคาที่ดินที่ไม่ปรากฎในบัญชีราคาประเมินที่ดิน

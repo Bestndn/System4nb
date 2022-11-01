@@ -269,12 +269,12 @@ export default function Inputinfo() {
                     </Grid>
 
                     <Grid container sx= {{justifyContent: 'flex-end', my: '3%', width: '90%', mb: '5%'}}>
-                        <ConfirmEdit variant='contained' onClick={handleClick} disabled>
+                        <ConfirmEdit variant='contained' onClick={handleClick} >
                             ยืนยันการนำเข้า
                         </ConfirmEdit>
                             <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
                                 <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-                                This is a error message!
+                                กรุณาระบุข้อมูลให้ครบ!
                             </Alert>
                             </Snackbar>
                     </Grid>

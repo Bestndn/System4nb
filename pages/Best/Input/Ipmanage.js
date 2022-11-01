@@ -2,16 +2,10 @@ import { Autocomplete, Button, Grid, Select, Typography, TextField, Theme } from
 import { Box, Stack } from '@mui/system'
 import { styled } from '@mui/material/styles';
 import styles from '../../styles/Home.module.css';
-import FindInPageRoundedIcon from '@mui/icons-material/FindInPageRounded';
 import React from 'react'
 import dayjs from 'dayjs';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
-import { FcCalendar } from "react-icons/fc";
 import { HiDatabase } from "react-icons/hi";
-import ThLocale from 'date-fns/locale/th';
+
 
 const optionTypes = [
     { key: '1', title: 'Structure' },
