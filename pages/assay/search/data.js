@@ -3390,4 +3390,545 @@ const amphurtest = [
 
 
     // 24
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองฉะเชิงเทรา"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "บางน้ำเปรี้ยว"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "บ้านโพธิ์"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "พนมสารคาม"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "บางคล้า"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "พนมสารคาม"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "แปลงยาว"
+    },
+    {
+        "AMPHUR_CODE": "11",
+        "AMPHUR_DESCRIPTION": "คลองเขื่อน"
+    },
+    {
+        "AMPHUR_CODE": "ฉ2",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.บางคล้า"
+    },
+    {
+        "AMPHUR_CODE": "ซ1",
+        "AMPHUR_DESCRIPTION": "พนมสารคาม"
+    },
+    {
+        "AMPHUR_CODE": "ต2",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.บางคล้า"
+    },
+    {
+        "AMPHUR_CODE": "ต6",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.พนมสารคาม"
+    },
+    {
+        "AMPHUR_CODE": "ต9",
+        "AMPHUR_DESCRIPTION": "ตราจองอ.แปลงยาว"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "พนมสารคาม"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "ราชสาส์น"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "สนามชัยเขต"
+    },
+    {
+        "AMPHUR_CODE": "10",
+        "AMPHUR_DESCRIPTION": "ท่าตะเกียบ"
+    },
+    {
+        "AMPHUR_CODE": "ต6",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.พนมสารคาม"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "บางปะกง"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "บ้านโพธิ์"
+    },
+    {
+        "AMPHUR_CODE": "ฉ4",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.บางปะกง"
+    },
+    {
+        "AMPHUR_CODE": "ฉ5",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.บ้านโพธิ์"
+    },
+    {
+        "AMPHUR_CODE": "ต4",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.บางปะกง"
+    },
+    {
+        "AMPHUR_CODE": "ต5",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.บ้านโพธิ์"
+    },
+
+
+
+    // 20
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองชลบุรี"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "พานทอง"
+    },
+    {
+        "AMPHUR_CODE": "ช1",
+        "AMPHUR_DESCRIPTION": "พนัสนิคม"
+    },
+    {
+        "AMPHUR_CODE": "ช2",
+        "AMPHUR_DESCRIPTION": "เมืองชลบุรี(บางพระ)"
+    },
+    {
+        "AMPHUR_CODE": "ต4",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.พานทอง"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "บางละมุง"
+    },
+    {
+        "AMPHUR_CODE": "ต4",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.พานทอง"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "ศรีราชา"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "เกาะสีชัง"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "พนัสนิคม"
+    },
+    {
+        "AMPHUR_CODE": "10",
+        "AMPHUR_DESCRIPTION": "บ่อทอง"
+    },
+    {
+        "AMPHUR_CODE": "11",
+        "AMPHUR_DESCRIPTION": "เกาะจันทร์"
+    },
+    {
+        "AMPHUR_CODE": "ฉ6",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.พนัสนิคม"
+    },
+    {
+        "AMPHUR_CODE": "ต6",
+        "AMPHUR_DESCRIPTION": "ตราจองอำเภอพนัสนิคม"
+    },
+    {
+        "AMPHUR_CODE": "ถ0",
+        "AMPHUR_DESCRIPTION": "ตราจองอำเภอบ่อทอง"
+    },
+    {
+        "AMPHUR_CODE": "ถ1",
+        "AMPHUR_DESCRIPTION": "ตราจองอำเภอเกาะจันทร์"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "สัตหีบ"
+    },
+    {
+        "AMPHUR_CODE": "ฉ9",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.สัตหีบ"
+    },
+    {
+        "AMPHUR_CODE": "ต9",
+        "AMPHUR_DESCRIPTION": "ตราจองอ.สัตหีบ"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "บ้านบึง"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "หนองใหญ่"
+    },
+    {
+        "AMPHUR_CODE": "ต1",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.เมืองชลบุรี"
+    },
+    {
+        "AMPHUR_CODE": "ต2",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.บ้านบึง"
+    },
+    {
+        "AMPHUR_CODE": "ต5",
+        "AMPHUR_DESCRIPTION": "ตราจองพานทอง"
+    },
+    {
+        "AMPHUR_CODE": "ต6",
+        "AMPHUR_DESCRIPTION": "ตราจองอำเภอพนัสนิคม"
+    },
+
+
+    
+    // 18
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองชัยนาท"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "มโนรมย์"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "สรรพยา"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "สรรคบุรี"
+    },
+    {
+        "AMPHUR_CODE": "ฉ5",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.สรรคบุรี"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "หันคา"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "เนินขาม"
+    },
+    {
+        "AMPHUR_CODE": "ฉ6",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจอง อ.หันคา"
+    },
+    {
+        "AMPHUR_CODE": "ต6",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.หันคา"
+    },
+    {
+        "AMPHUR_CODE": "ต8",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.เนินขาม"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "วัดสิงห์"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "หนองมะโมง"
+    },
+    {
+        "AMPHUR_CODE": "ต3",
+        "AMPHUR_DESCRIPTION": "ตราจองอ.วัดสิงห์"
+    },
+    {
+        "AMPHUR_CODE": "ต7",
+        "AMPHUR_DESCRIPTION": "ตราจองอ.หนองมะโมง"
+    },
+    
+
+
+    // 36
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองชัยภูมิ"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "หนองบัวแดง"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "จัตุรัส"
+    },
+    {
+        "AMPHUR_CODE": "15",
+        "AMPHUR_DESCRIPTION": "เนินสง่า"
+    },
+    {
+        "AMPHUR_CODE": "12",
+        "AMPHUR_DESCRIPTION": "แก้งคร้อ"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "คอนสวรรค์"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "เกษตรสมบูรณ์"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "บ้านเขว้า"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "หนองบัวระเหว"
+    },
+    {
+        "AMPHUR_CODE": "14",
+        "AMPHUR_DESCRIPTION": "ภักดีชุมพล"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "บำเหน็จณรงค์"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "เทพสถิต"
+    },
+    {
+        "AMPHUR_CODE": "16",
+        "AMPHUR_DESCRIPTION": "ซับใหญ่"
+    },
+
+
+
+    // 86
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองชุมพร"
+    },
+    {
+        "AMPHUR_CODE": "ต1",
+        "AMPHUR_DESCRIPTION": "ตราจองอำเภอเมืองชุมพร"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "หลังสวน"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "ละแม"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "พะโต๊ะ"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "ปะทิว"
+    },
+    {
+        "AMPHUR_CODE": "ต3",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.ปะทิว"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "สวี"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "ทุ่งตะโก"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "ท่าแซะ"
+    },
+    {
+        "AMPHUR_CODE": "ต2",
+        "AMPHUR_DESCRIPTION": "ตราจองอำเภอท่าแซะ"
+    },
+
+
+
+    // 57
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองเชียงราย"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "เวียงชัย"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "พาน"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "ป่าแดด"
+    },
+    {
+        "AMPHUR_CODE": "16",
+        "AMPHUR_DESCRIPTION": "แม่ลาว"
+    },
+    {
+        "AMPHUR_CODE": "11",
+        "AMPHUR_DESCRIPTION": "เวียงป่าเป้า"
+    },
+    {
+        "AMPHUR_CODE": "10",
+        "AMPHUR_DESCRIPTION": "แม่สรวย"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "แม่สาย"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "แม่จัน"
+    },
+    {
+        "AMPHUR_CODE": "15",
+        "AMPHUR_DESCRIPTION": "แม่ฟ้าหลวง"
+    },
+    {
+        "AMPHUR_CODE": "18",
+        "AMPHUR_DESCRIPTION": "ดอยหลวง"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "เวียงชัย"
+    },
+    {
+        "AMPHUR_CODE": "17",
+        "AMPHUR_DESCRIPTION": "เวียงเชียงรุ้ง"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "เทิง"
+    },
+    {
+        "AMPHUR_CODE": "14",
+        "AMPHUR_DESCRIPTION": "ขุนตาล"
+    },
+    {
+        "AMPHUR_CODE": "12",
+        "AMPHUR_DESCRIPTION": "พญาเม็งราย"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "พาน"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "ป่าแดด"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "เชียงของ"
+    },
+    {
+        "AMPHUR_CODE": "13",
+        "AMPHUR_DESCRIPTION": "เวียงแก่น"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "เชียงแสน"
+    },
+
+
+
+    // 50
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองเชียงใหม่"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "จอมทอง"
+    },
+    {
+        "AMPHUR_CODE": "24",
+        "AMPHUR_DESCRIPTION": "ดอยหล่อ"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "แม่แจ่ม"
+    },
+    {
+        "AMPHUR_CODE": "16",
+        "AMPHUR_DESCRIPTION": "ฮอด"
+    },
+    {
+        "AMPHUR_CODE": "17",
+        "AMPHUR_DESCRIPTION": "ดอยเต่า"
+    },
+    {
+        "AMPHUR_CODE": "18",
+        "AMPHUR_DESCRIPTION": "อมก๋อย"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "ดอยสะเก็ด"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "แม่ริม"
+    },
+    {
+        "AMPHUR_CODE": "ฉ7",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.แม่ริม"
+    },
+    {
+        "AMPHUR_CODE": "ต7",
+        "AMPHUR_DESCRIPTION": "ตราจองอ.แม่ริม"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "สะเมิง"
+    },
+    {
+        "AMPHUR_CODE": "25",
+        "AMPHUR_DESCRIPTION": "กัลยาณิวัฒนา"
+    },
+    {
+        "AMPHUR_CODE": "13",
+        "AMPHUR_DESCRIPTION": "สันกำแพง"
+    },
+    {
+        "AMPHUR_CODE": "23",
+        "AMPHUR_DESCRIPTION": "แม่ออน"
+    },
+    {
+        "AMPHUR_CODE": "12",
+        "AMPHUR_DESCRIPTION": "สันป่าตอง"
+    },
+    {
+        "AMPHUR_CODE": "22",
+        "AMPHUR_DESCRIPTION": "แม่วาง"
+    },
+    {
+        "AMPHUR_CODE": "ฉก",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.สันป่าตอง"
+    },
+    {
+        "AMPHUR_CODE": "ตก",
+        "AMPHUR_DESCRIPTION": "ตราจองอ.สันป่าตอง"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "แม่แตง"
+    },
+    {
+        "AMPHUR_CODE": "15",
+        "AMPHUR_DESCRIPTION": "หางดง"
+    },
+    
 ]
