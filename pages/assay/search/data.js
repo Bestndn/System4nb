@@ -2992,5 +2992,402 @@ const amphurtest = [
         "AMPHUR_CODE": "ซ2",
         "AMPHUR_DESCRIPTION": "บางซื่อ"
     },
-    
+
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองกาญจนบุรี"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "ไทรโยค"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "ศรีสวัสดิ์"
+    },
+    {
+        "AMPHUR_CODE": "11",
+        "AMPHUR_DESCRIPTION": "ด่านมะขามเตี้ย"
+    },
+    {
+        "AMPHUR_CODE": "10",
+        "AMPHUR_DESCRIPTION": "เลาขวัญ"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "ท่ามะกา"
+    },
+    {
+        "AMPHUR_CODE": "ฉ5",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.ท่ามะกา"
+    },
+    {
+        "AMPHUR_CODE": "ต5",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.ท่ามะกา"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "บ่อพลอย"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "พนมทวน"
+    },
+    {
+        "AMPHUR_CODE": "12",
+        "AMPHUR_DESCRIPTION": "หนองปรือ"
+    },
+    {
+        "AMPHUR_CODE": "13",
+        "AMPHUR_DESCRIPTION": "ห้วยกระเจา"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "ท่าม่วง"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "ทองผาภูมิ"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "สังขละบุรี"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "พนมทวน"
+    },
+    {
+        "AMPHUR_CODE": "ฉ9",
+        "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.พนมทวน"
+    },
+    {
+        "AMPHUR_CODE": "ต9",
+        "AMPHUR_DESCRIPTION": "ตราจองอ.พนมทวน"
+    },
+
+
+    // 46
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองกาฬสินธุ์"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "สหัสขันธ์"
+    },
+    {
+        "AMPHUR_CODE": "17",
+        "AMPHUR_DESCRIPTION": "ดอนจาน"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "ยางตลาด"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "กมลาไสย"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "ร่องคำ"
+    },
+    {
+        "AMPHUR_CODE": "18",
+        "AMPHUR_DESCRIPTION": "ฆ้องชัย"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "นามน"
+    },
+    {
+        "AMPHUR_CODE": "10",
+        "AMPHUR_DESCRIPTION": "คำม่วง"
+    },
+    {
+        "AMPHUR_CODE": "13",
+        "AMPHUR_DESCRIPTION": "สมเด็จ"
+    },
+    {
+        "AMPHUR_CODE": "14",
+        "AMPHUR_DESCRIPTION": "ห้วยผึ้ง"
+    },
+    {
+        "AMPHUR_CODE": "15",
+        "AMPHUR_DESCRIPTION": "สามชัย"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "กุฉินารายณ์"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "เขาวง"
+    },
+    {
+        "AMPHUR_CODE": "16",
+        "AMPHUR_DESCRIPTION": "นาคู"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "ห้วยเม็ก"
+    },
+    {
+        "AMPHUR_CODE": "11",
+        "AMPHUR_DESCRIPTION": "ท่าคันโท"
+    },
+    {
+        "AMPHUR_CODE": "12",
+        "AMPHUR_DESCRIPTION": "หนองกุงศรี"
+    },
+
+
+
+    // 62
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองกำแพงเพชร"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "ไทรงาม"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "คลองลาน"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "พรานกระต่าย"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "ลานกระบือ"
+    },
+    {
+        "AMPHUR_CODE": "11",
+        "AMPHUR_DESCRIPTION": "โกสัมพีนคร"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "คลองขลุง"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "ทรายทองวัฒนา"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "ปางศิลาทอง"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "ขาณุวรลักษบุรี"
+    },
+    {
+        "AMPHUR_CODE": "10",
+        "AMPHUR_DESCRIPTION": "บึงสามัคคี"
+    },
+
+
+    // 40
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองขอนแก่น"
+    },
+    {
+        "AMPHUR_CODE": "18",
+        "AMPHUR_DESCRIPTION": "ชนบท"
+    },
+    {
+        "AMPHUR_CODE": "12",
+        "AMPHUR_DESCRIPTION": "พล"
+    },
+    {
+        "AMPHUR_CODE": "13",
+        "AMPHUR_DESCRIPTION": "แวงใหญ่"
+    },
+    {
+        "AMPHUR_CODE": "10",
+        "AMPHUR_DESCRIPTION": "บ้านไผ่"
+    },
+    {
+        "AMPHUR_CODE": "11",
+        "AMPHUR_DESCRIPTION": "เปือยน้อย"
+    },
+    {
+        "AMPHUR_CODE": "18",
+        "AMPHUR_DESCRIPTION": "ชนบท"
+    },
+    {
+        "AMPHUR_CODE": "24",
+        "AMPHUR_DESCRIPTION": "บ้านแฮด"
+    },
+    {
+        "AMPHUR_CODE": "25",
+        "AMPHUR_DESCRIPTION": "โนนศิลา"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "ชุมแพ"
+    },
+    {
+        "AMPHUR_CODE": "20",
+        "AMPHUR_DESCRIPTION": "ภูผาม่าน"
+    },
+    {
+        "AMPHUR_CODE": "15",
+        "AMPHUR_DESCRIPTION": "หนองสองห้อง"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "หนองเรือ"
+    },
+    {
+        "AMPHUR_CODE": "16",
+        "AMPHUR_DESCRIPTION": "ภูเวียง"
+    },
+    {
+        "AMPHUR_CODE": "23",
+        "AMPHUR_DESCRIPTION": "หนองนาคำ"
+    },
+    {
+        "AMPHUR_CODE": "29",
+        "AMPHUR_DESCRIPTION": "เวียงเก่า"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "น้ำพอง"
+    },
+    {
+        "AMPHUR_CODE": "19",
+        "AMPHUR_DESCRIPTION": "เขาสวนกวาง"
+    },
+    {
+        "AMPHUR_CODE": "ต7",
+        "AMPHUR_DESCRIPTION": "ตราจองอ.น้ำพอง"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "อุบลรัตน์"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "กระนวน"
+    },
+    {
+        "AMPHUR_CODE": "21",
+        "AMPHUR_DESCRIPTION": "ซำสูง"
+    },
+    {
+        "AMPHUR_CODE": "17",
+        "AMPHUR_DESCRIPTION": "มัญจาคีรี"
+    },
+    {
+        "AMPHUR_CODE": "22",
+        "AMPHUR_DESCRIPTION": "โคกโพธิ์ไชย"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "บ้านฝาง"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "พระยืน"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "สีชมพู"
+    },
+    {
+        "AMPHUR_CODE": "14",
+        "AMPHUR_DESCRIPTION": "แวงน้อย"
+    },
+
+
+    // 22
+    {
+        "AMPHUR_CODE": "01",
+        "AMPHUR_DESCRIPTION": "เมืองจันทบุรี"
+    },
+    {
+        "AMPHUR_CODE": "ท1",
+        "AMPHUR_DESCRIPTION": "ท่าใหม่"
+    },
+    {
+        "AMPHUR_CODE": "พ1",
+        "AMPHUR_DESCRIPTION": "พลอยแหวน"
+    },
+    {
+        "AMPHUR_CODE": "06",
+        "AMPHUR_DESCRIPTION": "แหลมสิงห์"
+    },
+    {
+        "AMPHUR_CODE": "ต6",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.แหลมสิงห์"
+    },
+    {
+        "AMPHUR_CODE": "03",
+        "AMPHUR_DESCRIPTION": "ท่าใหม่"
+    },
+    {
+        "AMPHUR_CODE": "08",
+        "AMPHUR_DESCRIPTION": "แก่งหางแมว"
+    },
+    {
+        "AMPHUR_CODE": "09",
+        "AMPHUR_DESCRIPTION": "นายายอาม"
+    },
+    {
+        "AMPHUR_CODE": "ต3",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.ท่าใหม่"
+    },
+    {
+        "AMPHUR_CODE": "ต9",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.นายายอาม"
+    },
+    {
+        "AMPHUR_CODE": "04",
+        "AMPHUR_DESCRIPTION": "โป่งน้ำร้อน"
+    },
+    {
+        "AMPHUR_CODE": "05",
+        "AMPHUR_DESCRIPTION": "มะขาม"
+    },
+    {
+        "AMPHUR_CODE": "07",
+        "AMPHUR_DESCRIPTION": "สอยดาว"
+    },
+    {
+        "AMPHUR_CODE": "10",
+        "AMPHUR_DESCRIPTION": "เขาคิชฌกูฏ"
+    },
+    {
+        "AMPHUR_CODE": "ต0",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.เขาคิชฌกูฏ"
+    },
+    {
+        "AMPHUR_CODE": "ต4",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.โป่งน้ำร้อน"
+    },
+    {
+        "AMPHUR_CODE": "ต5",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.มะขาม"
+    },
+    {
+        "AMPHUR_CODE": "ต7",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.สอยดาว"
+    },
+    {
+        "AMPHUR_CODE": "02",
+        "AMPHUR_DESCRIPTION": "ขลุง"
+    },
+    {
+        "AMPHUR_CODE": "ต2",
+        "AMPHUR_DESCRIPTION": "ตราจอง อ.ขลุง"
+    },
+
+
+
+    // 24
 ]
