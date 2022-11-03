@@ -44,11 +44,11 @@ export default function User() {
     prevOpen.current = open;
   }, [open]);
 
-    const Username = styled(Fab)({
+    const Username = styled(Grid)({
         padding: '0.1%', 
         borderRadius: '50px', 
         width: '200px', 
-        background: '#fff',  
+        background: '#fff', 
         marginTop: '1%', 
         height: '45px', 
         justifyContent: 'flex-start',
