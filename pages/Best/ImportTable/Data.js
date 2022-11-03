@@ -262,11 +262,11 @@ import {
         justifyContent: 'space-evenly',
         zIndex: '300',
         fontFamily: 'kanit',
-          '&:hover': {
-            border: '1px solid #3448FD',
-            backgroundColor: '#fff',
-            color: '#3448FD',
-            transform: 'scale(1.02)'
+        '&:hover': {
+          border: '1px solid #3448FD',
+          backgroundColor: '#fff',
+          color: '#3448FD',
+          transform: 'scale(1.02)'
           },
       });
   

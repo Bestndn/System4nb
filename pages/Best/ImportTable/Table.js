@@ -43,6 +43,10 @@ export default function TableSearch(props) {
       name: "ไปแผนที่",
       listname: "",
     },
+    {
+      name: "",
+      listname: "",
+    },
   ];
 
   

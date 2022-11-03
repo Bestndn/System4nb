@@ -200,7 +200,7 @@ export default function MiniDrawer() {
                   px: 2.5,
                   my: 2
                 }}
-                onClick= {() => router.push("/Best/Cplist")}
+                onClick= {() => router.push("/Best/Compare/Cplist")}
               >
                 <ListItemIcon
                   sx={{
@@ -328,7 +328,7 @@ export default function MiniDrawer() {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1}}>
+      <Box component="main" sx={{ flexGrow: 1,}}>
         <DrawerHeader />
         <Map/>
       </Box>

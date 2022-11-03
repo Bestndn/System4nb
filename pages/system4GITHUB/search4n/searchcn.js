@@ -57,7 +57,7 @@ export default function Search4n(props) {
   const [show9, setShow9] = React.useState(false);
   const [formnorsor, setFormnorsor] = React.useState(false);
 
-  const [modaltrue, setModalTrue] = React.useState(false);
+  const [modaltrue, setModalTrue] = React.useState(true);
   // close switch
 
   // value open
@@ -1159,7 +1159,7 @@ export default function Search4n(props) {
         >
         <Grid container sx= {{justifyContent: 'center', alignItems: 'center', py: '10%'}}>
           <CancelRoundedIcon sx= {{ width: '146px', height: '146px', color: '#E64D3B' }}/>
-        <Grid container sx= {{justifyContent: 'center', mt: '3%'}}>
+        <Grid container sx= {{justifyContent: 'center', mt: '3%', border: '1px solid'}}>
           <Typography variant= "h4" className= {styles.kanit} sx= {{fontWeight: 'bold', color: '#848484'}}>
             ไม่ปรากฏขัอมูลในบัญชีราคาประเมินที่ดิน
           </Typography>

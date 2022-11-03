@@ -9,7 +9,7 @@ import Snackbar from '@mui/material/Snackbar';
 import { SiOpenstreetmap } from "react-icons/si";
 import TextSnippetRoundedIcon from '@mui/icons-material/TextSnippetRounded';
 import MuiAlert from '@mui/material/Alert';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 
 
 const Alert = React.forwardRef(function Alert(props, ref) {
