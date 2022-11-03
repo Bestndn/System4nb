@@ -157,7 +157,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
             <Grid container sx={{ alignItems: 'center', justifyContent: 'space-between',padding: '1%', backgroundImage: 'url(/image2.png)',}}>
 
-                <Image src="/Comu.png" alt="sdda" width={`300px`} height={'76px'} />
+                <Image src="/Comu.png" alt="sdda" width={300} height={76} />
                 <Typography variant='text' className={styles.kanit} 
                 sx={{ color: '#2F4266', fontSize: 'x-large', fontWeight: 'bold'}}>
                   ระบบการประเมินราคาที่ดินที่ไม่ปรากฎในบัญชีราคาประเมินที่ดิน
