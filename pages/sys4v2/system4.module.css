@@ -11,6 +11,12 @@
     font-weight: bold;
 }
 
+.kanitM{
+  font-family: 'Kanit';
+  font-size: small;
+  font-weight: bold;
+}
+
 .button {
     display: inline-block;
     border-radius: 4px;
@@ -48,3 +54,32 @@
     opacity: 1;
     right: 0;
   }
+
+
+.AiFillCheckCircle{
+  background-color: greenyellow;
+  color: white;
+}
+
+.AiFillChrome{
+  background-color: #2F4266;
+}
+
+.AiFillExclamationCircle{
+  background-color: purple;
+}
+
+.AiFillCloseCircle{
+  background-color: red;
+}
+
+.AiFillMinusCircle{
+  background-color: orange;
+}
+
+.buttonTe{
+  background-color: gray;
+  color: white;
+  font-family: 'Kanit';
+}
+

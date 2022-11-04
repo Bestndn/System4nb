@@ -19,7 +19,7 @@ import { CiSquareChevRight } from "react-icons/ci";
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Userr from './user';
-import Map from './map'
+import Map from '../sys4v2/import'
 
 import Import from './import'
 
@@ -335,7 +335,7 @@ export default function MiniDrawer() {
           ))}
         </List>
       </Drawer>
-      <Box component="main" sx={{ flexGrow: 1,}}>
+      <Box component="main" sx={{ flexGrow: 1, mt: 1 }}>
         <DrawerHeader />
         {show1?<Map/>:null}
         {show2?<Import/>:null}
