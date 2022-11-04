@@ -1,6 +1,6 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import { styled } from '@mui/material/styles';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 import { GiGears } from "react-icons/gi";
 import { GrCompare } from "react-icons/gr";
 import Image from 'next/image'

@@ -1,4 +1,4 @@
-import { Autocomplete, Button, Grid, Select, Typography, TextField, Theme, Divider } from '@mui/material'
+import { Autocomplete, Button, Grid, Select, Typography, TextField, Theme, Divider, IconButton, InputLabel } from '@mui/material'
 import { Box, Stack } from '@mui/system'
 import { styled } from '@mui/material/styles';
 import styles from '../../../styles/Home.module.css';
@@ -24,6 +24,15 @@ const optionZone = [
 
 export default function Ip() {
 
+    
+        const [value, setValue] = React.useState(null)
+      
+        const handleUploadInput = (newFile) => {
+            setValue(newFile)
+        }
+    
+     
+
     const edittextfileld1 = {
         fontFamily: 'Kanit',
     }
@@ -45,11 +54,11 @@ export default function Ip() {
 
   return (
     <div>
-        <Box sx= {{minWidth: '1400px', position: 'static', backgroundColor: '#fff'}}>
-            <Grid container sx= {{height: '100vh', }}>
-                <Grid item xs={6.5} sx= {{backgroundColor: '#fff'}}>
+        <Box>
+            <Grid container>
+                <Grid item xs={5.5} sx= {{backgroundColor: '#fff', borderRight: '1px solid'}}>
                     <Grid container sx= {{justifyContent: 'center'}}>
-                        <Typography variant= 'h5' className= {styles.kanit} sx= {{fontWeight: 'bold', my: '4%'}}>
+                        <Typography variant= 'h6' className= {styles.kanit} sx= {{fontWeight: 'bold', my: '4%'}}>
                             นำเข้าและจัดการชั้นข้อมูลรูปแปลงที่ดินที่ไม่ปรากฏในบัญชีราคาประเมินที่ดิน
                         </Typography>
                         <Grid container sx= {{width: '98%'}}>
@@ -111,20 +120,12 @@ export default function Ip() {
                                 />}
                                 />
                             <TextField
-                                focused
-                                type={"file"}
-                                classes={{ option: styles.kanit}}
+                                type="file"
                                 size= "small"
-                                sx={{ width: '50%',"& .MuiInputBase-root": {
+                                sx={{ width: '45%',"& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }}
-                                renderInput={(params) => <TextField {...params} 
-                                label= {
-                                    <Grid container>
-                                        <Typography sx={edittextfileld1}>เลือกไฟล์</Typography>
-                                        <Typography color="red"> *</Typography>
-                                    </Grid>} 
-                                />}
+                                renderInput={(params) => <TextField {...params} />}
                                 />
                             <Autocomplete
                                 id="combo-box-demo"
@@ -133,7 +134,7 @@ export default function Ip() {
                                 disableClearable
                                 classes={{ option: styles.kanit}}
                                 size= "small"
-                                sx={{ width: '15%',"& .MuiInputBase-root": {
+                                sx={{ width: '20%',"& .MuiInputBase-root": {
                                 backgroundColor: '#fff', fontFamily: 'kanit'
                                 } }}
                                 renderInput={(params) => <TextField {...params} 
@@ -147,14 +148,14 @@ export default function Ip() {
                             </Stack>
                         </Grid>
 
-                        <Searchbutton variant='contained' sx= {{my: '4%'}}>
+                        <Searchbutton variant='contained' component= {Grid} sx= {{my: '4%'}}>
                                 นำเข้า
                         </Searchbutton>
                     </Grid>
                     <Divider variant='middle' />
                 </Grid>
                 
-                <Grid item xs={5.5}>
+                <Grid item xs={6.5}>
                     <Grid container sx= {{justifyContent: 'center', alignItems: 'center',height: '100%'}}> 
                         <Grid sx= {{width: '98%', height: '98%' , border: '1px solid',backgroundColor: '#fff', overflow: 'hidden'}}>
                             <Map/>

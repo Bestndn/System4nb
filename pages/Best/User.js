@@ -77,7 +77,7 @@ export default function User() {
       
       <Grid>
            <Tooltip>
-            <Username component= "grid">
+            <Username component= "Grid">
                  <Grid container sx= {{alignItems: 'center', justifyContent: 'space-between', width: '80%'}}>
                     <Avatar sx= {{bgcolor: '#031E51'}}>
                       <FcBusinessman size={40}/>

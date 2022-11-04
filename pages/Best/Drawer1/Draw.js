@@ -20,12 +20,15 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Userr from '../User';
 import Ip from '../Input/Ip';
-import Map from '../../map';
+import Map from '../../system4/mapp';
+import Cplist from '../Compare/Cplist'
+import Cp from '../Compare/Cp'
+import Input from '../Input/Ip'
 
 
 
 
-const drawerWidth = 270;
+const drawerWidth = 250;
 
 const openedMixin = (theme) => ({
   width: drawerWidth,
@@ -34,6 +37,7 @@ const openedMixin = (theme) => ({
     duration: theme.transitions.duration.enteringScreen,
   }),
   overflowX: 'hidden',
+  overflowY: 'hidden',
   backgroundColor: '#00A09D',
   color: '#fff'
 });
@@ -44,6 +48,7 @@ const closedMixin = (theme) => ({
     duration: theme.transitions.duration.leavingScreen,
   }),
   overflowX: 'hidden',
+  overflowY: 'hidden',
   backgroundColor: '#00A09D',
   color: '#fff',
   width: `calc(${theme.spacing(7)} + 1px)`,
@@ -103,6 +108,7 @@ export default function MiniDrawer() {
   const [open, setOpen] = React.useState(false);
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
+  const [statuspages, setStatuspages] = React.useState(null)
 
   const handleClick = () => {
     setOpen1(!open1);
@@ -121,6 +127,7 @@ export default function MiniDrawer() {
     setOpen1(false);
     setOpen2(false);
   };
+  
 
   const ListButton = styled(ListItemButton)({
     marginLeft: '5%',
@@ -135,7 +142,8 @@ export default function MiniDrawer() {
   
 
   return (
-    <Box sx={{ display: 'flex'}}>
+  <div>
+    <Box sx={{ display: 'flex', height: '100vh'}}>
       <CssBaseline/>
       <AppBar open={open}
       sx= {{
@@ -177,7 +185,7 @@ export default function MiniDrawer() {
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} sx= {{position: 'static'}}>
-        <DrawerHeader sx= {{position: 'static'}}>
+        <DrawerHeader >
           <IconButton onClick={handleDrawerClose} 
           sx= {{color: '#fff',
             '&:hover': {
@@ -193,14 +201,13 @@ export default function MiniDrawer() {
         <List sx= {{position: 'static'}}>
           {['หน้าหลัก'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListButton
+              <ListButton onClick={() => setStatuspages(1)}
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',
                   px: 2.5,
                   my: 2
                 }}
-                onClick= {() => router.push("/Best/Compare/Cplist")}
               >
                 <ListItemIcon
                   sx={{
@@ -240,7 +247,9 @@ export default function MiniDrawer() {
               </ListButton>
                 <Collapse in={open1} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
-                <ListButton sx={{ pl: 4 }}>
+                <ListButton onClick={() => setStatuspages(2)}
+                sx={{ pl: 4 }}
+                >
                 <ListItemText primary="• ส่วนกรรมสิทธิ์ที่ดิน" classes= {{primary:styles.kanit}}/>
                 </ListButton>
                 </List>
@@ -271,7 +280,9 @@ export default function MiniDrawer() {
               </ListButton>
                 <Collapse in={open2} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
-                  <ListButton sx={{ pl: 4 }}>
+                  <ListButton onClick={() => setStatuspages(3)}
+                  sx={{ pl: 4 }}
+                  >
                   <ListItemText primary="• รายงานการบุกรุกพื้นที่" classes= {{primary:styles.kanit}}/>
                   </ListButton>
                   </List>
@@ -280,7 +291,7 @@ export default function MiniDrawer() {
           ))}
           {['บริการประชาชน'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListButton
+              <ListButton onClick={() => setStatuspages(4)}
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',
@@ -304,7 +315,7 @@ export default function MiniDrawer() {
           ))}
           {['จัดการสิทธิ'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListButton
+              <ListButton onClick={() => setStatuspages(5)}
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',
@@ -330,9 +341,81 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1,}}>
         <DrawerHeader />
-        <Map/>
+          <Grid>
+          {
+            statuspages == 1 && (<Box1/>)
+          }
+          {
+            statuspages == 2 && (<Box2/>)
+          }
+          {
+            statuspages == 3 && (<Box3/>)
+          }
+          {
+            statuspages == 4 && (<Box4/>)
+          }
+          {
+            statuspages == 5 && (<Box5/>)
+          }
+          </Grid>
       </Box>
     </Box>
+  </div>
   );
 }
 
+function Box1() {
+  return(
+      <Box sx={{
+          width:'96%',
+          position: 'absolute',
+          
+      }}>
+          <Input/>
+      </Box>
+  )
+}
+
+function Box2() {
+  return(
+      <Box sx={{
+        width:'96%',
+        position: 'absolute',
+      }}>
+         <Cp/>
+      </Box>
+  )
+}
+
+function Box3() {
+  return(
+      <Box sx={{
+        width:'96%',
+        position: 'absolute',
+      }}>
+          <Input/>
+      </Box>
+  )
+}
+
+function Box4() {
+  return(
+      <Box sx={{
+           width:'96%',
+          position: 'absolute',
+      }}>
+          4
+      </Box>
+  )
+}
+
+function Box5() {
+  return(
+      <Box sx={{
+        width:'96%',
+        position: 'absolute',
+      }}>
+          5
+      </Box>
+  )
+}
