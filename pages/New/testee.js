@@ -177,14 +177,14 @@ export default function MiniDrawer() {
             >
               ระบบการประเมินราคาที่ดินที่ไม่ปรากฎในบัญชีราคาประเมินที่ดิน
             </Typography>
-            <Grid sx= {{display: {xs: "none", lg: "block"}}}>
+            <Grid sx= {{display: {xs: "none", lg: "block"}}} >
               <Userr/>
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open} sx= {{position: 'static'}}>
-        <DrawerHeader sx= {{position: 'static'}}>
+      <DrawerHeader sx= {{position: 'static'}}>
           <IconButton onClick={handleDrawerClose} 
           sx= {{color: '#fff',
             '&:hover': {

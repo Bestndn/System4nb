@@ -7,7 +7,7 @@ import GeoJSON from 'ol/format/GeoJSON'
 import Feature from 'ol/Feature';
 
 // components
-import MapWrapper from '../components/MapWrapper'
+import MapWrapper from './mapwarp'
 
 function Mymap() {
     const stylelable = {
