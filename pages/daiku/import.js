@@ -23,7 +23,7 @@ import TableRow from '@mui/material/TableRow';
 import Fab from '@mui/material/Fab';
 import { AiFillCheckCircle, AiFillExclamationCircle, AiFillCloseCircle, AiFillMinusCircle, AiFillChrome   } from "react-icons/ai";
 import Pagination from '@mui/material/Pagination';
-import styles from './system4.module.css';
+import styles from './base.module.css';
 
 
 function createData(t1, t2, t3, t4, t5, t6, t7, t8, t9) {
@@ -155,24 +155,108 @@ export default function Importv2() {
         <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 1}}>
             <Typography variant="text" className={styles.kanitG}>
-            เทียบเคียงแปลงที่ดินไม่ปรากฎในบัญชีราคาประเมินที่ดิน
+                นำเข้าและจัดการชั้นข้อมูลรูปแปลงที่ดินที่ไม่ปรากฎในบัญชีราคาประเมินที่ดิน
             </Typography>
         </Box>
+        <Box sx={{ ml: 1, mr: 5, mt: 1}}>
+        <Stack direction='row' >
+          <Autocomplete
+          id="combo-box-demo"
+          options={top100Films}
+          value={valueChangwat}
+          onChange={handleChangwat}
+          sx={{ width: '40%', ml: '3%', mt: '1%' }}
+          renderInput={(params) => <TextField {...params} 
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> จังหวัด </Typography>
+            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
+          </div>}  
+          error={errorChangwat}
+          helperText={errorChangwat ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
+          />}
+          />
+
+          <Autocomplete
+          id="combo-box-demo"
+          options={top100Films}
+          value={valueBranch}
+          onChange={handleBranch} 
+          sx={{ width: '60%', ml: '3%', mt: '1%' }}
+          renderInput={(params) => <TextField {...params} 
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> สำนักงาน </Typography>
+            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
+          </div>} 
+          error={errorBranch}
+          helperText={errorBranch ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
+          />}
+          />     
+        </Stack>
+
+        <Stack direction='row'>
+          <Autocomplete
+          id="combo-box-demo"
+          options={top100Films}
+          value={document}
+          onChange={handleChangeDocument}
+          sx={{ width: '30%', ml: '3%', mt: '2%' }}
+          renderInput={(params) => <TextField {...params} 
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> ประเภทเอกสาร </Typography>
+            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
+          </div>} 
+          error={errorD}
+          helperText={errorD ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
+          />}
+          />
+          <TextField  
+          focused 
+          type={"file"}
+          value={files}
+          onChange={handleFile}
+          error={errorF}
+          helperText={errorF ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
+          sx={{ width: '45%', ml: '3%', mt: '2%' }}
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> เลือกไฟล์ </Typography>
+          </div>}
+          />
+          <Autocomplete
+          id="combo-box-demo"
+          options={top100Films}
+          value={zones}
+          onChange={handleZone}
+          sx={{ width: '20%', ml: '3%', mt: '2%' }}
+          renderInput={(params) => <TextField {...params} 
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> เลือกโซน </Typography>
+            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
+          </div>}  
+          error={errorZ}
+          helperText={errorZ ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
+          />}
+          />     
+        </Stack>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 1}}>
+          <Button variant="contained" className={styles.button}><span>นำเข้า</span></Button>
+        </Box>
+        </Box>
+
         <Grid>
         <TableContainer component={Paper}>
       <Table sx={{ minWidth: 1000 }} aria-label="simple table">
       {/* <caption><Pagination count={10} variant="outlined" shape="rounded"/></caption> */}
         <TableHead>
-          <TableRow sx={{ bgcolor: '#00A09D' }}>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}>ลำดับ</TableCell>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}>โฉนดที่ดินเลขที่</TableCell>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}>หน้าสำรวจ</TableCell>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}>ระวาง</TableCell>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}>เลขที่ดิน</TableCell>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}>เนื้อที่ไร่-งาน-ตร.ว.</TableCell>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}>สถานะนำเข้า</TableCell>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}>ไปแผนที่</TableCell>
-            <TableCell align="center" className={styles.kanit} sx={{ color: 'white' }}> </TableCell>
+          <TableRow >
+            <TableCell align="center" className={styles.kanit}>ลำดับ</TableCell>
+            <TableCell align="center" className={styles.kanit}>โฉนดที่ดินเลขที่</TableCell>
+            <TableCell align="center" className={styles.kanit}>หน้าสำรวจ</TableCell>
+            <TableCell align="center" className={styles.kanit}>ระวาง</TableCell>
+            <TableCell align="center" className={styles.kanit}>เลขที่ดิน</TableCell>
+            <TableCell align="center" className={styles.kanit}>เนื้อที่ไร่-งาน-ตร.ว.</TableCell>
+            <TableCell align="center" className={styles.kanit}>สถานะนำเข้า</TableCell>
+            <TableCell align="center" className={styles.kanit}>ไปแผนที่</TableCell>
+            <TableCell align="center" className={styles.kanit}> </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -208,7 +292,8 @@ export default function Importv2() {
         </Grid>
         </Grid>
         <Grid container sx={{ justifyContent: 'flex-end', mt: 3}}>
-        <Button variant="contained" sx={{ mr: 10}} className={styles.buttonTe}>ยืนยันการเทียบเคียง</Button>
+        <Button variant="contained" sx={{ mr: 10}} className={styles.buttonTe}>ปรับปรุงข้อมูล</Button>
+        <Button variant="contained" sx={{ mr: 5 }} className={styles.buttonTe}>เทียบเคียง</Button>
         </Grid>
         
 
