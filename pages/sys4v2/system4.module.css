@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+
+.kanit{
+  font-family: 'Kanit';
+}
+
+.kanitG{
+    font-family: 'Kanit';
+    font-size: large;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #2F4266;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    font-family: 'Kanit';
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 5px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
