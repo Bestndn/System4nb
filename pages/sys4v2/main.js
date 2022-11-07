@@ -15,9 +15,10 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 import styles from './system4.module.css';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import User from './user';
+
 import Importv2 from './import'
+import Compare from './compare'
 
 
 
@@ -103,7 +104,14 @@ export default function MiniDrawer() {
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
 
+  const [user, setUser] = React.useState(true);
 
+  const [show, setshow] = React.useState(true);
+  const [show1, setshow1] = React.useState(false);
+  const [show2, setshow2] = React.useState(false);
+  const [show3, setshow3] = React.useState(false);
+  const [show4, setshow4] = React.useState(false);
+  const [show5, setshow5] = React.useState(false);
 
   const handleClick = () => {
     setOpen1(!open1);
@@ -136,7 +144,6 @@ export default function MiniDrawer() {
   
 
   return (
-    <BrowserRouter>
     <Box sx={{ display: 'flex'}}>
       <CssBaseline/>
       <AppBar open={open}
@@ -152,7 +159,7 @@ export default function MiniDrawer() {
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            onClick={handleDrawerOpen}
+            onClick={() => {handleDrawerOpen(); setUser(false);}}
             edge="start"
             sx={{
               marginRight: 5,
@@ -173,14 +180,15 @@ export default function MiniDrawer() {
               ระบบการประเมินราคาที่ดินที่ไม่ปรากฎในบัญชีราคาประเมินที่ดิน
             </Typography>
             <Grid sx= {{display: {xs: "none", lg: "block"}}} >
-              <User/>
+              {user?<User/>:null}
             </Grid>
           </Grid>
         </Toolbar>
       </AppBar>
-      <Drawer variant="permanent" open={open} sx= {{position: 'static'}}>
+      <Drawer variant="permanent" open={open} sx= {{position: 'static'}} >
       <DrawerHeader sx= {{position: 'static'}}>
-          <IconButton onClick={handleDrawerClose} 
+          <IconButton onClick={() => {handleDrawerClose(); setTimeout(() => {
+            setUser(true);}, 200);}} 
           sx= {{color: '#fff',
             '&:hover': {
             backgroundColor: '#578AA8',
@@ -193,7 +201,6 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider variant='middle' sx= {{backgroundColor: '#fff'}}/>
         <List sx= {{position: 'static'}}>
-        <Link to="/">
           {['หน้าหลัก'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListButton
@@ -202,8 +209,7 @@ export default function MiniDrawer() {
                   justifyContent: open ? 'initial' : 'center',
                   px: 2.5,
                   my: 2
-                }}
-               
+                }} 
               >
                 <ListItemIcon
                   sx={{
@@ -219,16 +225,18 @@ export default function MiniDrawer() {
               </ListButton>
             </ListItem>
           ))}
-          </Link>
-          {['ส่วนกรรมสิทธิ์ที่ดิน'].map((text, index) => (
+          {['นำเข้าและจัดการข้อมูล'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListButton onClick={handleClick}
+              <ListButton 
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',
                   px: 2.5,
                   my: 2
                 }}
+                onClick={() => 
+                  {setshow1(true); setshow2(false); setshow3(false); setshow4(false); setshow5(false);}
+                }
               >
                 <ListItemIcon
                   sx={{
@@ -242,24 +250,27 @@ export default function MiniDrawer() {
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} classes= {{primary:styles.kanit}}/>
               </ListButton>
-                <Collapse in={open1} timeout="auto" unmountOnExit>
+                {/* <Collapse in={open1} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>
                 <ListButton sx={{ pl: 4 }}>
                 <ListItemText primary="• ส่วนกรรมสิทธิ์ที่ดิน" classes= {{primary:styles.kanit}}/>
                 </ListButton>
                 </List>
-                </Collapse>
+                </Collapse> */}
             </ListItem>
           ))}
-          {['จัดการการบุกรุกพื้นที่'].map((text, index) => (
+          {['เทียบเคียงแปลงที่ดิน'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
-              <ListButton onClick={handleClick2}
+              <ListButton
                 sx={{
                   minHeight: 48,
                   justifyContent: open ? 'initial' : 'center',
                   px: 2.5,
                   my: 2
                 }}
+                onClick={() => 
+                  {setshow1(false); setshow2(true); setshow3(false); setshow4(false); setshow5(false);}
+                }
               >
                 <ListItemIcon
                   sx={{
@@ -273,16 +284,16 @@ export default function MiniDrawer() {
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} classes= {{primary:styles.kanit}}/>
               </ListButton>
-                <Collapse in={open2} timeout="auto" unmountOnExit>
+                {/* <Collapse in={open2} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                   <ListButton sx={{ pl: 4 }}>
                   <ListItemText primary="• รายงานการบุกรุกพื้นที่" classes= {{primary:styles.kanit}}/>
                   </ListButton>
                   </List>
-                </Collapse>
+                </Collapse> */}
             </ListItem>
           ))}
-          {['บริการประชาชน'].map((text, index) => (
+          {['รายงานบัญชีประเมินราคา'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListButton
                 sx={{
@@ -291,6 +302,9 @@ export default function MiniDrawer() {
                   px: 2.5,
                   my: 2
                 }}
+                onClick={() => 
+                  {setshow1(false); setshow2(false); setshow3(true); setshow4(false); setshow5(false);}
+                }
               >
                 <ListItemIcon
                   sx={{
@@ -306,7 +320,7 @@ export default function MiniDrawer() {
               </ListButton>
             </ListItem>
           ))}
-          {['จัดการสิทธิ'].map((text, index) => (
+          {['รายงานสรุปผลดำเนินงาน'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListButton
                 sx={{
@@ -315,6 +329,9 @@ export default function MiniDrawer() {
                   px: 2.5,
                   my: 2
                 }}
+                onClick={() => 
+                  {setshow1(false); setshow2(false); setshow3(false); setshow4(true); setshow5(false);}
+                }
               >
                 <ListItemIcon
                   sx={{
@@ -334,17 +351,11 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, mt: 1 }}>
         <DrawerHeader />
-
-        <Routes>
-        {/* <Route path="/" element={<Ime />} />
-        <Route path="/ab" element={<Imee />} /> */}
-        <Route path="/" element={<Importv2 />}/>
-        </Routes>
         
+        {show1?<Importv2/>:null}
 
-   
+
       </Box>
     </Box>
-    </BrowserRouter>
   );
 }
