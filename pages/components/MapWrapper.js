@@ -74,10 +74,16 @@ function MapWrapper(props) {
     // initialMap.on('click', handleMapClick)
 
     // // save map and vector layer references to state
-    setMap(initialMap)
+    
     // setFeaturesLayer(initalFeaturesLayer)
-    console.log(mapElement,'mapElementmapElement');
-  }, [])
+    if(mapRef.current === true) {
+      console.log('stop');
+    }
+    return () => {
+      console.log(mapElement,'mapElementmapElement2');
+      mapRef.current = true
+    }
+ }, []);
 
   // update map if features prop changes - logic formerly put into componentDidUpdate
   useEffect(() => {
