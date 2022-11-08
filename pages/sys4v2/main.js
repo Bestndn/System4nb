@@ -19,6 +19,7 @@ import User from './user';
 
 import Importv2 from './import'
 import Compare from './compare'
+import Reportv2 from './report'
 
 
 
@@ -353,6 +354,7 @@ export default function MiniDrawer() {
         <DrawerHeader />
         
         {show1?<Importv2/>:null}
+        {show3?<Reportv2/>:null}
 
 
       </Box>

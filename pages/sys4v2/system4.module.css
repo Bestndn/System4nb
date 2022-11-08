@@ -83,3 +83,14 @@
   font-family: 'Kanit';
 }
 
+
+.cat {
+  background-color: #00A09D;
+  color: white;
+}
+
+.cat:hover {
+  background-color: white;
+  color: #00A09D;
+}
+
