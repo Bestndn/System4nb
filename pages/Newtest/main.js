@@ -8,7 +8,6 @@ import { Box, Toolbar, List, CssBaseline,
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar from '@mui/material/AppBar';
 import MenuIcon from '@mui/icons-material/Menu';
-import styles from '../../styles/Home.module.css';
 import { BsFolderX } from "react-icons/bs";
 import { BsFolder2Open } from "react-icons/bs";
 import { SlHome } from "react-icons/sl";
@@ -19,12 +18,11 @@ import { CiSquareChevRight } from "react-icons/ci";
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Userr from './user';
-import Map from '../sys4v2/import'
 
-import Import from './import'
-
-
-
+import styles from './newmain.module.css';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Ime from './im'
+import Imee from './im2'
 
 
 
@@ -108,8 +106,7 @@ export default function MiniDrawer() {
   const [open1, setOpen1] = React.useState(false);
   const [open2, setOpen2] = React.useState(false);
 
-  const [show1, setShow1] = React.useState(true);
-  const [show2, setShow2] = React.useState(false);
+
 
   const handleClick = () => {
     setOpen1(!open1);
@@ -142,6 +139,7 @@ export default function MiniDrawer() {
   
 
   return (
+    <BrowserRouter>
     <Box sx={{ display: 'flex'}}>
       <CssBaseline/>
       <AppBar open={open}
@@ -168,7 +166,7 @@ export default function MiniDrawer() {
           </IconButton>
           <Grid container sx= {{alignItems: 'center', justifyContent: 'space-between', minwidth: '1440px'}}>
             <Image src="/Comu.png" alt="sdda" width={300} height={80}/>
-            <Typography variant="h5" noWrap className= {styles.kanit1} 
+            <Typography variant="h5" noWrap className= {styles.kanit} 
             sx= {{color: '#fff', 
                   fontWeight: 'bold', 
                   display: {xs: "none", lg: "block"}
@@ -198,6 +196,7 @@ export default function MiniDrawer() {
         </DrawerHeader>
         <Divider variant='middle' sx= {{backgroundColor: '#fff'}}/>
         <List sx= {{position: 'static'}}>
+        <Link to="/">
           {['หน้าหลัก'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListButton
@@ -207,7 +206,7 @@ export default function MiniDrawer() {
                   px: 2.5,
                   my: 2
                 }}
-                onClick= {() => {setShow1(false); setShow2(true);}}
+               
               >
                 <ListItemIcon
                   sx={{
@@ -223,6 +222,7 @@ export default function MiniDrawer() {
               </ListButton>
             </ListItem>
           ))}
+          </Link>
           {['ส่วนกรรมสิทธิ์ที่ดิน'].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: 'block' }}>
               <ListButton onClick={handleClick}
@@ -337,10 +337,17 @@ export default function MiniDrawer() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, mt: 1 }}>
         <DrawerHeader />
-        {show1?<Map/>:null}
-        {show2?<Import/>:null}
+
+        <Routes>
+        <Route path="/" element={<Ime />} />
+        <Route path="/ab" element={<Imee />} />
+        </Routes>
+        
+
+   
       </Box>
     </Box>
+    </BrowserRouter>
   );
 }
 

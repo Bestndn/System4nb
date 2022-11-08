@@ -153,9 +153,9 @@ export default function Contrast() {
           <Grid container 
           justifyContent="center" 
           alignItems="center"
-          sx={{ p: '1%', mr: '3.5%' }}
+          sx={{ p: '1%', mr: '3.5%',}}
           >
-            <Button variant="contained" color='primary'
+            <Button variant="contained" color='primary'  className={styles.Buttondis}
             onClick={() => {
               if ( valueChangwat == '' ){
                 setErrorChangwat(true);

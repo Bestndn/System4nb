@@ -5,14 +5,12 @@
   font-family: 'Kanit';
 }
 
-.kano{
-    font-weight: bold;
-    font-size: large;
-    font-family: 'Kanit';
+.kanitB{
+  font-family: 'Kanit';
+  font-size: x-large;
 }
 
-.Buttondis{
+.Buttondis:disabled{
   background-color: #2F4266;
   color: white;
 }
-

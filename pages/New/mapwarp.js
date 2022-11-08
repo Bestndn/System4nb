@@ -119,7 +119,7 @@ function MapWrapper(props) {
   return (
     // <Paper>
     <div ref={mapElement} style={{ height: `${props.height}vh`, width: "100%", position: "relative" }}>
-      <div style={{zIndex: 10, position: 'absolute'}}>55555555555555</div>
+      {/* <div style={{zIndex: 10, position: 'absolute'}}>55555555555555</div> */}
     </div>
     // </Paper>
   )
