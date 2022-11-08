@@ -1,106 +1,103 @@
-import React from 'react'
-import { Grid, Box, Typography, Paper, Button, Stack, Modal } from '@mui/material'
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
 import Autocomplete from '@mui/material/Autocomplete';
-import SearchIcon from '@mui/icons-material/Search';
-import styles from '../../../styles/Home.module.css';
-
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import FormHelperText from '@mui/material/FormHelperText';
-import Select from '@mui/material/Select';
-import Collapse from '@mui/material/Collapse';
-
-
-import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
-import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Fab from '@mui/material/Fab';
+import { AiFillCheckCircle, AiFillExclamationCircle, AiFillCloseCircle, AiFillMinusCircle, AiFillChrome   } from "react-icons/ai";
+import Pagination from '@mui/material/Pagination';
 
 
+import styles from '../../../styles/system4v2.module.css';
 
 
-const top100Films = [
-  { label: 'ทดสอบ', year: 1994 },
-  ];
+function createData(t1, t2, t3, t4, t5, t6, t7, t8, t9) {
+  return { t1, t2, t3, t4, t5, t6, t7, t8, t9 };
+}
+const rows = [
+  createData(
+    1, 
+    2922, 
+    2531, 
+    "4836 | 4830-00 (1:4000)", 
+    64, 
+    "1-2-0",
+    <Fab size="small" color="success" aria-label="add" className={styles.AiFillCheckCircle}><AiFillCheckCircle size={40}/></Fab>, 
+    <Fab size="small" color="secondary" aria-label="add" className={styles.AiFillChrome}><AiFillChrome size={40}/></Fab>,
+    '',
+    ),
 
-export default function Search(props) {
+    createData(
+      2, 
+      2922, 
+      2531, 
+      "4836 | 4830-00 (1:4000)", 
+      64, 
+      "1-2-0",
+      <Fab size="small" color="success" aria-label="add" className={styles.AiFillCheckCircle}><AiFillCheckCircle size={40}/></Fab>, 
+      <Fab size="small" color="secondary" aria-label="add" className={styles.AiFillChrome}><AiFillChrome size={40}/></Fab>,
+      '',
+      ),
 
-  // menu top
-  const [errorD, setErrorD] = React.useState(false);
-  const [document, setDocument] = React.useState(''); 
-  const handleChangeDocument = (event) => {
-    setDocument(event.target.value); 
-    setErrorD(false);
-  }
+      createData(
+        3, 
+        2922, 
+        2531, 
+        "4836 | 4830-00 (1:4000)", 
+        64, 
+        "1-2-0",
+        <Fab size="small" color="secondary" aria-label="add" className={styles.AiFillExclamationCircle}><AiFillExclamationCircle size={40}/></Fab>, 
+        <Fab size="small" color="secondary" aria-label="add"  className={styles.AiFillMinusCircle}><AiFillMinusCircle size={40}/></Fab>,
+        '',
+        ),
 
-  // chanod
-  const [errorC, setErrorC] = React.useState(false);
-  const [hide1, setHide1] = React.useState(true);
-  const [chanodment, setChanodment] = React.useState('');
-  const handleChangeChanodment = (event) => {
-    setChanodment(event.target.value);
-    setErrorC(false);
-  }
-  // norsor3
-  const [errorN, setErrorN] = React.useState(false);
-  const [hide2, setHide2] = React.useState(false);
-  const [norsorment, setNorsorment] = React.useState('');
-  const handleChangeNorsorment = (event) => {
-    setNorsorment(event.target.value);
-    setErrorN(false); 
-  }
-  // menu top close
+        createData(
+          4, 
+          2922, 
+          2531, 
+          "4836 | 4830-00 (1:4000)", 
+          64, 
+          "1-2-0",
+          <Fab size="small" color="secondary" aria-label="add" className={styles.AiFillCloseCircle}><AiFillCloseCircle size={40}/></Fab>, 
+          <Fab size="small" color="secondary" aria-label="add" className={styles.AiFillMinusCircle}><AiFillMinusCircle size={40}/></Fab>,
+          '',
+          ),
 
-  // control switch
-  const [show1, setShow1] = React.useState(false);
-  const [show2, setShow2] = React.useState(false);
-  const [formchanode, setFormchanode] = React.useState(true);
+          createData(
+            5, 
+            2922, 
+            2531, 
+            "4836 | 4830-00 (1:4000)", 
+            64, 
+            "1-2-0",
+            <Fab size="small" color="secondary" aria-label="add" className={styles.AiFillCloseCircle}><AiFillCloseCircle size={40}/></Fab>, 
+            <Fab size="small" color="secondary" aria-label="add" className={styles.AiFillMinusCircle}><AiFillMinusCircle size={40}/></Fab>,
+            '',
+            ),
+];
 
-  const [show0, setShow0] = React.useState(false);
-  const [show9, setShow9] = React.useState(false);
-  const [formnorsor, setFormnorsor] = React.useState(false);
+const theme = createTheme();
 
-  const [modaltrue, setModalTrue] = React.useState(false);
-  // close switch
 
-  // value open
-  // part1.1
+
+export default function Importv2() {
+
   const [errorChangwat, setErrorChangwat] = React.useState(false);
   const [errorBranch, setErrorBranch] = React.useState(false);
-
-  const [valueChangwat, setValueChangwat] = React.useState('');
-  const [valueBranch, setValueBranch] = React.useState('');
-
-  // part1.2
-  const [errorNorsor3, setErrorNorsor3] = React.useState(false);
-  const [errorChanode, setErrorChanode] = React.useState(false);
-  const [errorSurvey, setErrorSurvey] = React.useState(false);
-  const [errorAmphur, setErrorAmphur] = React.useState(false);
-  const [errorTumbon, setErrorTumbon] = React.useState(false);
-
-  const [valueNorsor3, setValueNorsor3] = React.useState('');
-  const [valueChanode, setValueChanode] = React.useState('');
-  const [valueSurvey, setValueSurvey] = React.useState('');
-  const [valueAmphur, setValueAmphur] = React.useState('');
-  const [valueTumbon, setValueTumbon] = React.useState('');
-
-  // part1.3
-  const [errorLandNo, setErrorLandNo] = React.useState(false);
-  const [errorUTM1, setErrorUTM1] = React.useState(false);
-  const [errorUTM2, setErrorUTM2] = React.useState(false);
-  const [errorUTM3, setErrorUTM3] = React.useState(false);
-  const [errorUTM4, setErrorUTM4] = React.useState(false);
-  const [errorUTMScale, setErrorUTMScale] = React.useState(false);
-
-  const [valueLandNo, setValueLandNo] = React.useState('');
-  const [valueUTM1, setValueUTM1] = React.useState('');
-  const [valueUTM2, setValueUTM2] = React.useState(null);
-  const [valueUTM3, setValueUTM3] = React.useState('');
-  const [valueUTM4, setValueUTM4] = React.useState('');
-  const [valueUTMScale, setValueScale] = React.useState('');
-  // value close
-
-  // handleGET part1.1
+  const [valueChangwat, setValueChangwat] = React.useState(null);
+  const [valueBranch, setValueBranch] = React.useState(null);
   const handleChangwat = (event, value) => {
     setValueChangwat(value);
     console.log(value);
@@ -113,1119 +110,237 @@ export default function Search(props) {
     setErrorBranch(false);
   }
 
-
-
-  // handleGET part1.2
-  const handleNorsor3 = (event, value) => {
-    setValueNorsor3(value);
-    console.log(value);
-    setErrorNorsor3(false);
+  const [errorD, setErrorD] = React.useState(false);
+  const [document, setDocument] = React.useState(null);
+  const handleChangeDocument = (event, value) => {
+    setDocument(value); 
+    setErrorD(false);
   }
 
-  const handleChanode = (event, value) => {
-    setValueChanode(value);
-    console.log(value);
-    setErrorChanode(false);
+  const [errorF, setErrorF] = React.useState(false);
+  const [errorZ, setErrorZ] = React.useState(false);
+  const [files, setFiles] = React.useState('');
+  const [zones, setZone] = React.useState(null);
+  const handleFile = (event, value) => {
+    setFiles(value); 
+    setErrorF(false);
   }
-
-  const handleSurvey = (event, value) => {
-    setValueSurvey(value);
-    console.log(value);
-    setErrorSurvey(false);
-  }
-
-  const handleAmphur = (event, value) => {
-    setValueAmphur(value);
-    console.log(value);
-    setErrorAmphur(false);
-  }
-
-  const handleTumbon = (event, value) => {
-    setValueTumbon(value);
-    console.log(value);
-    setErrorTumbon(false);
+  const handleZone = (event, value) => {
+    setZone(value); 
+    setErrorZ(false);
   }
 
 
-  // part1.3
-  const handleLandNo = (event, value) => {
-    setValueLandNo(value);
-    console.log(value);
-    setErrorLandNo(false);
+  const clearAll = () => {
+    if (valueChangwat == null){
+      setErrorChangwat(true);
+    }
+    if (valueBranch == null){
+      setErrorBranch(true);
+    }
+    if (document == null){
+      setErrorD(true);
+    }
+    if (files == ''){
+      setErrorF(true);
+    }
+    if (zones == null){
+      setErrorZ(true);
+    }
+    else if (valueChangwat != null)
+         if (valueBranch != null)
+         if (document != null)
+         if (files != '')
+         if (zones != null){
+          setValueChangwat(null);
+          setValueBranch(null);
+          setDocument(null);
+          setFiles('');
+          setZone(null);
+         }
   }
-
-  const handleUTM1 = (event, value) => {
-    setValueUTM1(value);
-    console.log(value);
-    setErrorUTM1(false);
-  }
-
-  const handleUTM2 = (event, value) => {
-    setValueUTM2(value);
-    console.log(value);
-    setErrorUTM2(false);
-  }
-
-  const handleUTM3 = (event, value) => {
-    setValueUTM3(value);
-    console.log(value);
-    setErrorUTM3(false);
-  }
-
-  const handleUTM4 = (event, value) => {
-    setValueUTM4(value);
-    console.log(value);
-    setErrorUTM4(false);
-  }
-
-  const handleUTMScale = (event, value) => {
-    setValueScale(value);
-    console.log(value);
-    setErrorUTMScale(false);
-  }
-  //value close 
-
-  const Backbutton = styled(Button)({
-    borderRadius: '10px', 
-    width: '130px', 
-    height: '45px', 
-    backgroundColor: '#EAB120', 
-    color: '#fff', 
-    boxShadow: '7px 0px 4px rgba(0, 0, 0, 0.25)',
-    fontWeight: 'bold',
-    fontFamily: [
-        'kanit',
-      ].join(','),
-      '&:hover': {
-        border: '1px solid #ECECEC',
-        backgroundColor: '#fff',
-        color: '#EAB120',
-        boxShadow: '4px 4px 4px rgba(234,177,32)',
-        transform: 'scale(1.02)'
-      },
-  });
-
-  const Inputbutton = styled(Button)({
-    borderRadius: '10px', 
-    width: '130px', 
-    height: '45px', 
-    backgroundColor: '#2F4266', 
-    color: '#fff', 
-    boxShadow: '7px 0px 4px rgba(0, 0, 0, 0.25)',
-    fontWeight: 'bold',
-    fontFamily: [
-        'kanit',
-      ].join(','),
-      '&:hover': {
-        border: '1px solid #ECECEC',
-        backgroundColor: '#fff',
-        color: '#2F4266',
-        boxShadow: '4px 4px 4px rgba(47, 66, 102)',
-        transform: 'scale(1.02)'
-      },
-  });
 
   return (
     <div>
-      <Grid sx={{ 
-          bgcolor: 'white',
-          borderBottomRightRadius: '10px',
-          borderBottomLeftRadius: '10px',
-          borderTopLeftRadius: '6px',
-          borderTopRightRadius: '6px',
-          boxShadow: 20,
-          minWidth: '1000px',
-      }}>
-
-        <Grid sx={{ 
-          bgcolor: '#2F4266', 
-          p: '1%', 
-          borderTopLeftRadius: '6px',
-          borderTopRightRadius: '6px',
-          }}>
-            <Typography variant="text" className={styles.kanit} 
-            sx={{ ml: '10%', color: 'white' }}>
-              กรุณาระบุรายละเอียดเพื่อค้นหา
+    <ThemeProvider theme={theme}>
+      <Grid container component="main" sx={{ minHeight: 800 }}>
+        <CssBaseline />
+        <Grid item xs={12} sm={8} md={6} component={Paper} elevation={6} square>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 2}}>
+            <Typography variant="text" className={styles.kanit} sx={{ fontWeight: 'bold', fontSize: '19px'}}>
+                นำเข้าและจัดการชั้นข้อมูลรูปแปลงที่ดินที่ไม่ปรากฎในบัญชีราคาประเมินที่ดิน
             </Typography>
-        </Grid>
-
-        
-
-        <Grid container sx={{ 
-          p: '1%',
-          }}>
-          <Button variant="contained" color='primary' disabled className={styles.Buttondis}
-          sx={{ 
-            bgcolor: '#2F4266', 
-            color: 'white', 
-            width: '15%', 
-            height: '150px',
-            '&:disabled':{
-              bgcolor: '#2F4266', 
-              color: 'white', 
-            } 
-            }}>
-            <SearchIcon sx={{ fontSize: 100 }}/>
-          </Button>
-
-
-         <Grid sx={{ width: '80%'}}>
-          <Stack direction='row' >
+        </Box>
+        <Box sx={{ ml: 1, mr: 5, mt: 1}}>
+        <Stack direction='row' >
           <Autocomplete
-          id="combo-box-demo"
-          options={provicetest}
-          getOptionLabel={(option) => option.PROVINCE_NAME_TH || ""}
+          disableClearable
           classes={{ option: styles.kanit}}
+          options={provicetest}
           value={valueChangwat}
           onChange={handleChangwat}
-          sx={{ width: '48%', ml: '3%', mt: '1%', input: { fontFamily: 'Kanit' }  }}
+          getOptionLabel={(option) => option.PROVINCE_NAME_TH}
+          sx={{ width: '40%', ml: '3%', mt: '1%', input: { fontFamily: 'Kanit' } }}
           renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-              <Typography variant="text" className={styles.kanit}> จังหวัด </Typography>
-              <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          }
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> จังหวัด </Typography>
+            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
+          </div>}  
           error={errorChangwat}
           helperText={errorChangwat ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
           />}
           />
 
           <Autocomplete
-          id="combo-box-demo"
+          disableClearable
+          classes={{ option: styles.kanit}}
           options={branchtest}
-          getOptionLabel={(option) => option.BRANCH_NAME || ""}
-          classes={{ option: styles.kanit}}  
           value={valueBranch}
-          onChange={handleBranch}      
-          sx={{ width: '48%', ml: '3%', mt: '1%', input: { fontFamily: 'Kanit' }  }}
+          onChange={handleBranch} 
+          getOptionLabel={(option) => option.BRANCH_NAME}
+          sx={{ width: '60%', ml: '3%', mt: '1%', input: { fontFamily: 'Kanit' } }}
           renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-              <Typography variant="text" className={styles.kanit}> สำนักงาน </Typography>
-              <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          } 
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> สำนักงาน </Typography>
+            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
+          </div>} 
           error={errorBranch}
           helperText={errorBranch ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
           />}
           />     
-          </Stack>
+        </Stack>
 
-          <Stack direction='row'>
-          <FormControl fullWidth sx={{ width: '48%', ml: '3%', mt: '2%' }} error={errorD}>
-          <InputLabel id="demo-simple-select-labelNBG">
-          <div>
-            <Typography variant="text" className={styles.kanit}> เอกสารประกอบ </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          </InputLabel>
-          <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
+        <Stack direction='row'>
+          <Autocomplete
+          disableClearable
+          classes={{ option: styles.kanit}}
+          options={Menus}
           value={document}
-          label=" เอกสารประกอบ * "
           onChange={handleChangeDocument}
-          >
-          <MenuItem value={10} className={styles.kanit} 
-          onClick={() => {
-            setFormchanode(true);
-            setFormnorsor(false);
-
-            setShow0(false);
-            setShow9(false);
-            setNorsorment('');
-          }}
-          ><text className={styles.kanit}>โฉนด</text></MenuItem>
-          <MenuItem value={20} className={styles.kanit}
-          onClick={() => {
-            setFormnorsor(true);
-            setFormchanode(false);
-
-            setShow1(false);
-            setShow2(false);
-            setChanodment('');
-          }}
-          ><text className={styles.kanit}>น.ส. 3ก.</text></MenuItem>
-          </Select>
-          <FormHelperText>{errorD ? 
-            <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          </FormHelperText>
-          </FormControl>
-          
-          { formchanode ?
-          <FormControl fullWidth sx={{ width: '48%', ml: '3%', mt: '2%' }} error={errorC}>
-          <InputLabel id="demo-simple-select-label">
-          <div>
-            <Typography variant="text" className={styles.kanit}> รายการค้นหา </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          </InputLabel>
-          <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={chanodment}
-          label=" รายการค้นหา * "
-          onChange={handleChangeChanodment}>
-          <MenuItem value={11} className={styles.kanit} 
-          onClick={() => {
-            setShow1(true);
-            setShow2(false);
-            
-            setValueChanode('');  setErrorChanode(false);
-            setValueSurvey('');   setErrorSurvey(false);
-            setValueAmphur('');   setErrorAmphur(false);
-            setValueTumbon('');   setErrorTumbon(false);
-          }}
-          ><text className={styles.kanit}>เลขที่โฉนด</text></MenuItem>
-          <MenuItem value={22} className={styles.kanit} 
-          onClick={() => {
-            setShow2(true);
-            setShow1(false);
-
-            setValueLandNo('');  setErrorLandNo(false);
-            setValueUTM1('');    setErrorUTM1(false);
-            setValueUTM2(null);  setErrorUTM2(false);
-            setValueUTM3('');    setErrorUTM3(false);
-            setValueUTM4('');    setErrorUTM4(false);
-            setValueScale('');   setErrorUTMScale(false);
-          }}
-          ><text className={styles.kanit}>เลขที่ดิน</text></MenuItem>
-          </Select>
-          <FormHelperText>{errorC ? 
-            <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          </FormHelperText>
-          </FormControl>
-          : null }
-
-          { formnorsor ?
-          <FormControl fullWidth sx={{ width: '48%', ml: '3%', mt: '2%' }} error={errorN}>
-          <InputLabel id="demo-simple-select-label">
-          <div>
-            <Typography variant="text" className={styles.kanit}> รายการค้นหา </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          </InputLabel>
-          <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={norsorment}
-          label=" รายการค้นหา * "
-          onChange={handleChangeNorsorment}>
-          <MenuItem value={111} className={styles.kanit} 
-          onClick={() => {
-            setShow0(true);
-            setShow9(false);
-
-            setValueNorsor3(''); setErrorNorsor3(false);
-            setValueAmphur('');  setErrorAmphur(false);
-            setValueTumbon('');  setErrorTumbon(false);
-          }}
-          ><text className={styles.kanit}>เลขที่โฉนด</text></MenuItem>
-          <MenuItem value={222} className={styles.kanit} 
-          onClick={() => {
-            setShow9(true);
-            setShow0(false);
-
-            setValueAmphur('');  setErrorAmphur(false);
-            setValueTumbon('');  setErrorTumbon(false);
-            setValueLandNo('');  setErrorLandNo(false);
-            setValueUTM1('');    setErrorUTM1(false);
-            setValueUTM2(null);    setErrorUTM2(false);
-            setValueUTM4('');    setErrorUTM4(false);
-            setValueScale('');   setErrorUTMScale(false);
-          }}
-          ><text className={styles.kanit}>เลขที่ดิน</text></MenuItem>
-          </Select>
-          <FormHelperText>{errorN ? 
-            <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          </FormHelperText>
-          </FormControl>
-          : null }
-          </Stack>
-
-
-          <Collapse in={show1}>
-          <div>
-          <Grid 
-          sx={{ 
-            borderBottomStyle: 'solid',
-            borderColor: '#000',
-            color: 'white',
-            ml: '3%',
-            mt: '3%'
-            }}> 
-          </Grid>
-
-
-          <Stack direction='row'>
-          <Autocomplete
-          freeSolo
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueChanode}
-          onChange={handleChanode}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
+          getOptionLabel={(option) => option.label}
+          sx={{ width: '30%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
           renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-              <Typography variant="text" className={styles.kanit}> เลขที่โฉนด </Typography>
-              <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          } 
-          error={errorChanode}
-          helperText={errorChanode ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> ประเภทเอกสาร </Typography>
+            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
+          </div>} 
+          error={errorD}
+          helperText={errorD ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
           />}
           />
-          <Autocomplete
-          freeSolo
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueSurvey}
-          onChange={handleSurvey}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-              <Typography variant="text" className={styles.kanit}> หน้าสำรวจ </Typography>
-              <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          }  
-          error={errorSurvey}
-          helperText={errorSurvey ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />     
-          </Stack>
-
-
-
-          <Stack direction='row'>
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueAmphur}
-          onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
-          renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-              <Typography variant="text" className={styles.kanit}> อำเภอ </Typography>
-              <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          } 
-          error={errorAmphur}
-          helperText={errorAmphur ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueTumbon}
-          onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-              <Typography variant="text" className={styles.kanit}> ตำบล </Typography>
-              <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          }  
-          error={errorTumbon}
-          helperText={errorTumbon ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />     
-          </Stack>
-
-
-
-          <Grid container justifyContent="flex-end" alignItems="flex-end" sx={{ p: '1%', mr: '3.5%' }}>
-            <Button variant="contained" color='warning' sx={{ bgcolor: '#D7A203', width: 90 }} 
-            onClick={() => {
-              if ( valueChangwat == '' ){
-                setErrorChangwat(true);
-              }
-              if ( valueBranch == '' ){
-                setErrorBranch(true);
-              }
-              if ( document == '' ){
-                setErrorD(true);
-              }
-              if ( chanodment == '' ){
-                setErrorC(true);
-              }
-              if ( valueChanode == '' ){
-                setErrorChanode(true);
-              }
-              if ( valueSurvey == '' ){
-                setErrorSurvey(true);
-              }
-              if ( valueAmphur == '' ){
-                setErrorAmphur(true);
-              }
-              if ( valueTumbon == '' ){
-                setErrorTumbon(true);
-              }
-              else 
-              if ( valueChangwat != '' )
-              if ( valueBranch != '' )
-              if ( document != '' )
-              if ( chanodment != '' )
-              if ( valueChanode != '' )
-              if ( valueSurvey != '' )
-              if ( valueAmphur != '' )
-              if ( valueTumbon != '' ){
-                setModalTrue(true);
-              }
-            }}
-            >
-              <text className={styles.kanit}>ค้นหา</text>
-            </Button>
-
-            <Button variant="contained" color='primary' sx={{ ml: '1%', bgcolor: '#2F4266', width: 90 }}
-            onClick={() => {
-              setValueChangwat(''); setErrorChangwat(false);
-              setValueBranch('');   setErrorBranch(false);
-
-              setValueChanode('');  setErrorChanode(false);
-              setValueSurvey('');   setErrorSurvey(false);
-              setValueAmphur('');   setErrorAmphur(false);
-              setValueTumbon('');   setErrorTumbon(false);
-              setErrorD(false);
-              setErrorC(false);
-              setErrorN(false);
-            }}>
-              <text className={styles.kanit}>ล้างข้อมูล</text>
-            </Button>
-          </Grid>
-          </div>
-          </Collapse>
-
-
-
-          <Collapse in={show2}>
-          <div>
-          <Grid 
-          sx={{ 
-            borderBottomStyle: 'solid',
-            borderColor: '#000',
-            color: 'white',
-            ml: '3%',
-            mt: '3%'
-            }}> 
-          </Grid>
-
-
-          <Stack direction='row'>
-          <Autocomplete
-          freeSolo
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueLandNo}
-          onChange={handleLandNo}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' }  }}
-          renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-            <Typography variant="text" className={styles.kanit}> เลขที่ดิน </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          } 
-          error={errorLandNo}
-          helperText={errorLandNo ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />
-          <Autocomplete
-          freeSolo
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueUTM1}
-          onChange={handleUTM1}
-          sx={{ width: '34%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-            <Typography variant="text" className={styles.kanit}> ระวางแผนภูมิประเทศ </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          }  
-          error={errorUTM1}
-          helperText={errorUTM1 ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
+          <TextField  
+          focused 
+          type={"file"}
+          value={files}
+          onChange={handleFile}
+          error={errorF}
+          helperText={errorF ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
+          sx={{ width: '45%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          label={<div>
+            <Typography variant="text" className={styles.kanit}> เลือกไฟล์ </Typography>
+          </div>}
           />
           <Autocomplete
           disableClearable
-          id="free-solo-demo"
-          sx={{ width: '12%', ml: '2%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          options={[
-              {value:'1', title:'I'},
-              {value:'2', title:'II'}, 
-              {value:'3', title:'III'}, 
-              {value:'4', title:'IV'}]
-          }
           classes={{ option: styles.kanit}}
-          value={valueUTM2}
-          onChange={handleUTM2}
-          getOptionLabel={(option) => option.title}
-          renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-            <Typography variant="text" className={styles.kanit}> ซีรี่ย์</Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          } 
-          error={errorUTM2}
-          />}
-          />  
-          </Stack>
-
-
-
-          <Stack direction='row'>
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueUTM3}
-          onChange={handleUTM3}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-            <Typography variant="text" className={styles.kanit}> หมายเลขระวาง </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          } 
-          error={errorUTM3}
-          helperText={errorUTM3 ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueUTM4}
-          onChange={handleUTM4}
-          sx={{ width: '25%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={
-          <div>
-            <Typography variant="text" className={styles.kanit}> แผ่นที่หมายเลขระวาง </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>
-          }  
-          error={errorUTM4}
-          helperText={errorUTM4 ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />    
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueUTMScale}
-          onChange={handleUTMScale}
-          sx={{ width: '22%', ml: '1%', mt: '2%', input: { fontFamily: 'Kanit' } }}
+          options={Zones}
+          value={zones}
+          onChange={handleZone}
+          getOptionLabel={(option) => option.zone}
+          sx={{ width: '20%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
           renderInput={(params) => <TextField {...params} 
           label={<div>
-            <Typography variant="text" className={styles.kanit}> มาตราส่วน </Typography>
+            <Typography variant="text" className={styles.kanit}> เลือกโซน </Typography>
             <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
           </div>}  
-          error={errorUTMScale}
-          helperText={errorUTMScale ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
+          error={errorZ}
+          helperText={errorZ ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
           />}
           />     
-          </Stack>
+        </Stack>
+        <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mt: 1}}>
+          <Button variant="contained" className={styles.buttonImport} sx={{ width: 100 }} onClick={clearAll}>นำเข้า</Button>
+        </Box>
+        </Box>
 
-
-
-          <Grid container justifyContent="flex-end" alignItems="flex-end" sx={{ p: '1%', mr: '3.5%' }}>
-            <Button variant="contained" color='warning' sx={{ bgcolor: '#D7A203', width: 90 }}
-            onClick={() => {
-              if ( valueChangwat == '' ){
-                setErrorChangwat(true);
-              }
-              if ( valueBranch == '' ){
-                setErrorBranch(true);
-              }
-              if ( document == '' ){
-                setErrorD(true);
-              }
-              if ( chanodment == '' ){
-                setErrorC(true);
-              }
-              if ( valueLandNo == '' ){
-                setErrorLandNo(true);
-              }
-              if ( valueUTM1 == '' ){
-                setErrorUTM1(true);
-              }
-              if ( valueUTM2 == null ){
-                setErrorUTM2(true);
-              }
-              if ( valueUTM3 == '' ){
-                setErrorUTM3(true);
-              }
-              if ( valueUTM4 == '' ){
-                setErrorUTM4(true);
-              }
-              if ( valueUTMScale == '' ){
-                setErrorUTMScale(true);
-              }
-              else
-              if ( valueChangwat != '' )
-              if ( valueBranch != '' )
-              if ( document != '' )
-              if ( chanodment != '' )
-              if ( valueLandNo != '' )
-              if ( valueUTM1 != '' )
-              if ( valueUTM2 != null )
-              if ( valueUTM3 != '' )
-              if ( valueUTM4 != '' )
-              if ( valueUTMScale != '' ){
-                setModalTrue(true);
-              }
-            }}
+        <Grid>
+        <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 1000 }} aria-label="simple table">
+      {/* <caption><Pagination count={10} variant="outlined" shape="rounded"/></caption> */}
+        <TableHead>
+          <TableRow >
+            <TableCell align="center" className={styles.kanit}>ลำดับ</TableCell>
+            <TableCell align="center" className={styles.kanit}>โฉนดที่ดินเลขที่</TableCell>
+            <TableCell align="center" className={styles.kanit}>หน้าสำรวจ</TableCell>
+            <TableCell align="center" className={styles.kanit}>ระวาง</TableCell>
+            <TableCell align="center" className={styles.kanit}>เลขที่ดิน</TableCell>
+            <TableCell align="center" className={styles.kanit}>เนื้อที่ไร่-งาน-ตร.ว.</TableCell>
+            <TableCell align="center" className={styles.kanit}>สถานะนำเข้า</TableCell>
+            <TableCell align="center" className={styles.kanit}>ไปแผนที่</TableCell>
+            <TableCell align="center" className={styles.kanit}> </TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.t1}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
-              <text className={styles.kanit}>ค้นหา</text>
-            </Button>
+              <TableCell component="th" scope="row" align="center">
+                {row.t1}
+              </TableCell>
+              <TableCell align="center">{row.t2}</TableCell>
+              <TableCell align="center">{row.t3}</TableCell>
+              <TableCell align="center">{row.t4}</TableCell>
+              <TableCell align="center">{row.t5}</TableCell>
+              <TableCell align="center">{row.t6}</TableCell>
+              <TableCell align="center">{row.t7}</TableCell>
+              <TableCell align="center">{row.t8}</TableCell>
+              <TableCell align="center">{row.t9}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+        </Grid>
+        
 
-            <Button variant="contained" color='primary' sx={{ ml: '1%', bgcolor: '#2F4266', width: 90 }}
-            onClick={() => {
-              setValueChangwat(''); setErrorChangwat(false);
-              setValueBranch('');   setErrorBranch(false);
-              
-              setValueLandNo('');  setErrorLandNo(false);
-              setValueUTM1('');    setErrorUTM1(false);
-              setValueUTM2(null);  setErrorUTM2(false);
-              setValueUTM3('');    setErrorUTM3(false);
-              setValueUTM4('');    setErrorUTM4(false);
-              setValueScale('');   setErrorUTMScale(false);
-              setErrorD(false);
-              setErrorC(false);
-              setErrorN(false);
-            }}>
-              <text className={styles.kanit}>ล้างข้อมูล</text>
-            </Button>
-          </Grid>
-          </div>
-          </Collapse>
+        <Grid container>
+          <Typography className={styles.kanit} variant="text">
+            จำนวนทั้งหมด
+          </Typography>
 
-
-
-
-          <Collapse in={show0}>
-          <Grid 
-          sx={{ 
-            borderBottomStyle: 'solid',
-            borderColor: '#000',
-            color: 'white',
-            ml: '3%',
-            mt: '3%'
-            }}> 
-          </Grid>
-
-
-          <Stack direction='row'>
-          <Autocomplete
-          freeSolo
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueNorsor3}
-          onChange={handleNorsor3}
-          sx={{ width: '47%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> เลขที่น.ส. 3ก. </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>} 
-          error={errorNorsor3}
-          helperText={errorNorsor3 ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />
-          </Stack>
+          <Typography className={styles.kanit} variant="text">
+            นำเข้าได้
+          </Typography>
+        </Grid>
+        
 
 
 
-          <Stack direction='row'>
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueAmphur}
-          onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> อำเภอ </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>} 
-          error={errorAmphur}
-          helperText={errorAmphur ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueTumbon}
-          onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> ตำบล </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>}  
-          error={errorTumbon}
-          helperText={errorTumbon ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />     
-          </Stack>
-
-
-
-          <Grid container justifyContent="flex-end" alignItems="flex-end" sx={{ p: '1%', mr: '3.5%' }}>
-            <Button variant="contained" color='warning' sx={{ bgcolor: '#D7A203', width: 90 }}
-            onClick={() => {
-              if ( valueChangwat == ''){
-                setErrorChangwat(true);
-              }
-              if ( valueBranch == '' ){
-                setErrorBranch(true);
-              }
-              if ( document == '' ){
-                setErrorD(true);
-              }
-              if ( norsorment == '' ){
-                setErrorN(true);
-              }
-              if ( valueNorsor3 == '' ){
-                setErrorNorsor3(true);
-              }
-              if ( valueAmphur == '' ){
-                setErrorAmphur(true);
-              }
-              if ( valueTumbon == '' ){
-                setErrorTumbon(true);
-              }
-              else
-              if ( valueChangwat != '')
-              if ( valueBranch != '' )
-              if ( document != '' )
-              if ( norsorment != '' )
-              if ( valueNorsor3 != '' )
-              if ( valueAmphur != '' )
-              if ( valueTumbon != '' ){
-                setModalTrue(true);
-              }
-            }}>
-              <text className={styles.kanit}>ค้นหา</text>
-            </Button>
-
-
-            <Button variant="contained" color='primary' sx={{ ml: '1%', bgcolor: '#2F4266', width: 90 }}
-            onClick={() => {
-              setValueChangwat('');  setErrorChangwat(false);
-              setValueBranch('');    setErrorBranch(false);
-              setValueNorsor3('');   setErrorNorsor3(false);
-              setValueAmphur('');    setErrorAmphur(false);
-              setValueTumbon('');    setErrorTumbon(false);
-              setErrorD(false);
-              setErrorC(false);
-              setErrorN(false);
-            }}
-            >
-              <text className={styles.kanit}>ล้างข้อมูล</text>
-            </Button>
-          </Grid>
-          </Collapse>
-
-
-          <Collapse in={show9}>
-          <Grid 
-          sx={{ 
-            borderBottomStyle: 'solid',
-            borderColor: '#000',
-            color: 'white',
-            ml: '3%',
-            mt: '3%'
-            }}> 
-          </Grid>
-
-
-          <Stack direction='row'>
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueAmphur}
-          onChange={handleAmphur}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> อำเภอ </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>}
-          error={errorAmphur}
-          helperText={errorAmphur ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueTumbon}
-          onChange={handleTumbon}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> ตำบล </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>}
-          error={errorTumbon}
-          helperText={errorTumbon ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />     
-          </Stack>
-
-
-          <Stack direction='row'>
-          <Autocomplete
-          freeSolo
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueLandNo}
-          onChange={handleLandNo}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> เลขที่ดิน </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>}
-          error={errorLandNo}
-          helperText={errorLandNo ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />
-          <Autocomplete
-          freeSolo
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueUTM1}
-          onChange={handleUTM1}
-          sx={{ width: '34%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> ระวางแผนภูมิประเทศ </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>}  
-          error={errorUTM1}
-          helperText={errorUTM1 ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />
-          <Autocomplete
-          disableClearable
-          id="free-solo-demo"
-          sx={{ width: '12%', ml: '2%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          options={[
-              {valuenor:'1', titlenor:'I'},
-              {valuenor:'2', titlenor:'II'}, 
-              {valuenor:'3', titlenor:'III'}, 
-              {valuenor:'4', titlenor:'IV'}]
-          }
-          classes={{ option: styles.kanit}}
-          value={valueUTM2}
-          onChange={handleUTM2}
-          getOptionLabel={(option) => option.titlenor}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> ซีรี่ย์</Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>} 
-          error={errorUTM2}
-          />}
-          />  
-          </Stack>
-
-
-
-          <Stack direction='row'>
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueUTM4}
-          onChange={handleUTM4}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> แผ่นที่หมายเลขระวาง </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>}
-          error={errorUTM4}
-          helperText={errorUTM4 ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />    
-          <Autocomplete
-          id="combo-box-demo"
-          options={top100Films}
-          classes={{ option: styles.kanit}}
-          value={valueUTMScale}
-          onChange={handleUTMScale}
-          sx={{ width: '48%', ml: '3%', mt: '2%', input: { fontFamily: 'Kanit' } }}
-          renderInput={(params) => <TextField {...params} 
-          label={<div>
-            <Typography variant="text" className={styles.kanit}> มาตราส่วน </Typography>
-            <Typography variant="text" className={styles.kanit} sx={{ color: 'red' }}> *</Typography>
-          </div>}  
-          error={errorUTMScale}
-          helperText={errorUTMScale ? <text className={styles.kanit}>กรุณากรอกข้อมูลให้ครบ</text> : ""}
-          />}
-          />     
-          </Stack>
-
-          
-
-
-
-          <Grid container justifyContent="flex-end" alignItems="flex-end" sx={{ p: '1%', mr: '3.5%' }}>
-            <Button variant="contained" color='warning' sx={{ bgcolor: '#D7A203', width: 90 }}
-            onClick={() => {
-              if ( valueChangwat == '' ){
-                setErrorChangwat(true);
-              }
-              if ( valueBranch == '' ){
-                setErrorBranch(true);
-              }
-              if ( document == '' ){
-                setErrorD(true);
-              }
-              if ( norsorment == '' ){
-                setErrorN(true);
-              }
-              if ( valueAmphur == '' ){
-                setErrorAmphur(true);
-              }
-              if ( valueTumbon == '' ){
-                setErrorTumbon(true);
-              }
-              if ( valueLandNo == '' ){
-                setErrorLandNo(true);
-              }
-              if ( valueUTM1 == '' ){
-                setErrorUTM1(true);
-              }
-              if ( valueUTM2 == null ){
-                setErrorUTM2(true);
-              }
-              if ( valueUTM4 == '' ){
-                setErrorUTM4(true);
-              }
-              if ( valueUTMScale == '' ){
-                setErrorUTMScale(true);
-              }
-              else
-              if ( valueChangwat != '' )
-              if ( valueBranch != '' )
-              if ( document != '' )
-              if ( norsorment != '' )
-              if ( valueAmphur != '' )
-              if ( valueTumbon != '' )
-              if ( valueLandNo != '' )
-              if ( valueUTM1 != '' )
-              if ( valueUTM2 != null )
-              if ( valueUTM4 != '' )
-              if ( valueUTMScale != '' ){
-                setModalTrue(true);
-              }
-            }}>
-              <text className={styles.kanit}>ค้นหา</text>
-            </Button>
-
-
-            <Button variant="contained" color='primary' sx={{ ml: '1%', bgcolor: '#2F4266', width: 90 }}
-            onClick={() => {
-              setValueChangwat(''); setErrorChangwat(false);
-              setValueBranch('');   setErrorBranch(false);
-              
-              setValueAmphur('');  setErrorAmphur(false);
-              setValueTumbon('');  setErrorTumbon(false);
-              setValueLandNo('');  setErrorLandNo(false);
-              setValueUTM1('');    setErrorUTM1(false);
-              setValueUTM2(null);  setErrorUTM2(false);
-              setValueUTM3('');    setErrorUTM3(false);
-              setValueUTM4('');    setErrorUTM4(false);
-              setValueScale('');   setErrorUTMScale(false);
-              setErrorD(false);
-              setErrorC(false);
-              setErrorN(false);
-            }}>
-              <text className={styles.kanit}>ล้างข้อมูล</text>
-            </Button>
-          </Grid>
-          </Collapse>
-
-
-          </Grid>
         </Grid>
 
 
+
+
+        <Grid item xs={false} sm={4} md={6} sx={{ width: '100%' }}
+        >
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15929615.196018716!2d92.43077059157704!3d12.903464108699563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304d8df747424db1%3A0x9ed72c880757e802!2z4Lib4Lij4Liw4LmA4LiX4Lio4LmE4LiX4Lii!5e0!3m2!1sth!2sth!4v1665041235384!5m2!1sth!2sth"
+        width="100%"
+        height={800}
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"/>
+        </Grid>
       </Grid>
 
 
-
-
-      <Modal
-        open={modaltrue}
-        onClose={() => { setModalTrue(false); }}
-      >
-        <Box sx={{ 
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: 'auto',
-        }}>
-        <div>
-        <Box 
-        sx={{
-        bgcolor: '#fff', 
-        width: '650px', 
-        boxShadow : '2px -3px 14px rgba(0, 0, 0, 0.25)', 
-        mt: '5%', 
-        ml: '5%', 
-        borderRadius: '10px'
-        }}
-        >
-        <Grid container sx= {{justifyContent: 'center', alignItems: 'center', py: '10%'}}>
-          <CancelRoundedIcon sx= {{ width: '146px', height: '146px', color: '#E64D3B' }}/>
-        <Grid container sx= {{justifyContent: 'center', mt: '3%'}}>
-          <Typography variant= "h4" className= {styles.kanit} sx= {{fontWeight: 'bold', color: '#848484'}}>
-            ไม่ปรากฏขัอมูลในบัญชีราคาประเมินที่ดิน
-          </Typography>
-        </Grid>
-                
-        <Grid container sx= {{justifyContent: 'space-evenly', mt: '5%'}}>
-          <Backbutton variant= "contained" onClick={() => { setModalTrue(false); }}>กลับหน้าค้นหา</Backbutton>
-          <Inputbutton variant= "contained" onClick={props.onClick}>นำเข้า</Inputbutton>
-        </Grid>
-        </Grid>
-        </Box>
-        </div>
-        </Box>
-      </Modal>
-
-
-     
+    </ThemeProvider>
     </div>
-  )
+  );
 }
+
 
 
 const provicetest = [
@@ -3632,572 +2747,13 @@ const branchtest = [
 ]
 
 
-const amphurtest = [
 
-  //81
-  {
-      "AMPHUR_CODE": "01",
-      "AMPHUR_DESCRIPTION": "เมืองกระบี่"
-  },
-  {
-      "AMPHUR_CODE": "02",
-      "AMPHUR_DESCRIPTION": "เขาพนม"
-  },
-  {
-      "AMPHUR_CODE": "08",
-      "AMPHUR_DESCRIPTION": "เหนือคลอง"
-  },
-  {
-      "AMPHUR_CODE": "ฉ1",
-      "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.เมืองกระบี่"
-  },
-  {
-      "AMPHUR_CODE": "ฉ8",
-      "AMPHUR_DESCRIPTION": "โฉนดตราจองอ.เหนือคลอง"
-  },
-  {
-      "AMPHUR_CODE": "ต1",
-      "AMPHUR_DESCRIPTION": "ตราจองอ.เมืองกระบี่"
-  },
-  {
-      "AMPHUR_CODE": "ต8",
-      "AMPHUR_DESCRIPTION": "ตราจองอ.เหนือคลอง"
-  },
-  {
-      "AMPHUR_CODE": "05",
-      "AMPHUR_DESCRIPTION": "อ่าวลึก"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "ปลายพระยา"
-  },
-  {
-      "AMPHUR_CODE": "04",
-      "AMPHUR_DESCRIPTION": "คลองท่อม"
-  },
-  {
-      "AMPHUR_CODE": "07",
-      "AMPHUR_DESCRIPTION": "ลำทับ"
-  },
-  {
-      "AMPHUR_CODE": "03",
-      "AMPHUR_DESCRIPTION": "เกาะลันตา"
-  },
-
-  //10
-  {
-      "AMPHUR_CODE": "01",
-      "AMPHUR_DESCRIPTION": "พระนคร"
-  },
-  {
-      "AMPHUR_CODE": "02",
-      "AMPHUR_DESCRIPTION": "ดุสิต"
-  },
-  {
-      "AMPHUR_CODE": "03",
-      "AMPHUR_DESCRIPTION": "หนองจอก"
-  },
-  {
-      "AMPHUR_CODE": "04",
-      "AMPHUR_DESCRIPTION": "บางรัก"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "07",
-      "AMPHUR_DESCRIPTION": "ปทุมวัน"
-  },
-  {
-      "AMPHUR_CODE": "08",
-      "AMPHUR_DESCRIPTION": "ป้อมปราบศัตรูพ่าย"
-  },
-  {
-      "AMPHUR_CODE": "09",
-      "AMPHUR_DESCRIPTION": "พระโขนง"
-  },
-  {
-      "AMPHUR_CODE": "12",
-      "AMPHUR_DESCRIPTION": "ยานนาวา"
-  },
-  {
-      "AMPHUR_CODE": "13",
-      "AMPHUR_DESCRIPTION": "สัมพันธวงศ์"
-  },
-  {
-      "AMPHUR_CODE": "14",
-      "AMPHUR_DESCRIPTION": "พญาไท"
-  },
-  {
-      "AMPHUR_CODE": "19",
-      "AMPHUR_DESCRIPTION": "ตลิ่งชัน"
-  },
-  {
-      "AMPHUR_CODE": "20",
-      "AMPHUR_DESCRIPTION": "บางกอกน้อย"
-  },
-  {
-      "AMPHUR_CODE": "22",
-      "AMPHUR_DESCRIPTION": "ภาษีเจริญ"
-  },
-  {
-      "AMPHUR_CODE": "23",
-      "AMPHUR_DESCRIPTION": "หนองแขม"
-  },
-  {
-      "AMPHUR_CODE": "28",
-      "AMPHUR_DESCRIPTION": "สาทร"
-  },
-  {
-      "AMPHUR_CODE": "29",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  {
-      "AMPHUR_CODE": "31",
-      "AMPHUR_DESCRIPTION": "บางคอแหลม"
-  },
-  {
-      "AMPHUR_CODE": "33",
-      "AMPHUR_DESCRIPTION": "คลองเตย"
-  },
-  {
-      "AMPHUR_CODE": "40",
-      "AMPHUR_DESCRIPTION": "บางแค"
-  },
-  {
-      "AMPHUR_CODE": "ส1",
-      "AMPHUR_DESCRIPTION": "พระนคร(ในพระนคร)"
-  },
-  {
-      "AMPHUR_CODE": "ส6",
-      "AMPHUR_DESCRIPTION": "ยานนาวา(เมือง)"
-  },
-  {
-      "AMPHUR_CODE": "ส9",
-      "AMPHUR_DESCRIPTION": "สามเพ็ง"
-  },
-  {
-      "AMPHUR_CODE": "01",
-      "AMPHUR_DESCRIPTION": "พระนคร"
-  },
-  {
-      "AMPHUR_CODE": "05",
-      "AMPHUR_DESCRIPTION": "บางเขน"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "35",
-      "AMPHUR_DESCRIPTION": "จอมทอง"
-  },
-  {
-      "AMPHUR_CODE": "38",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว"
-  },
-  {
-      "AMPHUR_CODE": "42",
-      "AMPHUR_DESCRIPTION": "สายไหม"
-  },
-  {
-      "AMPHUR_CODE": "ก1",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว"
-  },
-  {
-      "AMPHUR_CODE": "ข1",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว"
-  },
-  {
-      "AMPHUR_CODE": "ข2",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "ข5",
-      "AMPHUR_DESCRIPTION": "บางเขน(ลำลูกกา)"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "09",
-      "AMPHUR_DESCRIPTION": "พระโขนง"
-  },
-  {
-      "AMPHUR_CODE": "33",
-      "AMPHUR_DESCRIPTION": "คลองเตย"
-  },
-  {
-      "AMPHUR_CODE": "39",
-      "AMPHUR_DESCRIPTION": "วัฒนา"
-  },
-  {
-      "AMPHUR_CODE": "47",
-      "AMPHUR_DESCRIPTION": "บางนา"
-  },
-  {
-      "AMPHUR_CODE": "ซ4",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "09",
-      "AMPHUR_DESCRIPTION": "พระโขนง"
-  },
-  {
-      "AMPHUR_CODE": "38",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว"
-  },
-  {
-      "AMPHUR_CODE": "45",
-      "AMPHUR_DESCRIPTION": "วังทองหลาง"
-  },
-  {
-      "AMPHUR_CODE": "ก1",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว"
-  },
-  {
-      "AMPHUR_CODE": "01",
-      "AMPHUR_DESCRIPTION": "พระนคร"
-  },
-  {
-      "AMPHUR_CODE": "10",
-      "AMPHUR_DESCRIPTION": "มีนบุรี"
-  },
-  {
-      "AMPHUR_CODE": "27",
-      "AMPHUR_DESCRIPTION": "บึงกุ่ม"
-  },
-  {
-      "AMPHUR_CODE": "46",
-      "AMPHUR_DESCRIPTION": "คลองสามวา"
-  },
-  {
-      "AMPHUR_CODE": "ม1",
-      "AMPHUR_DESCRIPTION": "บึงกุ่ม"
-  },
-  {
-      "AMPHUR_CODE": "ม2",
-      "AMPHUR_DESCRIPTION": "มีนบุรี(เมือง)"
-  },
-  {
-      "AMPHUR_CODE": "ม3",
-      "AMPHUR_DESCRIPTION": "แสนแสบ"
-  },
-  {
-      "AMPHUR_CODE": "18",
-      "AMPHUR_DESCRIPTION": "คลองสาน"
-  },
-  {
-      "AMPHUR_CODE": "21",
-      "AMPHUR_DESCRIPTION": "บางขุนเทียน"
-  },
-  {
-      "AMPHUR_CODE": "22",
-      "AMPHUR_DESCRIPTION": "ภาษีเจริญ"
-  },
-  {
-      "AMPHUR_CODE": "24",
-      "AMPHUR_DESCRIPTION": "ราษฎร์บูรณะ"
-  },
-  {
-      "AMPHUR_CODE": "30",
-      "AMPHUR_DESCRIPTION": "จตุจักร"
-  },
-  {
-      "AMPHUR_CODE": "33",
-      "AMPHUR_DESCRIPTION": "คลองเตย"
-  },
-  {
-      "AMPHUR_CODE": "35",
-      "AMPHUR_DESCRIPTION": "จอมทอง"
-  },
-  {
-      "AMPHUR_CODE": "50",
-      "AMPHUR_DESCRIPTION": "บางบอน"
-  },
-  {
-      "AMPHUR_CODE": "ท1",
-      "AMPHUR_DESCRIPTION": "ภาษีเจริญ"
-  },
-  {
-      "AMPHUR_CODE": "ท2",
-      "AMPHUR_DESCRIPTION": "บางขุนเทียน(เมือง)"
-  },
-  {
-      "AMPHUR_CODE": "ท3",
-      "AMPHUR_DESCRIPTION": "ราษฎร์บูรณะ"
-  },
-  {
-      "AMPHUR_CODE": "19",
-      "AMPHUR_DESCRIPTION": "ตลิ่งชัน"
-  },
-  {
-      "AMPHUR_CODE": "20",
-      "AMPHUR_DESCRIPTION": "บางกอกน้อย"
-  },
-  {
-      "AMPHUR_CODE": "25",
-      "AMPHUR_DESCRIPTION": "บางพลัด"
-  },
-  {
-      "AMPHUR_CODE": "29",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  {
-      "AMPHUR_CODE": "48",
-      "AMPHUR_DESCRIPTION": "ทวีวัฒนา"
-  },
-  {
-      "AMPHUR_CODE": "ซ1",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  {
-      "AMPHUR_CODE": "อ1",
-      "AMPHUR_DESCRIPTION": "ตลิ่งชัน(บางใหญ่)"
-  },
-  {
-      "AMPHUR_CODE": "15",
-      "AMPHUR_DESCRIPTION": "ธนบุรี"
-  },
-  {
-      "AMPHUR_CODE": "16",
-      "AMPHUR_DESCRIPTION": "บางกอกใหญ่"
-  },
-  {
-      "AMPHUR_CODE": "18",
-      "AMPHUR_DESCRIPTION": "คลองสาน"
-  },
-  {
-      "AMPHUR_CODE": "24",
-      "AMPHUR_DESCRIPTION": "ราษฎร์บูรณะ"
-  },
-  {
-      "AMPHUR_CODE": "49",
-      "AMPHUR_DESCRIPTION": "ทุ่งครุ"
-  },
-  {
-      "AMPHUR_CODE": "ธ1",
-      "AMPHUR_DESCRIPTION": "คลองสาน(บางลำภูล่าง)"
-  },
-  {
-      "AMPHUR_CODE": "ธ2",
-      "AMPHUR_DESCRIPTION": "ราษฎร์บูรณะ(เมือง)"
-  },
-  {
-      "AMPHUR_CODE": "02",
-      "AMPHUR_DESCRIPTION": "ดุสิต"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "14",
-      "AMPHUR_DESCRIPTION": "พญาไท"
-  },
-  {
-      "AMPHUR_CODE": "17",
-      "AMPHUR_DESCRIPTION": "ห้วยขวาง"
-  },
-  {
-      "AMPHUR_CODE": "26",
-      "AMPHUR_DESCRIPTION": "ดินแดง"
-  },
-  {
-      "AMPHUR_CODE": "29",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  {
-      "AMPHUR_CODE": "37",
-      "AMPHUR_DESCRIPTION": "ราชเทวี"
-  },
-  {
-      "AMPHUR_CODE": "ซ2",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  {
-      "AMPHUR_CODE": "ซ4",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "ว2",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  {
-      "AMPHUR_CODE": "22",
-      "AMPHUR_DESCRIPTION": "ภาษีเจริญ"
-  },
-  {
-      "AMPHUR_CODE": "23",
-      "AMPHUR_DESCRIPTION": "หนองแขม"
-  },
-  {
-      "AMPHUR_CODE": "40",
-      "AMPHUR_DESCRIPTION": "บางแค"
-  },
-  {
-      "AMPHUR_CODE": "05",
-      "AMPHUR_DESCRIPTION": "บางเขน"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "09",
-      "AMPHUR_DESCRIPTION": "พระโขนง"
-  },
-  {
-      "AMPHUR_CODE": "38",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว"
-  },
-  {
-      "AMPHUR_CODE": "45",
-      "AMPHUR_DESCRIPTION": "วังทองหลาง"
-  },
-  {
-      "AMPHUR_CODE": "ก1",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว"
-  },
-  {
-      "AMPHUR_CODE": "ซ5",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "ด1",
-      "AMPHUR_DESCRIPTION": "บางเขน"
-  },
-  {
-      "AMPHUR_CODE": "พ2",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว(บางกะปิ)"
-  },
-  {
-      "AMPHUR_CODE": "05",
-      "AMPHUR_DESCRIPTION": "บางเขน"
-  },
-  {
-      "AMPHUR_CODE": "36",
-      "AMPHUR_DESCRIPTION": "ดอนเมือง"
-  },
-  {
-      "AMPHUR_CODE": "41",
-      "AMPHUR_DESCRIPTION": "หลักสี่"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "09",
-      "AMPHUR_DESCRIPTION": "พระโขนง"
-  },
-  {
-      "AMPHUR_CODE": "32",
-      "AMPHUR_DESCRIPTION": "ประเวศ"
-  },
-  {
-      "AMPHUR_CODE": "33",
-      "AMPHUR_DESCRIPTION": "คลองเตย"
-  },
-  {
-      "AMPHUR_CODE": "34",
-      "AMPHUR_DESCRIPTION": "สวนหลวง"
-  },
-  {
-      "AMPHUR_CODE": "ซ3",
-      "AMPHUR_DESCRIPTION": "พระโขนง"
-  },
-  {
-      "AMPHUR_CODE": "ป5",
-      "AMPHUR_DESCRIPTION": "บางพลี"
-  },
-  {
-      "AMPHUR_CODE": "06",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "09",
-      "AMPHUR_DESCRIPTION": "พระโขนง"
-  },
-  {
-      "AMPHUR_CODE": "27",
-      "AMPHUR_DESCRIPTION": "บึงกุ่ม"
-  },
-  {
-      "AMPHUR_CODE": "32",
-      "AMPHUR_DESCRIPTION": "ประเวศ"
-  },
-  {
-      "AMPHUR_CODE": "43",
-      "AMPHUR_DESCRIPTION": "คันนายาว"
-  },
-  {
-      "AMPHUR_CODE": "44",
-      "AMPHUR_DESCRIPTION": "สะพานสูง"
-  },
-  {
-      "AMPHUR_CODE": "ก1",
-      "AMPHUR_DESCRIPTION": "ลาดพร้าว"
-  },
-  {
-      "AMPHUR_CODE": "ซ4",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "บ1",
-      "AMPHUR_DESCRIPTION": "บางกะปิ"
-  },
-  {
-      "AMPHUR_CODE": "03",
-      "AMPHUR_DESCRIPTION": "หนองจอก"
-  },
-  {
-      "AMPHUR_CODE": "33",
-      "AMPHUR_DESCRIPTION": "คลองเตย"
-  },
-  {
-      "AMPHUR_CODE": "ม3",
-      "AMPHUR_DESCRIPTION": "แสนแสบ"
-  },
-  {
-      "AMPHUR_CODE": "ล2",
-      "AMPHUR_DESCRIPTION": "เจียระดับ"
-  },
-  {
-      "AMPHUR_CODE": "11",
-      "AMPHUR_DESCRIPTION": "ลาดกระบัง"
-  },
-  {
-      "AMPHUR_CODE": "ม3",
-      "AMPHUR_DESCRIPTION": "แสนแสบ"
-  },
-  {
-      "AMPHUR_CODE": "ล2",
-      "AMPHUR_DESCRIPTION": "เจียระดับ"
-  },
-  {
-      "AMPHUR_CODE": "29",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  {
-      "AMPHUR_CODE": "30",
-      "AMPHUR_DESCRIPTION": "จตุจักร"
-  },
-  {
-      "AMPHUR_CODE": "ซ1",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  {
-      "AMPHUR_CODE": "ซ2",
-      "AMPHUR_DESCRIPTION": "บางซื่อ"
-  },
-  
+const Zones = [
+  { zone: '47', id: 47 },
+  { zone: '48', id: 48 },
 ]
 
-
+const Menus = [
+  { label: 'โฉนดที่ดิน', year: 4  },
+  { label: 'น.ส. 3ก.', year: 5  },
+]

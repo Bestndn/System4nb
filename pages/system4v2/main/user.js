@@ -2,11 +2,12 @@ import * as React from 'react';
 import {Box, ButtonBase, Grid, Avatar, Menu, MenuItem, ListItemIcon, Divider, Typography, Tooltip, Popper, Grow, Paper, ClickAwayListener, MenuList, Stack } from '@mui/material';
 import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
 import { GoShield, GoGear, GoFlame } from "react-icons/go";
-import styles from '../../../styles/Home.module.css';
 import { styled } from '@mui/material/styles';
 import { FcBusinessman } from "react-icons/fc";
 import Fab from '@mui/material/Fab';
 import Link from 'next/link';
+
+import styles from '../../../styles/system4v2.module.css';
 
 export default function User() {
   
@@ -44,7 +45,7 @@ export default function User() {
     prevOpen.current = open;
   }, [open]);
 
-    const Username = styled(Fab)({
+    const Username = styled(Grid)({
         padding: '0.1%', 
         borderRadius: '50px', 
         width: '200px', 
@@ -134,7 +135,7 @@ export default function User() {
                       </Stack>
                     </MenuItem>
                     <MenuItem onClick={handleClose}>
-                      <a href='../'>
+                      <a href=''>
                       <Stack spacing={1} direction="row" className={styles.kanit}>
                         <GoFlame/>
                         <text>ออกจากระบบ</text>

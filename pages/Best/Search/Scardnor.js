@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import { Box } from '@mui/system';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 import { Grid, Divider, Button } from '@mui/material';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import IconButton from '@mui/material/IconButton';

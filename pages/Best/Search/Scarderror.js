@@ -2,7 +2,7 @@ import { Grid, Typography, Button } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 import { styled } from '@mui/material/styles';
 
 

@@ -1,24 +1,22 @@
 import * as React from 'react';
 import {Box, Grid, Typography} from '@mui/material';
+import styles from '../../../styles/system4v2.module.css';
 
 export default function Footer() {
   return (
-    <div>
-
-     <Box sx={{ minWidth: '1200px' }}>
+    <Box>
       <Grid container sx={{
-        bgcolor: '#2F4266', 
+        bgcolor: '#00A09D', 
         justifyContent: 'center', 
         alignItem: 'center', 
-        padding: '1%', 
+        padding: '1%',
         }}>
-        <Typography color="white">
-          Copyright  © The Treasury Department
-        </Typography>
+          <Typography className={styles.kanit} color="white">Copyright  © The Treasury Department</Typography>
+
       </Grid>
-     </Box>
+    </Box>
 
 
-  </div>
+
   );
 } 

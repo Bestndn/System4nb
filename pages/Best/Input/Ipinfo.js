@@ -6,7 +6,7 @@ import { AiFillCaretRight } from "react-icons/ai";
 import EditRoundedIcon from '@mui/icons-material/EditRounded';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;

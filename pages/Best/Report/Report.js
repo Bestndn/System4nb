@@ -1,7 +1,7 @@
 import { Button, Grid, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import { styled } from '@mui/material/styles';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 import FindInPageRoundedIcon from '@mui/icons-material/FindInPageRounded';
 import React from 'react'
 import { HiOutlineDocumentChartBar } from "react-icons/hi2";

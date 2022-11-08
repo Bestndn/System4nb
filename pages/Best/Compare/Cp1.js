@@ -1,7 +1,7 @@
 import { Button, Grid, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import { styled } from '@mui/material/styles';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 import React from 'react'
 import { GiGears } from "react-icons/gi";
 import { IoGitCompareOutline } from "react-icons/io5";

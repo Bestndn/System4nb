@@ -3,7 +3,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import NotificationImportantRoundedIcon from '@mui/icons-material/NotificationImportantRounded';
 import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
-import styles from '../../styles/Home.module.css';
+import styles from '../../../styles/Home.module.css';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import { styled } from '@mui/material/styles';
