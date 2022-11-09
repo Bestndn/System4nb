@@ -32,7 +32,7 @@ function Mymap() {
                 <p>Click the map to reveal location coordinate via React State</p>
             </div> */}
 
-            <MapWrapper features height={100} />
+            <MapWrapper features height={'auto'} />
             
         </div>
     )
