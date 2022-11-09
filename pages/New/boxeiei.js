@@ -29,7 +29,7 @@ export default function Boxeiei() {
               p: 0.2, 
               pb: 0.5, 
               pl: 0.5, 
-              pr: 0.5 , 
+              pr: 0.5, 
               borderRadius: '10px',
               }}>
               <Grid sx={{ 

@@ -10,6 +10,7 @@ import Pagination from '@mui/material/Pagination';
 import styles from '../../../styles/system4v2.module.css';
 import { styled } from '@mui/material/styles';
 import { HiOutlineDocumentChartBar } from "react-icons/hi2";
+import { rotate } from 'ol/transform';
 
 const theme = createTheme();
 
@@ -59,8 +60,8 @@ export default function Reportend() {
                 }}
                 >
                 <Grid container sx= {{justifyContent: 'flex-start', alignItems: 'center', my: 1}}>
-                    <Avatar sx= {{width: 40, height: 40, mx: 1.5, border: '3px solid black', mt: 1}} >
-                        <HiOutlineDocumentChartBar size={30} color= "black"/>
+                    <Avatar sx= {{ width: 40, height: 40, mx: 1.5, border: '3px solid black', mt: 1 }} >
+                        <HiOutlineDocumentChartBar size={30} color= "red"/>
                     </Avatar>
                     <Grid sx= {{width: '92%'}}>
                         <Grid container sx= {{width: '100%'}}>
