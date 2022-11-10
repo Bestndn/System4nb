@@ -273,7 +273,7 @@ import { Stack } from "@mui/system";
             />
           }
           
-          <Grid container>
+          <Grid container >
             <TableContainer sx= {{borderRadius: '4px'}}>
               <Table>
                 <caption>             
@@ -309,8 +309,13 @@ import { Stack } from "@mui/system";
                           แปลงที่ดินที่ไม่ปรากฎในบัญชีราคาประเมินที่ดิน 
                         </Typography>
                         </TableCell>
+                        <TableCell align="center" colSpan={12} sx={{ backgroundColor: "#137371" }}>
+                        <Typography variant="text" sx={Kanitstyles} color="#FFFFFF">
+                          แปลงที่ดินใกล้เคียงที่มีสภาพคล้ายคลึงกัน 
+                        </Typography>
+                        </TableCell>
                     </TableRow>
-                <TableRow sx={{ backgroundColor: "#00A09D" }}>
+                <TableRow>
                 {data && data[0]?.hasOwnProperty("collapse") && (
                       <TableCell width={"2%"}></TableCell>
                     )}
@@ -318,9 +323,9 @@ import { Stack } from "@mui/system";
                       (el, index) =>
                         !excludeColum.includes(el.listname) && (
                           <TableCell
-  
+   
                             key={index}
-                            
+                            sx={{ backgroundColor: "#00A09D" }}
                             sortDirection={sortDirection}
                           >
                             <Grid container sx= {{justifyContent: 'center'}}>
@@ -332,6 +337,31 @@ import { Stack } from "@mui/system";
                           
                         )
                     )}
+                    {data && data[0]?.hasOwnProperty("collapse") && (
+                      <TableCell width={"2%"}></TableCell>
+                    )}
+
+                    {colums?.map(
+                      (el, index) =>
+                        !excludeColum.includes(el.listname) && (
+                          <TableCell
+  
+                            key={index}
+                            sx={{ backgroundColor: "#137371" }}
+                            sortDirection={sortDirection}
+                          >
+                            <Grid container sx= {{justifyContent: 'center'}}>
+                              <Grid item sx={{ display:'flex'}}>
+                              <Typography variant="text" sx={Kanitstyles} color="#FFFFFF">{el.name}</Typography>
+                              </Grid>
+                            </Grid>
+                          </TableCell>
+                          
+                        )
+                    )}
+                  </TableRow>
+                  <TableRow sx={{ backgroundColor: "#137371" }}>
+                
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -431,165 +461,6 @@ import { Stack } from "@mui/system";
               </Table>
             </TableContainer>
 
-
-            <TableContainer sx= {{borderRadius: '4px'}}>
-              <Table>
-                <caption>             
-                <Grid container sx= {{ justifyContent: 'flex-end' }}>
-                <Typography fontSize={14} className={styles.kanit} sx={{ mr: 5 }}>
-                    ส่งออกข้อมูล
-                </Typography>  
-                  <ButtonBase variant='contained' sx={{ bgcolor: '#009D23', borderRadius: '4px', width: 80 }}
-                    onClick={props.onClickExcel}>
-                   <Typography variant='text' className={styles.kanit} color="white">Excel</Typography>
-                  </ButtonBase>
-                <Divider orientation="vertical" flexItem color="gray" sx={{ mr: 1, ml: 1}}/>
-                  <ButtonBase variant='contained' sx={{ bgcolor: '#266F36', borderRadius: '4px', width: 80 }}
-                  onClick={props.onClickCSV}>
-                  <Typography variant='text' className={styles.kanit} color="white">CSV</Typography>
-                  </ButtonBase>
-                <Divider orientation="vertical" flexItem color="gray" sx={{ mr: 1, ml: 1}}/>
-                  <ButtonBase variant='contained' sx={{ bgcolor: '#3D39FF', borderRadius: '4px', width: 80 }}
-                  onClick={props.onClickWord}>
-                  <Typography variant='text' className={styles.kanit} color="white">Word</Typography>
-                  </ButtonBase>
-                <Divider orientation="vertical" flexItem color="gray" sx={{ mr: 1, ml: 1}}/>
-                  <ButtonBase variant='contained' sx={{ bgcolor: '#E20000', borderRadius: '4px', width: 80 }}
-                   onClick={props.onClickPDF}>
-                   <Typography variant='text' className={styles.kanit} color="white">PDF</Typography>
-                  </ButtonBase>
-                </Grid>
-                </caption>
-                <TableHead >
-                    <TableRow>
-                        <TableCell align="center" colSpan={12} sx={{ backgroundColor: "#137371" }}>
-                        <Typography variant="text" sx={Kanitstyles} color="#FFFFFF">
-                          แปลงที่ดินใกล้เคียงที่มีสภาพคล้ายคลึงกัน 
-                        </Typography>
-                        </TableCell>
-                    </TableRow>
-                <TableRow sx={{ backgroundColor: "#137371" }}>
-                {data && data[0]?.hasOwnProperty("collapse") && (
-                      <TableCell width={"2%"}></TableCell>
-                    )}
-                    {colums?.map(
-                      (el, index) =>
-                        !excludeColum.includes(el.listname) && (
-                          <TableCell
-  
-                            key={index}
-                            
-                            sortDirection={sortDirection}
-                          >
-                            <Grid container sx= {{justifyContent: 'center'}}>
-                              <Grid item sx={{ display:'flex'}}>
-                              <Typography variant="text" sx={Kanitstyles} color="#FFFFFF">{el.name}</Typography>
-                              </Grid>
-                            </Grid>
-                          </TableCell>
-                          
-                        )
-                    )}
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                      
-                {data?.map(
-                    (el, index) =>
-                      index >= (curPage - 1) * rowPerPage &&
-                      index < curPage * rowPerPage && (
-                        <React.Fragment>
-                          <TableRow
-                            key={index}
-                            onClick={
-                              props.onSingleSelect
-                                ? () => _onClickSingle(el)
-                                : null
-                            }
-                            sx={
-                              props.onSingleSelect
-                                ? singleSelectData == el
-                                  ? {
-                                    cursor: "pointer",
-                                    backgroundColor: "#eff6ff",
-                                  }
-                                  : {
-                                    cursor: "pointer",
-                                    "&:hover": { backgroundColor: "#eff6ff" },
-                                  }
-                                : null
-                            }
-                          >
-                            
-                            {el.collapse && (
-                              <TableCell>
-                                <IconButton
-                                  size={"small"}
-                                  onClick={() => _handleCollapse(el)}
-                                >
-                                  {el == selectedCollaspe ? (
-                                    <KeyboardArrowUpIcon />
-                                  ) : (
-                                    <KeyboardArrowDownIcon />
-                                  )}
-                                </IconButton>
-                              </TableCell>
-                            )}
-                            
-                            {props.onSelect && (
-                              <TableCell>
-                                <Checkbox
-                                  size="medium"
-                                  checked={_isSelected(el)}
-                                  onClick={() => _onClick(el)}
-                                  sx={{ ml: 1 }}
-                                />
-                              </TableCell>
-                            )}
-                            
-                            {colums.map(
-                              (colums, indexx) =>
-                                !excludeColum.includes(colums.listname) && (
-                                  <TableCell
-                                    key={indexx}
-                                    sx={Kanitstyles}
-                                    align= "center"
-                                  >
-                                    {el[colums.listname]}
-                                  </TableCell>
-                                  
-                                )
-                            )}
-                            
-                            {data[0]?.hasOwnProperty("action") && (
-                              <TableCell>{el["action"]}</TableCell>
-                            )}
-                            
-                          </TableRow>
-                          {el.collapse && (
-                            <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
-                              {
-                                <TableCell
-                                colSpan={colums.length + 2}
-                                style={{ paddingBottom: 0, paddingTop: 0 }}
-                              >
-                                
-                                <Collapse in={Object.is(el, selectedCollaspe)}>
-                                  {Object.is(el, selectedCollaspe) &&
-                                    el.collapse}
-                                </Collapse>
-                              </TableCell>
-                              }
-                            </TableRow>
-                          )}
-                        </React.Fragment>
-                      )
-                  )}
-                </TableBody>
-              </Table>
-            </TableContainer>
-
-            
           </Grid>
         </Paper>
       </div>
