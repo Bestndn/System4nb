@@ -219,8 +219,8 @@ let colum = [
   return (
     <div>
       <Grid container sx={{ justifyContent: 'center', bgcolor: 'white', p: '1%' }}>
-        <Grid sx={{ width: '90%' }}>
-          <DataTable data={datalist} colum={colum} colums={colums} sx={{ overflowX: 'scroll' }} />
+        <Grid sx={{ width: '100%' }}>
+          <DataTable data={datalist} colum={colum} colums={colums} sx={{ overflow: 'scroll' }} />
         </Grid>
       </Grid>
     </div>

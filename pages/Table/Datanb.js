@@ -360,9 +360,6 @@ import { Stack } from "@mui/system";
                         )
                     )}
                   </TableRow>
-                  <TableRow sx={{ backgroundColor: "#137371" }}>
-                
-                  </TableRow>
                 </TableHead>
                 <TableBody>
                       
